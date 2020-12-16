@@ -68,8 +68,6 @@ header {
       font-size: 2.5em;
       background-color: var(--hover);
       color: black;
-      /* background-color: #1e1e1e;
-      color: white; */
   }
   .nav-bar-container {
       width: 100%;
@@ -570,7 +568,7 @@ header {
 @media only screen and (max-width: 1200px) {
   header {
       width: 100%;
-      font-size: 5em;
+      font-size: 2em;
       background-color: var(--hover);
   }
   .nav-bar-container {
@@ -578,7 +576,6 @@ header {
       height: 100%;
   }
   .sections-container {
-      height: 95vh;
       width: 100%;
       color: var(--primary-text);
   }
@@ -643,25 +640,25 @@ header {
       background-color: white;
       position: relative;
       z-index: 1;
-      box-shadow: 9px 9px 11px #d4d4d4, -9px -9px 11px #fff;
   }
   .selected {
       background-color: var(--selected-option);
   }
   a.major-section, a.link {
-      font-size: 5em;
+      font-size: 4em;
+      padding: 2.5rem;
   }
   a.major-section:hover {
       color: black;
-      font-size: 5em;
+      font-size: 4em;
   }
   a.major-section:focus {
       color: black;
-      font-size: 5em;
+      font-size: 4em;
   }
   a.link:hover {
       color: black;
-      font-size: 5em;
+      font-size: 4em;
       font-weight: bolder;
   }
   .major-section {
@@ -730,7 +727,7 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0.5em;
+      padding: 0.25em;
   }
   .github::before {
       background: var(--github);
@@ -810,25 +807,26 @@ header {
       object-fit: cover;
   }
   .proj-name {
-      font-size: 5em;
+      font-size: 10vw;
       font-weight: bold;
       text-align: center;
       height: 20%;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.1em;
       padding-bottom: 0.5em;
+      word-break: break-word;
   }
   .proj-description {
       margin-top: 15px;
       height: 50%;
       overflow-y: scroll;
-      font-size: 2.5em;
+      font-size: 7.5vw;
   }
   .proj-description::-webkit-scrollbar {
       display: none;
   }
   .proj-features {
       margin: 5px;
-      font-size: 0.75em;
+      font-size: 5vw;
   }
   .proj-links-container {
       display: flex;
@@ -839,7 +837,7 @@ header {
       margin-bottom: 2em;
   }
   .proj-link {
-      font-size: 3em;
+      font-size: 5vw;
       padding: 0.5em;
       text-align: center;
       border-radius: 5px;
@@ -877,7 +875,7 @@ header {
       display: none;
   }
   .proj-tag {
-      font-size: 2em;
+      font-size: 5vw;
       padding: 0.5em;
       text-align: center;
       border-radius: 5px;
@@ -916,13 +914,13 @@ header {
   }
   .title-container {
       height: auto;
-      font-size: 4em;
+      font-size: 2.5em;
       width: 100%;
       padding: 30px;
   }
   .about-me {
       padding: 0px 30px 0px 30px;
-      font-size: 1.5em;
+      font-size: 1em;
       height: auto;
   }
   ul.bullets-container {
@@ -953,7 +951,7 @@ header {
   }
   .interest {
       width: auto;
-      font-size: 2em;
+      font-size: 1em;
       text-align: center;
       padding: 1em;
   }
@@ -973,7 +971,7 @@ header {
       margin-bottom: 100px;
   }
   .contact-title-container {
-      font-size: 5em;
+      font-size: 3em;
       width: 100%;
       padding: 25px;
   }
@@ -995,7 +993,7 @@ header {
   }
   .contact-info-container {
       width: 100%;
-      font-size: 3em;
+      font-size: 2em;
   }
   input:focus {
       outline: 0px;
@@ -1053,17 +1051,17 @@ header {
   .social-link-box-top {
       width: 100%;
       height: 50%;
-      display: flex;
+      display: block;
       border-radius: 0px 10px 10px 0px;
   }
   .social-link-box-bot {
       width: 100%;
       height: 50%;
-      display: flex;
+      display: block;
       border-radius: 0px 10px 10px 0px;
   }
   .social-link {
-      width: 50%;
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
