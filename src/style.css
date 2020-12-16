@@ -33,10 +33,11 @@
   overflow: hide;
   color: inherit;
   transition: 200ms;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10+ and Edge */
-  user-select: none; /* Standard syntax */
+  /* -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; */
   scrollbar-width: none;
+  font-weight: 300;
 }
 body {
   width: 100vw;
@@ -46,7 +47,12 @@ body {
 a {
   text-decoration: none;
 }
-
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	font-weight: 400 !important;
+}
+b {
+  font-weight: 400 !important;
+}
 .flex-center {
   display: flex;
   justify-content: center;
@@ -59,6 +65,18 @@ a {
 }
 header {
   box-shadow: 9px 9px 11px #d4d4d4, -9px -9px 11px #fff;
+}
+
+h1, h2, h4, h6 {
+  margin: 0px !important;
+}
+
+.section {
+  margin-top: 1rem;
+}
+
+ul {
+  margin-bottom: 0 !important;
 }
 
 @media only screen and (min-width: 1201px) {
@@ -363,9 +381,6 @@ header {
   .nodejs-tag {
       background-color: var(--primary-dark);
       color: white;
-  }
-  li {
-      color: var(--feature);
   }
   .page-container {
       width: 100%;
@@ -888,9 +903,6 @@ header {
   .nodejs-tag {
       background-color: var(--primary-dark);
       color: white;
-  }
-  li {
-      color: var(--feature);
   }
   .page-container {
       width: 100%;

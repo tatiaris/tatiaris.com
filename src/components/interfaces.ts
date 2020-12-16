@@ -4,7 +4,7 @@ export interface MheaderProps {
 
 export interface MnavbarProps {
   theme: "light" | "dark";
-  page: "home" | "projects" | "about" | "contact"
+  page: "home" | "projects" | "about" | "contact" | "resume";
 }
 
 export interface ProjectProps {

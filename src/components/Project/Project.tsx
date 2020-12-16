@@ -20,7 +20,7 @@ export const Project: React.FC<ProjectProps> = (props) => {
                   {props.info.description}
                   <br/><br/>Main Features:
                   <ul className="proj-features">
-                      {props.info.features.map((f, i) => <div key={`feature-${props.info.id}-${i}`}><li>{f.name}</li>&gt; {f.description}</div> )}
+                      {props.info.features.map((f, i) => <div key={`feature-${props.info.id}-${i}`}><li style={{ color: "#ee258d" }}>{f.name}</li>&gt; {f.description}</div> )}
                   </ul>
               </div>
               <div className="proj-links-container">
