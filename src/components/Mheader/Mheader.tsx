@@ -10,7 +10,7 @@ export const Mheader: React.FC<MheaderProps> = (props) => {
   return (
     <div>
       <Head>
-        <title>Tatiaris | {props.title}</title>
+        <title>tatiaris | {props.title}</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"/>

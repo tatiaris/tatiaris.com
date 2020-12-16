@@ -41,7 +41,6 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: var(--primary-dark);
   margin: 0px;
 }
 a {
@@ -57,6 +56,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: left;
+}
+header {
+  box-shadow: 9px 9px 11px #d4d4d4, -9px -9px 11px #fff;
 }
 
 @media only screen and (min-width: 1201px) {
@@ -265,14 +267,14 @@ a {
       width: 90%;
   }
   .proj-container {
-      width: 100%;
-      border-radius: 15px;
-      box-shadow: 7px 7px 7px var(--selected-option);
-      display: flex;
-      margin-top: 50px;
-      margin-bottom: 50px;
-      background-color: white;
-      color: black;
+    width: 100%;
+    -webkit-box-shadow: 11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff;
+    box-shadow: 11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff;
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: white;
+    color: black;
   }
   .proj-img-container {
       width: 25%;
@@ -340,7 +342,7 @@ a {
   }
   .proj-tags-container {
       width: 25%;
-      border-radius: 0px 15px 15px 0px;
+      border-radius: 0px 10px 10px 0px;
   }
   .proj-tag-list {
       width: 50%;
@@ -378,8 +380,9 @@ a {
       width: 80%;
       height: 80%;
       background-color: white;
-      border-radius: 20px;
-      box-shadow: 7px 7px 7px var(--selected-option);
+      border-radius: 10px;
+      -webkit-box-shadow: 11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff;
+      box-shadow: 11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -423,7 +426,7 @@ a {
       width: 15%;
       height: 100%;
       overflow: scroll;
-      border-radius: 0px 20px 20px 0px;
+      border-radius: 0px 10px 10px 0px;
   }
   .my-interests-container::-webkit-scrollbar {
       display: none;
@@ -444,8 +447,8 @@ a {
       width: 75%;
       height: auto;
       background-color: white;
-      border-radius: 20px;
-      box-shadow: 7px 7px 7px var(--selected-option);
+      border-radius: 10px;
+      box-shadow: 11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff;
   }
   .contact-title-container {
       height: 20%;
@@ -521,8 +524,8 @@ a {
       font-size: 3em;
       height: auto;
       background-color: white;
-      border-radius: 20px;
-      box-shadow: 7px 7px 7px var(--selected-option);
+      border-radius: 10px;
+      box-shadow: 11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff;
   }
   .social-links-container {
       height: 250px;
@@ -532,13 +535,13 @@ a {
       width: 100%;
       height: 50%;
       display: flex;
-      border-radius: 0px 25px 25px 0px;
+      border-radius: 0px 10px 10px 0px;
   }
   .social-link-box-bot {
       width: 100%;
       height: 50%;
       display: flex;
-      border-radius: 0px 25px 25px 0px;
+      border-radius: 0px 10px 10px 0px;
   }
   .social-link {
       width: 50%;
@@ -606,8 +609,14 @@ a {
       justify-content: flex-end;
   }
   .menu-icon-container {
-      width: 20%;
-      height: 100%;
+    width: 20%;
+    height: 100%;
+    font-size: 1em;
+    background: white;
+    border: 0px;
+  }
+  .menu-icon-container:hover {
+    cursor: pointer;
   }
   .menu-option {
       font-size: 0.6em;
@@ -634,6 +643,7 @@ a {
       background-color: white;
       position: relative;
       z-index: 1;
+      box-shadow: 9px 9px 11px #d4d4d4, -9px -9px 11px #fff;
   }
   .selected {
       background-color: var(--selected-option);
@@ -775,14 +785,14 @@ a {
       width: 90%;
   }
   .proj-container {
-      height: auto;
-      width: 100%;
-      border-radius: 15px;
-      box-shadow: 7px 7px 7px var(--selected-option);
-      margin-top: 5em;
-      margin-bottom: 5em;
-      background-color: white;
-      color: black;
+    width: 100%;
+    -webkit-box-shadow: 11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff;
+    box-shadow: 11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: white;
+    color: black;
   }
   .proj-img-container {
       width: 100%;
@@ -856,7 +866,7 @@ a {
   }
   .proj-tags-container {
       width: 100%;
-      border-radius: 0px 15px 15px 0px;
+      border-radius: 0px 10px 10px 0px;
   }
   .proj-tag-list {
       width: 90%;
@@ -895,8 +905,8 @@ a {
       width: 80%;
       height: auto;
       background-color: white;
-      border-radius: 20px;
-      box-shadow: 7px 7px 7px var(--selected-option);
+      border-radius: 10px;
+      box-shadow: 11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff;
       display: block;
       font-size: 2em;
   }
@@ -935,7 +945,7 @@ a {
       width: 100%;
       height: auto;
       overflow: scroll;
-      border-radius: 0px 0px 20px 20px;
+      border-radius: 0px 0px 10px 10px;
       display: flex;
   }
   .my-interests-container::-webkit-scrollbar {
@@ -957,8 +967,8 @@ a {
       width: 75%;
       height: auto;
       background-color: white;
-      border-radius: 20px;
-      box-shadow: 7px 7px 7px var(--selected-option);
+      border-radius: 10px;
+      box-shadow: 11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff;
       margin-top: 100px;
       margin-bottom: 100px;
   }
@@ -1034,8 +1044,8 @@ a {
       font-size: 3em;
       height: auto;
       background-color: white;
-      border-radius: 20px;
-      box-shadow: 7px 7px 7px var(--selected-option);
+      border-radius: 10px;
+      box-shadow: 11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff
   }
   .social-links-container {
       margin-top: 2em;
@@ -1044,13 +1054,13 @@ a {
       width: 100%;
       height: 50%;
       display: flex;
-      border-radius: 0px 25px 25px 0px;
+      border-radius: 0px 10px 10px 0px;
   }
   .social-link-box-bot {
       width: 100%;
       height: 50%;
       display: flex;
-      border-radius: 0px 25px 25px 0px;
+      border-radius: 0px 10px 10px 0px;
   }
   .social-link {
       width: 50%;

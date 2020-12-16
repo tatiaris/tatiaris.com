@@ -15,6 +15,16 @@ export const Mnavbar: React.FC<MnavbarProps> = (props) => {
   }
   feature[props.page] = "selected"
 
+  const open_menu = () => {
+    console.log('opening menu');
+    var x = document.getElementById("my-links");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+  }
+
   return (
     <>
         <header>
@@ -29,9 +39,7 @@ export const Mnavbar: React.FC<MnavbarProps> = (props) => {
                     <a href="/about" className={`menu-option ${feature['about']} hover-top menu-bg`}>About</a>
                     <a href="/contact" className={`menu-option ${feature['contact']} hover-top menu-bg`}>Contact</a>
                 </div>
-                <a href="javascript:void(0);" className="menu-icon-container flex-center">
-                    <i className="fa fa-bars"></i>
-                </a>
+                <button onClick={open_menu} className="menu-icon-container flex-center"><i className="fa fa-bars"></i></button>
             </div>
             <div id="my-links">
                 <a href="/" className="ham-menu-option selected hover-right menu-bg">Home</a>
