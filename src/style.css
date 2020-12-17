@@ -703,25 +703,26 @@ th {
       background-color: white;
       position: relative;
       z-index: 1;
+      box-shadow: 9px 9px 11px #d4d4d4, -9px -9px 11px #fff;;
   }
   .selected {
       background-color: var(--selected-option);
   }
   a.major-section, a.link {
-      font-size: 4em;
-      padding: 2.5rem;
+      font-size: 2.5em;
+      padding: 2rem;
   }
   a.major-section:hover {
       color: black;
-      font-size: 4em;
+      font-size: 2.5em;
   }
   a.major-section:focus {
       color: black;
-      font-size: 4em;
+      font-size: 2.5em;
   }
   a.link:hover {
       color: black;
-      font-size: 4em;
+      font-size: 2.5em;
       font-weight: bolder;
   }
   .major-section {
