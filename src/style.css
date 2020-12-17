@@ -79,6 +79,23 @@ ul {
   margin-bottom: 0 !important;
 }
 
+th {
+  text-align: left;
+}
+
+.neuro-btn {
+  transition: 250ms !important;
+  margin: 2.1em 0;
+  border: 0 !important;
+  color: black !important;
+  background: white !important;
+  box-shadow: 7px 7px 19px #bdbdbd,-7px -7px 19px #ffffff !important;
+}
+
+.neuro-btn:hover {
+  background: #eee !important;
+}
+
 @media only screen and (min-width: 1201px) {
   header {
       height: 5vh;
@@ -132,6 +149,11 @@ ul {
       display: flex;
       justify-content: center;
       align-items: center;
+      color: black;
+  }
+  .menu-option:hover {
+    color: black;
+    text-decoration: none;
   }
   .ham-menu-option {
       display: none;
@@ -647,6 +669,10 @@ ul {
       justify-content: center;
       align-items: center;
       padding: 0.2em;
+  }
+  .ham-menu-option:hover {
+    color: black;
+    text-decoration: none;
   }
   #my-links {
       width: 100%;

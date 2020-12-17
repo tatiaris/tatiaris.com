@@ -10,6 +10,7 @@
   "dependencies": {
     "bootstrap": "^4.5.2",
     "cheerio": "^1.0.0-rc.3",
+    "html-pdf": "^2.2.0",
     "mongodb": "^3.6.3",
     "next": "^10.0.1",
     "next-connect": "^0.9.1",

@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { MFooter } from "../components/MFooter";
+import React from "react";
 import { Mheader } from "../components/Mheader";
 import { Mnavbar } from "../components/Mnavbar";
-import { Table, Container, Button, Col, Row } from "react-bootstrap";
-import { ThBtn } from "../components/style"
 
 const Home = (): React.ReactNode => {
   return (
@@ -17,7 +14,7 @@ const Home = (): React.ReactNode => {
             <div className="links-section-container lightest">
                 <div className="links-section">
                     <a href="https://github.com/tatiaris" className="link hover-right github" target="_blank">GITHUB</a>
-                    <a href="https://www.linkedin.com/in/rishabh-tatia-164bb5170/" className="link hover-right linkedin" target="_blank">LINKEDIN</a>
+                    <a href="https://www.linkedin.com/in/tatiaris/" className="link hover-right linkedin" target="_blank">LINKEDIN</a>
                     <a href="/resume" className="link hover-right resume" target="_blank">RESUME</a>
                     <a href="https://open.kattis.com/users/rishabh-tatia" className="link hover-right kattis" target="_blank">KATTIS</a>
                     <a href="https://www.instagram.com/tat.ris/" className="link hover-right insta" target="_blank">INSTAGRAM</a>

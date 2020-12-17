@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { MFooter } from "../components/MFooter";
+import React from "react";
 import { Mheader } from "../components/Mheader";
 import { Mnavbar } from "../components/Mnavbar";
 import { Project } from "../components/Project";
