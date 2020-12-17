@@ -17,7 +17,6 @@ const Resume = (): React.ReactNode => {
   return (
     <>
         <Mheader title="resume"/>
-        <Mnavbar theme="light" page="resume"/>
         <div className="resume-page-container">
           <div style={{ padding: "2em", boxShadow: "11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff", margin: "2em" }}>
           <Container id="resume-container" style={{ maxWidth: "1000px", padding: "0" }}>
