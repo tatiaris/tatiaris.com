@@ -7,16 +7,23 @@ import { ThBtn } from "../components/style"
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Resume = (): React.ReactNode => {
+
+  const toggleDirectEdit = () => {
+    const e = document.getElementById("resume-container");
+    if (e.contentEditable == "true") e.contentEditable = "false"
+    else e.contentEditable = "true";
+  }
+
   return (
     <>
         <Mheader title="resume"/>
         <Mnavbar theme="light" page="resume"/>
         <div className="resume-page-container">
           <div style={{ padding: "2em", boxShadow: "11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff", margin: "2em" }}>
-          <Container style={{ maxWidth: "1000px", padding: "0" }}>
+          <Container id="resume-container" style={{ maxWidth: "1000px", padding: "0" }}>
             <Row style={{ margin: "0px", paddingBottom: "1em" }}>
               <Col sm="4">
-                <h1>Rishabh Tatia</h1>
+                <h1 id="name-container">Rishabh Tatia</h1>
                 <h4>Software Developer</h4>
                 <a href="https://tatiaris.com" target="_blank" style={{ color: "black", fontStyle: "italic" }}>tatiaris.com</a>
               </Col>
@@ -180,6 +187,8 @@ const Resume = (): React.ReactNode => {
           </div>
           <div className="resume-dwl-btn-container">
             <Button className="neuro-btn" href="/docs/RISHABH_TATIA_RESUME_12_20_v2.pdf" as="a" download={true}>Download Resume</Button>
+            <br/><br/>
+            <Button className="neuro-btn" onClick={toggleDirectEdit}>Toggle Edit</Button>
           </div>
         </div>
     </>
