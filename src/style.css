@@ -85,18 +85,40 @@ th {
 
 .neuro-btn {
   transition: 250ms !important;
-  margin: 2.1em 0;
   border: 0 !important;
   color: black !important;
   background: white !important;
   box-shadow: 7px 7px 19px #bdbdbd,-7px -7px 19px #ffffff !important;
 }
-
 .neuro-btn:hover {
   background: #eee !important;
 }
 
+.resume-dwl-btn-container {
+  padding: 0 15px;
+}
+
 @media only screen and (min-width: 1201px) {
+  .resume-dwl-btn-container {
+    margin: 2em 0;
+  }
+  .dc2 {
+    display: flex;
+    justify-content: right;
+  }
+  .center-section {
+    text-align: center;
+    padding-top: 0.5em;
+  }
+  .left-section {
+    border-right: 1px solid #d9d9d9;
+  }
+  .resume-page-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
   header {
       height: 5vh;
       width: 100%;
@@ -1122,5 +1144,25 @@ th {
   .email-link {
       background-color: #ecec73;
       border-bottom-right-radius: 20px;
+  }
+  .center-section {
+    text-align: left;
+  }
+  .dc1 {
+    margin-top: 1em;
+    justify-content: left;
+  }
+  .dc2 {
+    margin-top: 1em;
+  }
+  .right-section {
+    margin-top: 1em;
+  }
+  .page-container {
+    display: block;
+  }
+  .resume-dwl-btn-container {
+    margin: 2em 0;
+    text-align: center;
   }
 }
