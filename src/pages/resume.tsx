@@ -162,7 +162,7 @@ const Resume = (): React.ReactNode => {
                 <br/>
                 <h3>Activities</h3>
                 <div className="section">
-                  <span style={{ float: "right" }}>August 2019 - Current</span>
+                  <span style={{ float: "right" }}>August 2019 - Present</span>
                   <h5><b>A&M Racquetball Club</b></h5>
                   <b>Team Officer</b>
                   <ul>
