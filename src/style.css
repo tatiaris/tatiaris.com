@@ -342,9 +342,11 @@ th {
       align-items: center;
   }
   .proj-info-container {
-      width: 50%;
-      padding: 15px;
-      padding-left: 45px;
+    width: 50%;
+    padding: 15px 15px 15px 45px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
   }
   .proj-img {
       width: 100%;
@@ -362,6 +364,7 @@ th {
   }
   .proj-description {
       margin-top: 15px;
+      flex: 1 1 0%;
   }
   .proj-description::-webkit-scrollbar {
       display: none;
