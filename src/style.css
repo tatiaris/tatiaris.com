@@ -380,6 +380,7 @@ th {
       text-align: center;
       border-radius: 5px;
       margin: 15px;
+      box-shadow: 6px 6px 12px #c4c4c4, -6px -6px 12px #ffffff;
   }
   .github-link {
       border: 1px solid var(--github);
@@ -910,6 +911,7 @@ th {
       text-align: center;
       border-radius: 5px;
       margin: 15px;
+      box-shadow: 6px 6px 12px #c4c4c4, -6px -6px 12px #ffffff;
   }
   .github-link {
       border: 1px solid var(--github);
