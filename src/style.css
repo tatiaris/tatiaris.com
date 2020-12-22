@@ -383,15 +383,18 @@ th {
   }
   .github-link {
       border: 1px solid var(--github);
+      color: var(--github);
   }
   .github-link:hover {
       background-color: var(--github);
+      color: black;
   }
   .live-link {
-      border: 1px solid var(--primary-dark);
+      border: 1px solid purple;
+      color: purple;
   }
   .live-link:hover {
-      background-color: var(--primary-dark);
+      background-color: purple;
       color: white;
   }
   .download-link {
@@ -424,7 +427,8 @@ th {
   }
   .nodejs-tag {
       background-color: var(--primary-dark);
-      color: white;
+      color: #fff;
+      box-shadow: 6px 6px 12px #c4c4c4, -6px -6px 12px #ffffff;
   }
   .page-container {
       width: 100%;
@@ -909,15 +913,18 @@ th {
   }
   .github-link {
       border: 1px solid var(--github);
+      color: var(--github);
   }
   .github-link:hover {
       background-color: var(--github);
+      color: black;
   }
   .live-link {
-      border: 1px solid var(--primary-dark);
+      border: 1px solid purple;
+      color: purple;
   }
   .live-link:hover {
-      background-color: var(--primary-dark);
+      background-color: purple;
       color: white;
   }
   .download-link {
@@ -951,7 +958,8 @@ th {
   }
   .nodejs-tag {
       background-color: var(--primary-dark);
-      color: white;
+      color: #fff;
+      box-shadow: 6px 6px 12px #c4c4c4, -6px -6px 12px #ffffff;
   }
   .page-container {
       width: 100%;
