@@ -680,9 +680,9 @@ const Wesume = (): React.ReactNode => {
                 </Col>
               </Row>
               <Row style={{ margin: "1em 0" }}>
-                <Col style={{ display: "flex", justifyContent: "center" }}>
-                  <div style={{ border: "1px solid black", background: "white" }}>
-                    <div id="code-output" style={{ margin: "1em", maxWidth: "1000px" }}>
+                <Col style={{ padding: "0" }}>
+                  <div style={{ background: "white", boxShadow: "11px 11px 22px #bfbfbf, -11px -11px 22px #ffffff", width: "max-content" }}>
+                    <div id="code-output" style={{ margin: "1em", width: "1000px" }}>
 
                     </div>
                   </div>
