@@ -342,27 +342,14 @@ const Wesume = (): React.ReactNode => {
     padding-right: 15px;
     padding-left: 15px;
   }
-  .center-section {
-    text-align: center;
-    padding-top: 0.5em;
-  }
   .row {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-  .dc2 {
-    display: flex;
-    justify-content: right;
-  }
-  .left-section {
-    border-right: 1px solid #d9d9d9;
   }
   </style>
 </head>
 <div id="resume-container" style="width: 1000px; padding: 0" class="container">
-  <div style="margin: 0px; padding-bottom: 1em" class="row">
+  <div style="margin: 0px; padding: 1em 0" class="row">
     <div class="col-sm-4">
       <h1 id="full_name"></h1>
       <h4 id="subtitle"></h4>
@@ -370,7 +357,7 @@ const Wesume = (): React.ReactNode => {
       </a>
     </div>
     <div class="dc1 col-sm-4">
-      <div class="center-section">
+      <div style="text-align: center;padding-top: 0.5em;">
         <span id="street_name"></span> <span id="apt_no"></span>
         <br />
         <span id="city"></span>
@@ -378,7 +365,7 @@ const Wesume = (): React.ReactNode => {
         <span id="state"></span>, <span id="zip_code"></span>
       </div>
     </div>
-    <div class="dc2 col-sm-4">
+    <div class="col-sm-4" style="display: flex; justify-content: right;">
       <div>
         <span id="phone_no"></span>
         <br />
@@ -400,8 +387,8 @@ const Wesume = (): React.ReactNode => {
     <h3>Objective</h3>
     <span id="objective"></span>
   </div>
-  <div style="margin: 0px; padding-top: 1em; border-top: 1px solid #d9d9d9" class="row">
-    <div class="left-section col-sm-6">
+  <div style="margin: 0px; padding: 1em 0; border-top: 1px solid #d9d9d9" class="row">
+    <div class="col-sm-6" style="border-right: 1px solid #d9d9d9;">
       <h3>Education</h3>
       <div class="section">
         <span style="float: right"><span id="university_start_day"></span> -
