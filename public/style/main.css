@@ -1,0 +1,90 @@
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+* {
+  font-family: 'Roboto', sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hide;
+  color: inherit;
+  transition: 200ms;
+  scrollbar-width: none;
+  font-weight: 400;
+}
+a.badge-link {
+  line-height: 1.5;
+  color: white !important;
+  text-transform: uppercase;
+}
+a.about-link {
+  padding: 0 2px;
+  color: black !important;
+  font-weight: bold;
+}
+.tamu:hover {
+  background-color: rgba(85, 0, 0, 0.15);
+  border-radius: 2px;
+}
+.city:hover {
+  background-color: rgba(81, 255, 0, 0.15);
+  border-radius: 2px;
+}
+.datathon:hover {
+  background-color: rgba(204, 0, 255, 0.15);
+  border-radius: 2px;
+}
+.hobby {
+	line-height: 1.5 !important;
+	height: auto !important;
+  font-size: 1em !important;
+  margin-top: 0.5em !important;
+}
+.misc-link {
+	line-height: 1.5 !important;
+	height: auto !important;
+  font-size: 1em !important;
+  margin-top: 0.5em !important;
+  align-items: center !important;
+}
+.misc-link-r {
+	line-height: 1.5 !important;
+	height: auto !important;
+  font-size: 1em !important;
+  align-items: center !important;
+}
+.card {
+  margin: 20px !important;
+  flex: 1 1 0% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 275px !important;
+  max-width: 275px !important;
+}
+.content {
+  flex: 1 1 0%;
+}
+.content-wrapper {
+  padding: 4pt calc(0.65 * 4pt);
+}
+.collapse {
+  padding: 1em 0 !important;
+}
+.title > h3 {
+  font-weight: 400;
+}
+.modal-section {
+  width: 28rem !important;
+  max-width: 80vw !important;
+}
+button > .text, .text > a {
+  height: 100% !important;
+  width: 100% !important;
+  justify-content: center !important;
+  color: black !important;
+  font-size: 1rem !important;
+}
+footer > button {
+  padding: 0 !important;
+}
