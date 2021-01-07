@@ -69,10 +69,11 @@ a.about-link {
   padding: 4pt calc(0.65 * 4pt);
 }
 .collapse {
-  padding: 1em 0 !important;
+  padding: 0.75em 0 !important;
 }
 .title > h3 {
   font-weight: 400;
+  font-size: 1.2rem;
 }
 .modal-section {
   width: 28rem !important;
