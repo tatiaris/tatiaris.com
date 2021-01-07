@@ -211,7 +211,7 @@ const projectList = [
     "id": 3,
     "name": "Zotak",
     "img": "zotak.png",
-    "description": "A multi-purpose Discord bot that performs a variety tasks based on user inputs.",
+    "description": "A multi-purpose Discord bot that performs a variety of tasks.",
     "features": [
       {
         "name": "Text Predictor",
@@ -343,14 +343,18 @@ const Projects = () => {
       <div className="content-wrapper">
         <Collapse.Group style={{ padding: "0", marginTop: "1em" }}>
           <Collapse title="Ongoing" initialVisible style={{ borderTop: "0" }}>
-            <Row style={{ flexWrap: "wrap", marginTop: "1em", justifyContent: "center" }}>
+            <Row className="projects-container">
               {currentProjectList.map((project, i) =>
-                <Card key={`project-card-${i}`} hoverable>
-                  <Image src={`img/${project.img}`} height="300" width="300" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
-                  <h4>{project.name}</h4>
-                  <p>{project.description}</p>
-                  <Button onClick={e => displayMoreInfo(project.id)} size="small" auto>Learn more...</Button>
-                  <Card.Footer style={{ justifyContent: "space-between" }}>
+                <Card key={`project-card-${i}`} hoverable className="project-card">
+                  <div className="project-card-content">
+                    <Image src={`img/${project.img}`} height="200" width="200" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
+                    <div style={{ padding: "0.75em" }}>
+                      <h4>{project.name}</h4>
+                      {project.description} <br />
+                      <Button onClick={e => displayMoreInfo(project.id)} size="mini" auto style={{ marginTop: "0.5rem" }}>Learn more...</Button>
+                    </div>
+                  </div>
+                  <Card.Footer className="card-link-container">
                     <Link color target="_blank" rel="noreferrer" href={project.github_link} className="misc-link-r" block><span style={{ marginRight: "5px" }}>Source</span><Code /></Link>
                     <Link color target="_blank" rel="noreferrer" href={project.demo_link} className="misc-link-r" block><span style={{ marginRight: "5px" }}>Demo</span><ExternalLink /></Link>
                   </Card.Footer>
@@ -359,14 +363,18 @@ const Projects = () => {
             </Row>
           </Collapse>
           <Collapse title="Completed" style={{ borderTop: "0" }}>
-            <Row style={{ flexWrap: "wrap", marginTop: "1em", justifyContent: "center" }}>
+            <Row className="projects-container">
               {completedProjectList.map((project, i) =>
-                <Card key={`project-card-${i}`} hoverable>
-                  <Image src={`img/${project.img}`} height="300" width="300" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
-                  <h4>{project.name}</h4>
-                  <p>{project.description}</p>
-                  <Button onClick={e => displayMoreInfo(project.id)} size="small" auto>More</Button>
-                  <Card.Footer style={{ justifyContent: "space-between" }}>
+                <Card key={`project-card-${i}`} hoverable className="project-card">
+                  <div className="project-card-content">
+                    <Image src={`img/${project.img}`} height="200" width="200" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
+                    <div style={{ padding: "0.75em" }}>
+                      <h4>{project.name}</h4>
+                      {project.description} <br />
+                      <Button onClick={e => displayMoreInfo(project.id)} size="mini" auto style={{ marginTop: "0.5rem" }}>Learn more...</Button>
+                    </div>
+                  </div>
+                  <Card.Footer className="card-link-container">
                     <Link color target="_blank" rel="noreferrer" href={project.github_link} className="misc-link-r" block><span style={{ marginRight: "5px" }}>Source</span><Code /></Link>
                     <Link color target="_blank" rel="noreferrer" href={project.demo_link} className="misc-link-r" block><span style={{ marginRight: "5px" }}>Demo</span><ExternalLink /></Link>
                   </Card.Footer>
@@ -375,14 +383,18 @@ const Projects = () => {
             </Row>
           </Collapse>
           <Collapse title="Not maintained" style={{ borderTop: "0" }}>
-            <Row style={{ flexWrap: "wrap", marginTop: "1em", justifyContent: "center" }}>
+            <Row className="projects-container">
               {unmaintainedProjectList.map((project, i) =>
-                <Card key={`project-card-${i}`} hoverable>
-                  <Image src={`img/${project.img}`} height="300" width="300" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
-                  <h4>{project.name}</h4>
-                  <p>{project.description}</p>
-                  <Button onClick={e => displayMoreInfo(project.id)} size="small" auto>More</Button>
-                  <Card.Footer style={{ justifyContent: "space-between" }}>
+                <Card key={`project-card-${i}`} hoverable className="project-card">
+                  <div className="project-card-content">
+                    <Image src={`img/${project.img}`} height="200" width="200" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
+                    <div style={{ padding: "0.75em" }}>
+                      <h4>{project.name}</h4>
+                      {project.description} <br />
+                      <Button onClick={e => displayMoreInfo(project.id)} size="mini" auto style={{ marginTop: "0.5rem" }}>Learn more...</Button>
+                    </div>
+                  </div>
+                  <Card.Footer className="card-link-container">
                     <Link color target="_blank" rel="noreferrer" href={project.github_link} className="misc-link-r" block><span style={{ marginRight: "5px" }}>Source</span><Code /></Link>
                     <Link color target="_blank" rel="noreferrer" href={project.demo_link} className="misc-link-r" block><span style={{ marginRight: "5px" }}>Demo</span><ExternalLink /></Link>
                   </Card.Footer>

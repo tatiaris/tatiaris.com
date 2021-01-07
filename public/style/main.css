@@ -78,19 +78,45 @@ a.about-link {
   width: 28rem !important;
   max-width: 80vw !important;
 }
-button > .text, .text > a {
-  height: 100% !important;
-  width: 100% !important;
-  justify-content: center !important;
-  color: black !important;
-  font-size: 1rem !important;
-}
 footer > button {
   padding: 0 !important;
 }
-@media (max-width: 650px) {
-  .card {
-    min-width: 75vw !important;
-    max-width: 75vw !important;
+.projects-container {
+  flex-wrap: wrap;
+  margin-top: 1em;
+  justify-content: left;
+}
+.project-card {
+  width: 400px !important;
+  max-width: 400px !important;
+  flex: 0 auto !important;
+}
+.project-card > .content {
+  padding: 0 !important
+}
+.project-card-content {
+  display: flex !important;
+  flex-direction: row !important;
+  max-width: none !important;
+  width: min-content !important;
+  flex: 0 auto !important;
+  width: 100% !important;
+}
+.project-card-content > .image {
+  padding: 0.75em;
+}
+.card-link-container {
+  justify-content: center;
+  padding: 0.25rem !important;
+}
+@media (max-width: 520px) {
+  .project-card-content > .image {
+    display: none;
+  }
+  .card-link-container {
+    justify-content: left;
+  }
+  .projects-container {
+    justify-content: center;
   }
 }
