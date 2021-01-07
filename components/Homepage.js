@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, User, Divider, Row, Tag, Spacer, Col, Badge, Link, useToasts } from '@geist-ui/react'
+import { Text, User, Divider, Row, Tag, Spacer, Col, Badge, Link, useToasts, Tooltip } from '@geist-ui/react'
 import { Github, FileText, Instagram, Twitter, Linkedin, Mail } from '@geist-ui/react-icons'
 
 /**
@@ -33,7 +33,7 @@ export const Homepage = () => {
         <Text>
           <span style={{ fontSize: "1.2em" }}>Hello,</span><br />
         My name is <b>Rishabh Tatia</b>. I am a Junior at <a href="https://tamu.edu" className="about-link tamu" target="_blank" rel="noreferrer">Texas A&M University</a> studying Mathematics and Computer Science.
-        I started programming as a freshman in high school when I wanted to develop games, automate processes, and create helpful applications for people around me.
+        I started programming as a freshman in high school when I wanted to develop games, automate processes, and create helpful applications for the public.
       </Text>
         <ul>
           <li>I entered the world on the 3rd of January 2001 in <a href="https://www.google.com/maps/place/Gwalior,+Madhya+Pradesh,+India/@28.7853139,59.1335284,3.83z/data=!4m5!3m4!1s0x3976c5d1792291fb:0xff4fb56d65bc3adf!8m2!3d26.2195191!4d78.1842041" className="about-link city" target="_blank" rel="noreferrer">Gwalior, India</a>.</li>
@@ -65,16 +65,21 @@ export const Homepage = () => {
         </Row>
         <Divider style={{ marginTop: "2.5em" }} align="start">My Links</Divider>
         <Row style={{ flexWrap: "wrap" }}>
-          <Link className="misc-link" target="_blank" rel="noreferrer" href="https://github.com/tatiaris" block><Github /></Link>
-          <Spacer x={.5} />
-          <Link className="misc-link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/tatiaris/" block><Linkedin /></Link>
-          <Spacer x={.5} />
-          <Link className="misc-link" target="_blank" rel="noreferrer" href="https://www.instagram.com/tat.ris/" block><Instagram /></Link>
-          <Spacer x={.5} />
-          <Link className="misc-link" target="_blank" rel="noreferrer" href="https://twitter.com/Rishabh77022392" block><Twitter /></Link>
-          <Spacer x={.5} />
-          <Link className="misc-link" target="_blank" rel="noreferrer" href="mailto:tatiaris2001@gmail.com?Subject=Hello!" block><Mail /></Link>
-          <Spacer x={.5} />
+          <Tooltip text={'Github'} placement="bottom" enterDelay="1000">
+            <Link className="misc-link" target="_blank" rel="noreferrer" href="https://github.com/tatiaris" block><Github /></Link>
+          </Tooltip>
+          <Tooltip text={'Linkedin'} placement="bottom" enterDelay="1000">
+            <Link className="misc-link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/tatiaris/" block><Linkedin /></Link>
+          </Tooltip>
+          <Tooltip text={'Instagram'} placement="bottom" enterDelay="1000">
+            <Link className="misc-link" target="_blank" rel="noreferrer" href="https://www.instagram.com/tat.ris/" block><Instagram /></Link>
+          </Tooltip>
+          <Tooltip text={'Twitter'} placement="bottom" enterDelay="1000">
+            <Link className="misc-link" target="_blank" rel="noreferrer" href="https://twitter.com/Rishabh77022392" block><Twitter /></Link>
+          </Tooltip>
+          <Tooltip text={'E-mail'} placement="bottom" enterDelay="1000">
+            <Link className="misc-link" target="_blank" rel="noreferrer" href="mailto:tatiaris2001@gmail.com?Subject=Hello!" block><Mail /></Link>
+          </Tooltip>
           <Link download onClick={e => launchToast('Downloading Resume PDF...')} className="misc-link" href="/docs/RISHABH_TATIA_RESUME_12_20_v1.pdf" block><FileText /><span style={{ marginLeft: "5px" }}>Resume</span></Link>
         </Row>
       </div>

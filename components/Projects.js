@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Modal, Tag, Row, Card, Col, Image, Link, Button, Collapse, useModal } from '@geist-ui/react'
 import { ExternalLink, Code, X, ArrowLeft, ArrowRight } from '@geist-ui/react-icons'
 
@@ -337,6 +337,17 @@ const Projects = () => {
       setChosenProject(projectList.filter(p => p.id == chosenProject.id + i)[0])
     }
   }
+  const handleKeyPress = (event) => {
+    if (event.key == "ArrowRight" && visible) {
+      changeChosenProject(-1)
+    } else if (event.key == "ArrowLeft" && visible) {
+      changeChosenProject(1)
+    } else if (event.key == "Escape" && visible) {
+      setVisible(false)
+    }
+  }
+
+  if (document) document.onkeydown = handleKeyPress;
 
   return (
     <>
@@ -351,7 +362,7 @@ const Projects = () => {
                     <div style={{ padding: "0.75em" }}>
                       <h4>{project.name}</h4>
                       {project.description} <br />
-                      <Button onClick={e => displayMoreInfo(project.id)} size="mini" auto style={{ marginTop: "0.5rem" }}>Learn more...</Button>
+                      <Button onClick={e => displayMoreInfo(project.id)} size="mini" auto style={{ marginTop: "0.5rem" }}>Learn more&nbsp;<ArrowRight size="15" /></Button>
                     </div>
                   </div>
                   <Card.Footer className="card-link-container">
@@ -371,7 +382,7 @@ const Projects = () => {
                     <div style={{ padding: "0.75em" }}>
                       <h4>{project.name}</h4>
                       {project.description} <br />
-                      <Button onClick={e => displayMoreInfo(project.id)} size="mini" auto style={{ marginTop: "0.5rem" }}>Learn more...</Button>
+                      <Button onClick={e => displayMoreInfo(project.id)} size="mini" auto style={{ marginTop: "0.5rem" }}>Learn more&nbsp;<ArrowRight size="15" /></Button>
                     </div>
                   </div>
                   <Card.Footer className="card-link-container">
@@ -391,7 +402,7 @@ const Projects = () => {
                     <div style={{ padding: "0.75em" }}>
                       <h4>{project.name}</h4>
                       {project.description} <br />
-                      <Button onClick={e => displayMoreInfo(project.id)} size="mini" auto style={{ marginTop: "0.5rem" }}>Learn more...</Button>
+                      <Button onClick={e => displayMoreInfo(project.id)} size="mini" auto style={{ marginTop: "0.5rem" }}>Learn more&nbsp;<ArrowRight size="15" /></Button>
                     </div>
                   </div>
                   <Card.Footer className="card-link-container">
