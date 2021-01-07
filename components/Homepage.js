@@ -1,38 +1,37 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Text, User, Divider, Row, Tag, Spacer, Col, Badge, Link, useToasts } from '@geist-ui/react'
 import { Github, FileText, Instagram, Twitter, Linkedin, Mail } from '@geist-ui/react-icons'
 
 /**
  * Homepage component
  */
-export const Homepage = (props) => {
+export const Homepage = () => {
   const [toasts, setToast] = useToasts()
   const launchToast = (msg) => setToast({ text: msg, type: "success", delay: 3000 })
 
   return (
     <>
-    <div className="content-wrapper">
-      <Row style={{ alignItems: "center", flexWrap: "wrap", marginTop: "1em" }}>
-        <Col style={{ width: "max-content", marginTop: "1em", marginRight: "1em" }}>
-          <User src="img/avatar.png" name="Rishabh Tatia" style={{ padding: "0" }}>
-            Full Stack Developer
+      <div className="content-wrapper">
+        <Row style={{ alignItems: "center", flexWrap: "wrap", marginTop: "1em" }}>
+          <Col style={{ width: "max-content", marginTop: "1em", marginRight: "1em" }}>
+            <User src="img/avatar.png" altText="user-img" name="Rishabh Tatia" style={{ padding: "0" }}>
+              Full Stack Developer
           </User>
-        </Col>
-        <Col style={{ width: "max-content", marginTop: "1em" }}>
-          <Row>
-            <Badge type="secondary"><a className="badge-link" href="https://intuit.com" target="_blank" rel="noreferrer">@INTUIT</a></Badge>
-            <Spacer x={.5} />
-            <Badge type="secondary"><a className="badge-link" href="https://acelab.tamu.edu" target="_blank" rel="noreferrer">@ACELAB</a></Badge>
-            <Spacer x={.5} />
-            <Badge type="secondary"><a className="badge-link" href="https://tamudatathon.com" target="_blank" rel="noreferrer">@TAMU_DATATHON</a></Badge>
-          </Row>
-        </Col>
-      </Row>
-      <br />
-      <Divider align="start">My Life</Divider>
-      <Text>
-        <span style={{ fontSize: "1.2em" }}>Hello,</span><br/>
+          </Col>
+          <Col style={{ width: "max-content", marginTop: "1em" }}>
+            <Row>
+              <Badge type="secondary"><a className="badge-link" href="https://intuit.com" target="_blank" rel="noreferrer">@INTUIT</a></Badge>
+              <Spacer x={.5} />
+              <Badge type="secondary"><a className="badge-link" href="https://acelab.tamu.edu" target="_blank" rel="noreferrer">@ACELAB</a></Badge>
+              <Spacer x={.5} />
+              <Badge type="secondary"><a className="badge-link" href="https://tamudatathon.com" target="_blank" rel="noreferrer">@TAMU_DATATHON</a></Badge>
+            </Row>
+          </Col>
+        </Row>
+        <br />
+        <Divider align="start">My Life</Divider>
+        <Text>
+          <span style={{ fontSize: "1.2em" }}>Hello,</span><br />
         My name is <b>Rishabh Tatia</b>. I am a Junior at <a href="https://tamu.edu" className="about-link tamu" target="_blank" rel="noreferrer">Texas A&M University</a> studying Mathematics and Computer Science.
         I started programming as a freshman in high school when I wanted to develop games, automate processes, and create helpful applications for people around me.
       </Text>
@@ -46,39 +45,39 @@ export const Homepage = (props) => {
           <li>I aim to spread the knowledge of programming and computer science as much as poossible.</li>
           <li>My life long goal is to travel and document as many places around the world as I can.</li>
         </ul>
-      <Divider style={{ marginTop: "2.5em" }} align="start">My Hobbies & Interests</Divider>
-      <Row style={{ flexWrap: "wrap" }}>
-        <Tag className="hobby">Racquetball</Tag>
-        <Spacer x={.5} />
-        <Tag className="hobby">Longboarding</Tag>
-        <Spacer x={.5} />
-        <Tag className="hobby">Ping Pong</Tag>
-        <Spacer x={.5} />
-        <Tag className="hobby">Basketball</Tag>
-        <Spacer x={.5} />
-        <Tag className="hobby">Pool</Tag>
-        <Spacer x={.5} />
-        <Tag className="hobby">Video Games</Tag>
-        <Spacer x={.5} />
-        <Tag className="hobby">Board Games</Tag>
-        <Spacer x={.5} />
-        <Tag className="hobby">Speed Cubing</Tag>
-      </Row>
-      <Divider style={{ marginTop: "2.5em" }} align="start">My Links</Divider>
-      <Row style={{ flexWrap: "wrap" }}>
-        <Link className="misc-link" target="_blank" rel="noreferrer" href="https://github.com/tatiaris" block><Github/></Link>
-        <Spacer x={.5} />
-        <Link className="misc-link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/tatiaris/" block><Linkedin/></Link>
-        <Spacer x={.5} />
-        <Link className="misc-link" target="_blank" rel="noreferrer" href="https://www.instagram.com/tat.ris/" block><Instagram/></Link>
-        <Spacer x={.5} />
-        <Link className="misc-link" target="_blank" rel="noreferrer" href="https://twitter.com/Rishabh77022392" block><Twitter/></Link>
-        <Spacer x={.5} />
-        <Link className="misc-link" target="_blank" rel="noreferrer" href="mailto:tatiaris2001@gmail.com?Subject=Hello!" block><Mail/></Link>
-        <Spacer x={.5} />
-        <Link download onClick={e => launchToast('Downloading Resume PDF...')} className="misc-link" href="/docs/RISHABH_TATIA_RESUME_12_20_v1.pdf" block><FileText/><span style={{ marginLeft: "5px" }}>Resume</span></Link>
-      </Row>
-    </div>
+        <Divider style={{ marginTop: "2.5em" }} align="start">My Hobbies & Interests</Divider>
+        <Row style={{ flexWrap: "wrap" }}>
+          <Tag className="hobby">Racquetball</Tag>
+          <Spacer x={.5} />
+          <Tag className="hobby">Longboarding</Tag>
+          <Spacer x={.5} />
+          <Tag className="hobby">Ping Pong</Tag>
+          <Spacer x={.5} />
+          <Tag className="hobby">Basketball</Tag>
+          <Spacer x={.5} />
+          <Tag className="hobby">Pool</Tag>
+          <Spacer x={.5} />
+          <Tag className="hobby">Video Games</Tag>
+          <Spacer x={.5} />
+          <Tag className="hobby">Board Games</Tag>
+          <Spacer x={.5} />
+          <Tag className="hobby">Speed Cubing</Tag>
+        </Row>
+        <Divider style={{ marginTop: "2.5em" }} align="start">My Links</Divider>
+        <Row style={{ flexWrap: "wrap" }}>
+          <Link className="misc-link" target="_blank" rel="noreferrer" href="https://github.com/tatiaris" block><Github /></Link>
+          <Spacer x={.5} />
+          <Link className="misc-link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/tatiaris/" block><Linkedin /></Link>
+          <Spacer x={.5} />
+          <Link className="misc-link" target="_blank" rel="noreferrer" href="https://www.instagram.com/tat.ris/" block><Instagram /></Link>
+          <Spacer x={.5} />
+          <Link className="misc-link" target="_blank" rel="noreferrer" href="https://twitter.com/Rishabh77022392" block><Twitter /></Link>
+          <Spacer x={.5} />
+          <Link className="misc-link" target="_blank" rel="noreferrer" href="mailto:tatiaris2001@gmail.com?Subject=Hello!" block><Mail /></Link>
+          <Spacer x={.5} />
+          <Link download onClick={e => launchToast('Downloading Resume PDF...')} className="misc-link" href="/docs/RISHABH_TATIA_RESUME_12_20_v1.pdf" block><FileText /><span style={{ marginLeft: "5px" }}>Resume</span></Link>
+        </Row>
+      </div>
 
     </>
   );
