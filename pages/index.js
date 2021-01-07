@@ -15,7 +15,7 @@ export default function Home() {
         <meta property="og:url" content="tatiaris.com" />
         <meta property="og:description" content="Rishabh Tatia's personal website. Welcome to my portfolio page, here you can get to know me and my projects." />
         <meta property="og:type" content="profile" />
-        <meta http-equiv="content-language" content="en" />
+        <meta httpEquiv="content-language" content="en" />
       </Head>
       <GeistNavbar theme="light" />
     </Page>

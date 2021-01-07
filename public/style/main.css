@@ -88,3 +88,9 @@ button > .text, .text > a {
 footer > button {
   padding: 0 !important;
 }
+@media (max-width: 650px) {
+  .card {
+    min-width: 75vw !important;
+    max-width: 75vw !important;
+  }
+}
