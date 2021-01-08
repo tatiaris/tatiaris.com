@@ -13,9 +13,15 @@
   scrollbar-width: none;
   font-weight: 400;
 }
-a.badge-link {
+.badge-link {
+  background-color: #00000015 !important;
+}
+.badge-link:hover {
+  background-color: #00000030 !important;
+}
+.badge-link > a {
   line-height: 1.5;
-  color: white !important;
+  color: black !important;
   text-transform: uppercase;
 }
 a.about-link {

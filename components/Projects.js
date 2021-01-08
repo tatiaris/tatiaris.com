@@ -7,7 +7,7 @@ const projectList = [
     "id": 11,
     "name": "Resubae",
     "img": "resubae.png",
-    "description": "Easy to use Resume Builder with custom templates.",
+    "description": "Easy to use Resume Builder with custom templates",
     "features": [
       {
         "name": "",
@@ -35,7 +35,7 @@ const projectList = [
     "id": 10,
     "name": "TAMU Degree Planner",
     "img": "tamudp.png",
-    "description": "Web-app that makes degree planning convenient for aggies.",
+    "description": "Web-app that makes degree planning convenient for aggies",
     "features": [
       {
         "name": "Collective Info",
@@ -59,7 +59,7 @@ const projectList = [
     "id": 9,
     "name": "S&P 500 Analysis",
     "img": "spanalysis.png",
-    "description": "Tool that provides unique stats for S&P 500 stocks.",
+    "description": "Tool that provides unique stats for S&P 500 stocks",
     "features": [
       {
         "name": "Sorting",
@@ -83,7 +83,7 @@ const projectList = [
     "id": 8,
     "name": "WIEAT",
     "img": "wieat.png",
-    "description": "Web-based Interactive Episode Analysis Tool for researchers.",
+    "description": "Web-based Interactive Episode Analysis Tool for researchers",
     "features": [
       {
         "name": "Entry",
@@ -111,7 +111,7 @@ const projectList = [
     id: 7,
     name: "Pathfinder",
     img: "pathfinder.png",
-    description: "Easy to use path finding algorithm visualizer.",
+    description: "Easy to use path finding algorithm visualizer",
     features: [
       {
         name: "Movable Checkpoints",
@@ -139,7 +139,7 @@ const projectList = [
     id: 6,
     name: "Quizhack",
     img: "quizhack.png",
-    description: "A Quizlet scraper that combines and displays popular sets for any topic.",
+    description: "A Quizlet scraper that combines and displays popular sets for any topic",
     features: [
       {
         name: "Advanced Options",
@@ -163,7 +163,7 @@ const projectList = [
     "id": 5,
     "name": "Moosic",
     "img": "moosic.png",
-    "description": "A website to download songs from youtube for free.",
+    "description": "A website to download songs from youtube for free",
     "features": [
       {
         "name": "Multiple songs + Spotify",
@@ -187,7 +187,7 @@ const projectList = [
     "id": 4,
     "name": "Apples-to-Apples",
     "img": "apples-to-apples.png",
-    "description": "An Apples-to-Apples card game simulator for people to play online.",
+    "description": "An Apples-to-Apples card game simulator for people to play online",
     "features": [
       {
         "name": "Custom Cards",
@@ -211,7 +211,7 @@ const projectList = [
     "id": 3,
     "name": "Zotak",
     "img": "zotak.png",
-    "description": "A multi-purpose Discord bot that performs a variety of tasks.",
+    "description": "A multi-purpose Discord bot that performs a variety of tasks",
     "features": [
       {
         "name": "Text Predictor",
@@ -239,7 +239,7 @@ const projectList = [
     "id": 2,
     "name": "Typo",
     "img": "typo.png",
-    "description": "A website that tracks user's typing speed and accuracy over time.",
+    "description": "A website that tracks user's typing speed and accuracy over time",
     "features": [
       {
         "name": "Typos",
@@ -267,7 +267,7 @@ const projectList = [
     "id": 1,
     "name": "Sort Visualizer",
     "img": "sorting.svg",
-    "description": "A web app that visualizes how the insertion sort algorithm functions.",
+    "description": "A web app that visualizes how the insertion sort algorithm functions",
     "features": [
       {
         "name": "Live Sorting",
@@ -291,7 +291,7 @@ const projectList = [
     "id": 0,
     "name": "Sudoku Solver (BETA)",
     "img": "sudoku.png",
-    "description": "A step by step sudoku solving program.",
+    "description": "A step by step sudoku solving program",
     "features": [
       {
         "name": "Step Solving",

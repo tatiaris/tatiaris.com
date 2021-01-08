@@ -20,11 +20,11 @@ export const Homepage = () => {
           </Col>
           <Col style={{ width: "max-content", marginTop: "1em" }}>
             <Row>
-              <Badge type="secondary"><a className="badge-link" href="https://intuit.com" target="_blank" rel="noreferrer">@INTUIT</a></Badge>
+              <Badge type="secondary" className="badge-link"><a href="https://intuit.com" target="_blank" rel="noreferrer">@INTUIT</a></Badge>
               <Spacer x={.5} />
-              <Badge type="secondary"><a className="badge-link" href="https://acelab.tamu.edu" target="_blank" rel="noreferrer">@ACELAB</a></Badge>
+              <Badge type="secondary" className="badge-link"><a href="https://acelab.tamu.edu" target="_blank" rel="noreferrer">@ACELAB</a></Badge>
               <Spacer x={.5} />
-              <Badge type="secondary"><a className="badge-link" href="https://tamudatathon.com" target="_blank" rel="noreferrer">@TAMU_DATATHON</a></Badge>
+              <Badge type="secondary" className="badge-link"><a href="https://tamudatathon.com" target="_blank" rel="noreferrer">@TAMU_DATATHON</a></Badge>
             </Row>
           </Col>
         </Row>
