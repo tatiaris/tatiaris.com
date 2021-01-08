@@ -139,7 +139,7 @@ const projectList = [
     id: 6,
     name: "Quizhack",
     img: "quizhack.png",
-    description: "A Quizlet scraper that combines and displays popular sets for any topic",
+    description: "Quizlet scraper that combines popular sets for any topic",
     features: [
       {
         name: "Advanced Options",
@@ -187,7 +187,7 @@ const projectList = [
     "id": 4,
     "name": "Apples-to-Apples",
     "img": "apples-to-apples.png",
-    "description": "An Apples-to-Apples card game simulator for people to play online",
+    "description": "An Apples-to-Apples simulator for people to play online",
     "features": [
       {
         "name": "Custom Cards",
@@ -239,7 +239,7 @@ const projectList = [
     "id": 2,
     "name": "Typo",
     "img": "typo.png",
-    "description": "A website that tracks user's typing speed and accuracy over time",
+    "description": "A website that tracks user's typing stats over time",
     "features": [
       {
         "name": "Typos",
@@ -267,7 +267,7 @@ const projectList = [
     "id": 1,
     "name": "Sort Visualizer",
     "img": "sorting.svg",
-    "description": "A web app that visualizes how the insertion sort algorithm functions",
+    "description": "Visualizes how different sort algorithms function",
     "features": [
       {
         "name": "Live Sorting",
@@ -289,7 +289,7 @@ const projectList = [
   },
   {
     "id": 0,
-    "name": "Sudoku Solver (BETA)",
+    "name": "Sudoku Solver",
     "img": "sudoku.png",
     "description": "A step by step sudoku solving program",
     "features": [
@@ -378,7 +378,7 @@ const Projects = () => {
               {completedProjectList.map((project, i) =>
                 <Card key={`project-card-${i}`} hoverable className="project-card">
                   <div className="project-card-content">
-                    <Image src={`img/${project.img}`} height="200" width="200" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
+                    <Image src={`img/${project.img}`} height="150" width="150" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
                     <div style={{ padding: "0.75em" }}>
                       <h4>{project.name}</h4>
                       {project.description} <br />
@@ -398,7 +398,7 @@ const Projects = () => {
               {unmaintainedProjectList.map((project, i) =>
                 <Card key={`project-card-${i}`} hoverable className="project-card">
                   <div className="project-card-content">
-                    <Image src={`img/${project.img}`} height="200" width="200" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
+                    <Image src={`img/${project.img}`} height="150" width="150" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
                     <div style={{ padding: "0.75em" }}>
                       <h4>{project.name}</h4>
                       {project.description} <br />

@@ -112,6 +112,8 @@ footer > button {
 }
 .project-card-content > .image {
   padding: 0.75em;
+  min-width: 150px !important;
+  max-width: 150px !important;
 }
 .card-link-container {
   justify-content: center;
