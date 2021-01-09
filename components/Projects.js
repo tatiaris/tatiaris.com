@@ -4,7 +4,7 @@ import { ExternalLink, Code, X, ArrowLeft, ArrowRight } from '@geist-ui/react-ic
 
 const projectList = [
   {
-    "id": 11,
+    "id": 12,
     "name": "Resubae",
     "img": "resubae.png",
     "description": "Easy to use Resume Builder with custom templates",
@@ -32,7 +32,7 @@ const projectList = [
     status: "ongoing"
   },
   {
-    "id": 10,
+    "id": 11,
     "name": "TAMU Degree Planner",
     "img": "tamudp.png",
     "description": "Web-app that makes degree planning convenient for aggies",
@@ -56,7 +56,7 @@ const projectList = [
     status: "ongoing"
   },
   {
-    "id": 9,
+    "id": 10,
     "name": "S&P 500 Analysis",
     "img": "spanalysis.png",
     "description": "Tool that provides unique stats for S&P 500 stocks",
@@ -80,7 +80,7 @@ const projectList = [
     status: "completed"
   },
   {
-    "id": 8,
+    "id": 9,
     "name": "WIEAT",
     "img": "wieat.png",
     "description": "Web-based Interactive Episode Analysis Tool for researchers",
@@ -106,6 +106,34 @@ const projectList = [
     "demo_link": "https://wieat.vercel.app",
     "github_link": "https://github.com/tatiaris/wieat",
     status: "ongoing"
+  },
+  {
+    id: 8,
+    name: "Game of Life",
+    img: "game_of_life.png",
+    description: "John Conway's Game of Life, the zero player game",
+    features: [
+      {
+        name: "Variable Speed",
+        description: "Users can adjust the speed of game's progress."
+      },
+      {
+        name: "Several Controls",
+        description: "Users can control and choose whether to play, pause, single step, or reset the game."
+      },
+      {
+        name: "Info Section",
+        description: "Players new to the game can learn the rules in the information section."
+      },
+      {
+        name: "Intuitive UI",
+        description: "Easy to use minimal interface for users."
+      }
+    ],
+    tools: ["React", "JSX", "HTML", "CSS"],
+    demo_link: "/p/game_of_life",
+    github_link: "https://github.com/tatiaris/tatiaris.com/tree/master/pages/p/game_of_life.js",
+    status: "completed"
   },
   {
     id: 7,
@@ -358,7 +386,7 @@ const Projects = () => {
               {currentProjectList.map((project, i) =>
                 <Card key={`project-card-${i}`} hoverable className="project-card">
                   <div className="project-card-content">
-                    <Image src={`img/${project.img}`} height="200" width="200" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
+                    <Image src={`/img/${project.img}`} height="200" width="200" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
                     <div style={{ padding: "0.75em" }}>
                       <h4>{project.name}</h4>
                       {project.description} <br />
@@ -378,7 +406,7 @@ const Projects = () => {
               {completedProjectList.map((project, i) =>
                 <Card key={`project-card-${i}`} hoverable className="project-card">
                   <div className="project-card-content">
-                    <Image src={`img/${project.img}`} height="150" width="150" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
+                    <Image src={`/img/${project.img}`} height="150" width="150" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
                     <div style={{ padding: "0.75em" }}>
                       <h4>{project.name}</h4>
                       {project.description} <br />
@@ -398,7 +426,7 @@ const Projects = () => {
               {unmaintainedProjectList.map((project, i) =>
                 <Card key={`project-card-${i}`} hoverable className="project-card">
                   <div className="project-card-content">
-                    <Image src={`img/${project.img}`} height="150" width="150" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
+                    <Image src={`/img/${project.img}`} height="150" width="150" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
                     <div style={{ padding: "0.75em" }}>
                       <h4>{project.name}</h4>
                       {project.description} <br />
@@ -420,7 +448,7 @@ const Projects = () => {
           <Modal.Content>
             <Row style={{ flexWrap: "wrap" }}>
               <Col className="modal-section">
-                <Image src={`img/${chosenProject.img}`} height="250" width="250" style={{ objectFit: 'cover' }} alt={`chosen-project-img`} />
+                <Image src={`/img/${chosenProject.img}`} height="250" width="250" style={{ objectFit: 'cover' }} alt={`chosen-project-img`} />
               </Col>
               <Col className="modal-section">
                 <ul>

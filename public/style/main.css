@@ -41,6 +41,10 @@ a.about-link {
   background-color: rgba(204, 0, 255, 0.15);
   border-radius: 2px;
 }
+.bg-yellow:hover {
+  background-color: rgba(255, 255, 0, 0.15);
+  border-radius: 2px;
+}
 .hobby {
 	line-height: 1.5 !important;
 	height: auto !important;
@@ -122,6 +126,30 @@ footer > button {
 .tooltip-content > .inner {
   padding: 0 1em !important;
 }
+a.breadcrums-item:hover {
+  color: black !important;
+}
+.control-btn {
+  margin-top: 1.5em;
+  display: flex !important;
+  align-items: center !important;
+}
+.board-row {
+  display: flex;
+}
+.cell {
+  width: 25px;
+  height: 25px;
+  border: 0;
+  margin: 1px;
+}
+.alive {
+  background-color: black;
+}
+.cell:hover {
+  background-color: black;
+}
+
 @media (max-width: 520px) {
   .project-card-content > .image {
     display: none;
