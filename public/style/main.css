@@ -303,8 +303,8 @@ a.breadcrums-item:hover {
   border: 1px solid white;
 }
 .bg-img-default {
-  top: calc(var(--toggle-img-width)/-5);
-  right: calc(var(--toggle-img-width)/-5);
+  top: calc(var(--toggle-img-width)/-5.5);
+  right: calc(var(--toggle-img-width)/-4.4);
   transform: rotate(105deg);
 }
 .bg-img-light {
