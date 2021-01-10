@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head'
-import { Page } from '@geist-ui/react'
+import { Page, Text } from '@geist-ui/react'
 import GeistNavbar from "../components/GeistNavbar"
 
 export default function Home() {
@@ -38,6 +38,8 @@ export default function Home() {
           <meta httpEquiv="content-language" content="en" />
         </Head>
         <GeistNavbar theme={theme} />
+        <br/>
+        <Text small style={{ float: "right" }} type="secondary" className={`copyright-statement ${theme}`}>Copyright © 2020 - 2021 Rishabh Tatia</Text>
       </Page>
     </>
   )

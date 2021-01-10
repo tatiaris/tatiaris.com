@@ -26,6 +26,9 @@ ul, ol {
   background-color: black;
   color: white;
 }
+.copyright-statement.dark {
+  color: #bbb;
+}
 .nav-tabs-dark > .hide-divider > .tab.active {
   color: white;
 }
