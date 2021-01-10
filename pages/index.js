@@ -6,7 +6,7 @@ import GeistNavbar from "../components/GeistNavbar"
 export default function Home() {
   const [theme, setTheme] = useState('default');
   const toggleTheme = () => {
-    (theme == 'light') ? setTheme('dark') : setTheme('light');
+    (theme == 'dark') ? setTheme('light') : setTheme('dark');
   }
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function Home() {
   }, [theme])
 
   useEffect(() => {
-    setTheme(localStorage.getItem("theme"))
+    if (localStorage.getItem("theme") != "") setTheme(localStorage.getItem("theme"))
   }, [])
 
   return (
