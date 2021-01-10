@@ -17,7 +17,8 @@ export default function Home() {
   }, [theme])
 
   useEffect(() => {
-    if (localStorage.getItem("theme") != "") setTheme(localStorage.getItem("theme"))
+    if (typeof localStorage.getItem("theme") != "undefined" &&
+      (localStorage.getItem("theme") == "light" || localStorage.getItem("theme") == "dark")) setTheme(localStorage.getItem("theme"))
   }, [])
 
   return (

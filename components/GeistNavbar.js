@@ -11,8 +11,8 @@ export const GeistNavbar = (props) => {
   const Projects = lazy(() => import('./Projects'));
   return (
     <Tabs initialValue="home" hideDivider className={`nav-tabs-${props.theme}`}>
-      <Tabs.Item label={<><Home/>HOME</>} value="home"><Homepage {...props} /></Tabs.Item>
-      <Tabs.Item label={<><Monitor/>PROJECTS</>} value="projects">
+      <Tabs.Item label={<><Home />HOME</>} value="home"><Homepage {...props} /></Tabs.Item>
+      <Tabs.Item label={<><Monitor />PROJECTS</>} value="projects">
         <Suspense fallback={<Row style={{ padding: '10px 0' }}><Loading /></Row>}>
           <Projects {...props} />
         </Suspense>
