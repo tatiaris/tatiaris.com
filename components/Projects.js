@@ -4,6 +4,29 @@ import { ExternalLink, Code, X, ArrowLeft, ArrowRight } from '@geist-ui/react-ic
 
 const projectList = [
   {
+    "id": 13,
+    "name": "About You",
+    "img": "about_you.png",
+    "description": "The information every website knows about you.",
+    "features": [
+      {
+        "name": "",
+        "description": "Learn about the data accessible and stored by almost every website you visit."
+      },
+      {
+        "name": "",
+        "description": "Learn about how you can avoid giving away the information."
+      }, {
+        name: "",
+        description: "More features to come"
+      }
+    ],
+    "tools": ["React", "JS", "Geist UI", "HTML"],
+    "demo_link": "/p/about_you",
+    "github_link": "https://github.com/tatiaris/tatiaris.com/tree/master/pages/p/about_you.js",
+    status: "completed"
+  },
+  {
     "id": 12,
     "name": "Resubae",
     "img": "resubae.png",
@@ -386,7 +409,7 @@ const Projects = (props) => {
               {currentProjectList.map((project, i) =>
                 <Card key={`project-card-${i}`} hoverable className={`project-card ${props.theme}`}>
                   <div className="project-card-content">
-                    <Image src={`/img/${project.img}`} height="200" width="200" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
+                    <Image src={`/img/${project.img}`} height="150" width="150" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
                     <div style={{ padding: "0.75em" }}>
                       <h4>{project.name}</h4>
                       {project.description} <br />

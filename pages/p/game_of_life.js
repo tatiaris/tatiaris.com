@@ -102,8 +102,8 @@ const Project = () => {
     return (
       <div key={`row-${i}`} className="board-row">
         { row.map((c, j) => (!grid[i][j])
-          ? <button onClick={e => toggleCellState(i, j)} key={`cell-${i}-${j}`} className="cell"></button>
-          : <button onClick={e => toggleCellState(i, j)} key={`cell-${i}-${j}`} className="cell alive"></button>)}
+          ? <button onClick={e => toggleCellState(i, j)} key={`cell-${i}-${j}`} className="gol-cell"></button>
+          : <button onClick={e => toggleCellState(i, j)} key={`cell-${i}-${j}`} className="gol-cell alive"></button>)}
       </div>
     )
   })
@@ -113,13 +113,13 @@ const Project = () => {
   return (
     <Page id="project-container">
       <Head>
-        <title>Rishabh Tatia | Game of Life</title>
+        <title>Game of Life</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Play John Conway's Game of Life simulator created by Rishabh Tatia using React" />
         <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=5, minimum-scale=1, width=device-width" />
-        <meta property="og:title" content={`Rishabh Tatia | Game of Life`} />
+        <meta property="og:title" content={`Game of Life`} />
         <meta property="og:site_name" content="Rishabh Tatia" />
-        <meta property="og:url" content="tatiaris.com" />
+        <meta property="og:url" content="tatiaris.com/p/game_of_life" />
         <meta property="og:description" content="Play John Conway's Game of Life simulator created by Rishabh Tatia using React" />
         <meta property="og:type" content="profile" />
         <meta httpEquiv="content-language" content="en" />
