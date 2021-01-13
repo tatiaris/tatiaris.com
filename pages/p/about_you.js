@@ -103,6 +103,8 @@ const Project = () => {
         <Table.Column prop="type" label="type" />
         <Table.Column prop="value" label="value" />
       </Table>
+      <br/>
+      <Row justify="center">Created by &nbsp;<a href="/" className="about-link bg-yellow">Rishabh Tatia</a></Row>
     </Page>
   )
 }

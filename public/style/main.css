@@ -342,6 +342,26 @@ a.breadcrums-item:hover {
 .dot {
   background-color: black !important;
 }
+/* INCOME TRACKER START */
+.input-container > span {
+  width: 200px !important;
+}
+.mini-inp-container > span {
+  width: 138px !important;
+}
+.mini-inp-container > div {
+  width: 100px !important;
+}
+.input-container > span.right {
+  width: 50px !important;
+}
+.with-label {
+  margin-top: 10px;
+}
+a.canvasjs-chart-credit {
+  display: none !important;
+}
+/* INCOME TRACKER END */
 @media (max-width: 1300px) {
   .mode-toggle-img {
     width: 160px;

@@ -4,6 +4,29 @@ import { ExternalLink, Code, X, ArrowLeft, ArrowRight } from '@geist-ui/react-ic
 
 const projectList = [
   {
+    "id": 14,
+    "name": "Wealth Tracker",
+    "img": "wealth_tracker.png",
+    "description": "Estimate your wealth over the years.",
+    "features": [
+      {
+        "name": "",
+        "description": "Calculate your wealth based on investments over time."
+      },
+      {
+        "name": "",
+        "description": "Manipulate parameters such as initial deposit, deposit rate/frequency, and growth rate/frequency to see how they impact your wealth over time."
+      }, {
+        "name": "",
+        "description": "Featurefull chart to visualize investment growth over time."
+      }
+    ],
+    "tools": ["React", "CanvasJS", "Geist UI", "JS", "HTML", "CSS"],
+    "demo_link": "/p/wealth_tracker",
+    "github_link": "https://github.com/tatiaris/tatiaris.com/tree/master/pages/p/about_you.js",
+    status: "completed"
+  },
+  {
     "id": 13,
     "name": "About You",
     "img": "about_you.png",
@@ -17,8 +40,8 @@ const projectList = [
         "name": "",
         "description": "Learn about how you can avoid giving away the information."
       }, {
-        name: "",
-        description: "More features to come"
+        "name": "",
+        "description": "More features to come"
       }
     ],
     "tools": ["React", "JS", "Geist UI", "HTML"],
