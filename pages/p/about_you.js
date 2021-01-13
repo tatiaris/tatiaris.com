@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head'
-import { Page, Breadcrumbs, Table, Text } from '@geist-ui/react'
+import { Page, Breadcrumbs, Table, Text, Row } from '@geist-ui/react'
 
 const Project = () => {
   const [userIpData, setUserIpData] = useState({
