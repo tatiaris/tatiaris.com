@@ -362,6 +362,25 @@ a.canvasjs-chart-credit {
   display: none !important;
 }
 /* INCOME TRACKER END */
+/* TUTORING PAGE START */
+.color-link {
+  padding: 2px;
+  border-radius: 2px;
+  color: black;
+}
+.red-bg {
+  background-color: rgb(255, 0, 0, 0.2);
+}
+.blue-bg {
+  background-color: rgb(0, 0, 255, 0.2);
+}
+.green-bg {
+  background-color: rgb(0, 255, 0, 0.2);
+}
+.maroon-bg {
+  background-color: rgba(85, 0, 0, 0.2);
+}
+/* TUTORING PAGE END */
 @media (max-width: 1300px) {
   .mode-toggle-img {
     width: 160px;
