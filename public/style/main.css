@@ -369,16 +369,34 @@ a.canvasjs-chart-credit {
   color: black;
 }
 .red-bg {
+  border: 2px solid rgb(255, 0, 0, 0.2);
+}
+.red-bg:hover {
   background-color: rgb(255, 0, 0, 0.2);
 }
 .blue-bg {
+  border: 2px solid rgb(0, 0, 255, 0.2);
+}
+.blue-bg:hover {
   background-color: rgb(0, 0, 255, 0.2);
 }
 .green-bg {
+  border: 2px solid rgb(0, 255, 0, 0.2);
+}
+.green-bg:hover {
   background-color: rgb(0, 255, 0, 0.2);
 }
 .maroon-bg {
+  border: 2px solid rgba(85, 0, 0, 0.2);
+}
+.maroon-bg:hover {
   background-color: rgba(85, 0, 0, 0.2);
+}
+.zoom-bg {
+  border: 2px solid #0089fa38;
+}
+.zoom-bg:hover {
+  background-color: #0089fa38;
 }
 /* TUTORING PAGE END */
 @media (max-width: 1300px) {
