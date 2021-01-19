@@ -169,9 +169,9 @@ a.about-link.dark {
   font-size: 1.2rem;
 }
 .modal-section-img {
-	width: 27rem !important;
-	max-width: 80vw !important;
-	margin-right: 1rem;
+  width: 27rem !important;
+  max-width: 80vw !important;
+  margin-right: 1rem;
 }
 .modal-section {
   width: 28rem !important;
@@ -337,7 +337,7 @@ a.breadcrums-item:hover {
   background-color: black;
 }
 .slider.jsx-993346371 {
-	background-color: #eee !important;
+  background-color: #eee !important;
 }
 .dot {
   background-color: black !important;
@@ -412,6 +412,8 @@ a.canvasjs-chart-credit {
   margin: 1rem 0 !important;
   display: flex;
   align-items: center;
+  padding: 0 1em !important;
+  max-width: 100%;
 }
 .class-details {
   width: 550px;
