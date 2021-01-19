@@ -398,6 +398,16 @@ a.canvasjs-chart-credit {
 .zoom-bg:hover {
   background-color: #0089fa38;
 }
+.class-info-container {
+  flex-wrap: wrap;
+}
+.class-image-container {
+  margin: 1rem 0 !important;
+}
+.order-one {
+  order: 1;
+}
+@media (max-width: 1000px) {.order-one { order: 0; }}
 /* TUTORING PAGE END */
 @media (max-width: 1300px) {
   .mode-toggle-img {

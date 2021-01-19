@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { Page, Breadcrumbs, Text, Image, Divider } from '@geist-ui/react';
+import { Page, Breadcrumbs, Text, Image, Divider, Row, Col } from '@geist-ui/react';
 
 const Tutoring = () => {
   return (
@@ -69,18 +69,47 @@ const Tutoring = () => {
         to conduct <b>one-on-one</b> classes at predetermined times of the week based on availability.
       </Text>
       <Divider y={5}>CLASSES</Divider>
-      <Text h4>
-        Intro to Programming | <span style={{ color: 'hotpink' }}>$30/Hr</span>
-      </Text>
-      <Text h4>
-        AP Computer Science Prep | <span style={{ color: 'hotpink' }}>$30/Hr</span>
-      </Text>
-      <Text h4>
-        Web Development | <span style={{ color: 'hotpink' }}>$40/Hr</span>
-      </Text>
+      <Row className="class-info-container" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
+        <div className="class-image-container">
+          <Image width={400} height={200} src="/tutoring/intro_programmer.svg" alt="intro_programmer" />
+        </div>
+        <div style={{ width: '550px' }}>
+          <Text h4>
+            Intro to Programming | <span style={{ color: 'hotpink' }}>$30/Hr</span>
+          </Text>
+          <Text>Learn what programming is, how it is used in our world today, and the basics of any programming language of your choice.</Text>
+        </div>
+      </Row>
+      <Divider />
+      <Row className="class-info-container" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
+        <div className="class-image-container order-one">
+          <Image width={400} height={200} src="/tutoring/intro_programmer.svg" alt="intro_programmer" />
+        </div>
+        <div style={{ width: '550px' }}>
+          <Text h4>
+            AP Computer Science Prep | <span style={{ color: 'hotpink' }}>$30/Hr</span>
+          </Text>
+          <Text>Learn what programming is, how it is used in our world today, and the basics of any programming language of your choice.</Text>
+        </div>
+      </Row>
+      <Divider />
+      <Row className="class-info-container" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
+        <div className="class-image-container">
+          <Image width={400} height={200} src="/tutoring/intro_programmer.svg" alt="intro_programmer" />
+        </div>
+        <div style={{ width: '550px' }}>
+          <Text h4>
+            Web Development | <span style={{ color: 'hotpink' }}>$40/Hr</span>
+          </Text>
+          <Text>Learn what programming is, how it is used in our world today, and the basics of any programming language of your choice.</Text>
+        </div>
+      </Row>
+
+      <Divider />
       <Text h4>
         Problem Solving | <span style={{ color: 'hotpink' }}>$40/Hr</span>
       </Text>
+      <Divider y={5} />
       <Text small style={{ float: 'right' }} type="secondary" className={`copyright-statement light`}>
         Copyright © 2020 - 2021 Rishabh Tatia
       </Text>
