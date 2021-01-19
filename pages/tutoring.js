@@ -41,8 +41,8 @@ const Tutoring = () => {
       <Text h4>WHY should you learn it?</Text>
       <Text style={{ marginTop: 0 }}>
         Good computer scientists are in <b>high demand</b> today, and are expected to stay so for a very long time. Even if you do not choose to work a computer science job, programming is an{' '}
-        <b>extremely beneficial skill</b> which can be applied to <b>almost any field</b> and your personal life as well. If neither of the above statements interest you, you can still <b>have fun</b>{' '}
-        solving challenging and interesting{' '}
+        <b>extremely beneficial skill</b> which can be applied to <b>almost any field</b> and your personal life as well. If neither of the above statements interest you, you can simply{' '}
+        <b>have fun</b> solving challenging and interesting{' '}
         <a href="https://open.kattis.com/" className="color-link red-bg" target="_blank" rel="noreferrer">
           logic puzzles
         </a>{' '}
@@ -73,42 +73,83 @@ const Tutoring = () => {
         <div className="class-image-container">
           <Image width={400} height={200} src="/tutoring/intro_programmer.svg" alt="intro_programmer" />
         </div>
-        <div style={{ width: '550px' }}>
+        <div className="class-details">
           <Text h4>
             Intro to Programming | <span style={{ color: 'hotpink' }}>$30/Hr</span>
           </Text>
-          <Text>Learn what programming is, how it is used in our world today, and the basics of any programming language of your choice.</Text>
+          <Text>
+            Learn what programming is, how it is used in our world today, and the basics of any{' '}
+            <a href="https://www.geeksforgeeks.org/difference-between-high-level-and-low-level-languages/" className="color-link green-bg" target="_blank" rel="noreferrer">
+              high-level programming language
+            </a>{' '}
+            of your choice.
+          </Text>
+          <span className="goals">Goals:</span>
+          <ul>
+            <li>
+              Understand <b>fundamentals of programming</b> such as variables, conditions, loops, and methods.
+            </li>
+            <li>Understand important principles of software development.</li>
+            <li>
+              Have the ability to use learned knowledge to <b>solve logic problems</b>.
+            </li>
+          </ul>
         </div>
       </Row>
       <Divider />
       <Row className="class-info-container" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
         <div className="class-image-container order-one">
-          <Image width={400} height={200} src="/tutoring/intro_programmer.svg" alt="intro_programmer" />
+          <Image width={400} height={200} src="/tutoring/ap_cs_prep.svg" alt="ap_cs_prep" />
         </div>
-        <div style={{ width: '550px' }}>
+        <div className="class-details">
           <Text h4>
             AP Computer Science Prep | <span style={{ color: 'hotpink' }}>$30/Hr</span>
           </Text>
-          <Text>Learn what programming is, how it is used in our world today, and the basics of any programming language of your choice.</Text>
+          <Text>
+            Master the content that appears on the <b>AP Computer Science A</b> exam and get a 5 on it!
+          </Text>
+          <span className="goals">Goals:</span>
+          <ul>
+            <li>
+              Learn how{' '}
+              <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" className="color-link orange-bg" target="_blank" rel="noreferrer">
+                Java
+              </a>{' '}
+              works along with the concept and principles of <b>object oriented programming</b>.
+            </li>
+            <li>
+              Learn how to <b>debug</b>, fix errors, document code, and <b>explain</b> how a program works.
+            </li>
+            <li>
+              Have the ability to design programs, <b>develop algorithms</b>, and implement them.
+            </li>
+          </ul>
         </div>
       </Row>
       <Divider />
       <Row className="class-info-container" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
         <div className="class-image-container">
-          <Image width={400} height={200} src="/tutoring/intro_programmer.svg" alt="intro_programmer" />
+          <Image width={400} height={200} src="/tutoring/web_dev_1.svg" alt="intro_programmer" />
         </div>
         <div style={{ width: '550px' }}>
           <Text h4>
             Web Development | <span style={{ color: 'hotpink' }}>$40/Hr</span>
           </Text>
-          <Text>Learn what programming is, how it is used in our world today, and the basics of any programming language of your choice.</Text>
+          <Text>Learn how to design, build, and publish beautiful, responsive websites using HTML, CSS, and Javascript.</Text>
         </div>
       </Row>
-
       <Divider />
-      <Text h4>
-        Problem Solving | <span style={{ color: 'hotpink' }}>$40/Hr</span>
-      </Text>
+      <Row className="class-info-container" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
+        <div className="class-image-container order-one">
+          <Image width={400} height={200} src="/tutoring/problem_solving_2.svg" alt="problem_solving_2" />
+        </div>
+        <div style={{ width: '550px' }}>
+          <Text h4>
+            Problem Solving | <span style={{ color: 'hotpink' }}>$40/Hr</span>
+          </Text>
+          <Text></Text>
+        </div>
+      </Row>
       <Divider y={5} />
       <Text small style={{ float: 'right' }} type="secondary" className={`copyright-statement light`}>
         Copyright © 2020 - 2021 Rishabh Tatia

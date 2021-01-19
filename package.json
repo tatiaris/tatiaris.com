@@ -15,8 +15,6 @@
     "next": "9.4.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "@types/node": "^14.0.13",
-    "@types/react": "^16.9.38",
     "@typescript-eslint/eslint-plugin": "^4.11.0",
     "@typescript-eslint/parser": "^4.11.0",
     "babel-plugin-styled-components": "^1.12.0",
@@ -29,8 +27,7 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
-    "prettier": "^2.2.1",
-    "typescript": "^3.9.5"
+    "prettier": "^2.2.1"
   },
   "husky": {
     "hooks": {
@@ -41,5 +38,10 @@
     "./**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.21",
+    "@types/react": "^16.14.2",
+    "typescript": "^3.9.7"
   }
 }
