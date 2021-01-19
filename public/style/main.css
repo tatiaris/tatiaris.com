@@ -100,6 +100,13 @@ a.about-link.dark {
 .intuit.dark:hover {
   background-color: #0077c5;
 }
+.tutoring:hover {
+  background-color: #ffcde6;
+  border-radius: 2px;
+}
+.tutoring.dark:hover {
+  background-color: #ff0080;
+}
 .bg-yellow:hover {
   background-color: rgba(255, 255, 0, 0.15);
   border-radius: 2px;
@@ -409,14 +416,18 @@ a.canvasjs-chart-credit {
   flex-wrap: wrap;
 }
 .class-image-container {
-  margin: 1rem 0 !important;
+  padding: 1rem !important;
   display: flex;
   align-items: center;
-  padding: 0 1em !important;
-  max-width: 100%;
+  max-width: 475px;
+  min-width: 50%;
+}
+.class-image-container > .image > img {
+  min-width: 300px;
 }
 .class-details {
-  width: 550px;
+  min-width: 50%;
+  max-width: 475px !important;
 }
 .class-details > .goals {
   color: #6c63ff;
