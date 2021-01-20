@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Copyright from '../components/Copyright';
 import { Page, Breadcrumbs, Text, Image, Divider, Row, Tooltip, Link, useToasts } from '@geist-ui/react';
 import { Github, FileText, Linkedin, Mail, Globe } from '@geist-ui/react-icons';
 
@@ -80,7 +81,7 @@ const Tutoring = () => {
         </div>
         <div className="class-details">
           <Text h4>
-            Intro to Programming | <span style={{ color: 'hotpink' }}>$30/Hr</span>
+            Intro to Programming | <span style={{ color: 'hotpink' }}>$30/Hr</span> | <span style={{ color: 'darkorange' }}>Easy</span>
           </Text>
           <Text>
             Learn about programming, how it is used today, and the basics of any{' '}
@@ -108,7 +109,7 @@ const Tutoring = () => {
         </div>
         <div className="class-details">
           <Text h4>
-            AP Computer Science Prep | <span style={{ color: 'hotpink' }}>$30/Hr</span>
+            AP Computer Science Prep | <span style={{ color: 'hotpink' }}>$30/Hr</span> | <span style={{ color: 'darkorange' }}>Medium</span>
           </Text>
           <Text>
             Master the content that appears on the <b>AP Computer Science A</b> exam and get a 5 on it!
@@ -138,7 +139,7 @@ const Tutoring = () => {
         </div>
         <div className="class-details">
           <Text h4>
-            Web Development | <span style={{ color: 'hotpink' }}>$40/Hr</span>
+            Web Development | <span style={{ color: 'hotpink' }}>$40/Hr</span> | <span style={{ color: 'darkorange' }}>Medium</span>
           </Text>
           <Text>
             Design, build, and publish beautiful, <b>responsive websites</b> using HTML, CSS, and Javascript.
@@ -164,7 +165,7 @@ const Tutoring = () => {
         </div>
         <div className="class-details">
           <Text h4>
-            Problem Solving | <span style={{ color: 'hotpink' }}>$40/Hr</span>
+            Problem Solving | <span style={{ color: 'hotpink' }}>$40/Hr</span> | <span style={{ color: 'darkorange' }}>Hard</span>
           </Text>
           <Text>
             Use advanced <b>programming logic</b> to solve complex and challenging coding problems.
@@ -183,7 +184,7 @@ const Tutoring = () => {
           </ul>
         </div>
       </Row>
-      <Divider align="start" y={5}>
+      <Divider align="start" y={5} style={{ marginBottom: 'calc(15.25pt + 1px * 0)' }}>
         GET IN TOUCH
       </Divider>
       <Row style={{ flexWrap: 'wrap' }} className="ligt">
@@ -208,10 +209,7 @@ const Tutoring = () => {
           <span style={{ marginLeft: '5px' }}>Resume</span>
         </Link>
       </Row>
-      <Divider y={5}></Divider>
-      <Text small style={{ float: 'right' }} type="secondary" className={`copyright-statement light`}>
-        Copyright © 2020 - 2021 Rishabh Tatia
-      </Text>
+      <Copyright theme="light" />
     </Page>
   );
 };

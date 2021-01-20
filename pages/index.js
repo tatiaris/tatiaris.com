@@ -1,29 +1,31 @@
 import { useState, useEffect } from 'react';
-import Head from 'next/head'
-import { Page, Text } from '@geist-ui/react'
-import GeistNavbar from "../components/GeistNavbar"
+import Head from 'next/head';
+import { Button, Page, Text, Image } from '@geist-ui/react';
+import GeistNavbar from '../components/GeistNavbar';
+import Copyright from '../components/Copyright';
 
 export default function Home() {
   const [theme, setTheme] = useState('default');
   const toggleTheme = () => {
-    (theme == 'dark') ? setTheme('light') : setTheme('dark');
-  }
+    theme == 'dark' ? setTheme('light') : setTheme('dark');
+  };
 
   useEffect(() => {
     if (theme != 'default') {
-      document.body.className = `body-${theme}`
-      localStorage.setItem("theme", theme);
+      document.body.className = `body-${theme}`;
+      localStorage.setItem('theme', theme);
     }
-  }, [theme])
+  }, [theme]);
 
   useEffect(() => {
-    if (typeof localStorage.getItem("theme") != "undefined" &&
-      (localStorage.getItem("theme") == "light" || localStorage.getItem("theme") == "dark")) setTheme(localStorage.getItem("theme"))
-  }, [])
+    if (typeof localStorage.getItem('theme') != 'undefined' && (localStorage.getItem('theme') == 'light' || localStorage.getItem('theme') == 'dark')) setTheme(localStorage.getItem('theme'));
+  }, []);
 
   return (
     <>
-      <img onClick={toggleTheme} className={`mode-toggle-img bg-img-${theme}`} src="/img/bg-top-right.png" />
+      <button onClick={toggleTheme} className={`mode-toggle-img`}>
+        <Image className={`bg-img-${theme}`} src="/img/bg-top-right.png" alt="theme-toggle-img" />
+      </button>
       <Page>
         <Head>
           <title>Rishabh Tatia | Portfolio</title>
@@ -38,9 +40,8 @@ export default function Home() {
           <meta httpEquiv="content-language" content="en" />
         </Head>
         <GeistNavbar theme={theme} />
-        <br/>
-        <Text small style={{ float: "right" }} type="secondary" className={`copyright-statement ${theme}`}>Copyright © 2020 - 2021 Rishabh Tatia</Text>
+        <Copyright theme={theme} />
       </Page>
     </>
-  )
+  );
 }

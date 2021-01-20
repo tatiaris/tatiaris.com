@@ -151,6 +151,10 @@ a.about-link.dark {
 .collapse.dark > .view > .title {
   color: white !important;
 }
+.collapse-group > .last-collapse {
+  border-bottom: 0px !important;
+  padding-bottom: 0px !important;
+}
 .title > svg {
   color: inherit !important;
 }
@@ -304,11 +308,13 @@ a.breadcrums-item:hover {
   background-color: black;
 }
 .mode-toggle-img {
-  position: absolute;
+  position: absolute !important;
   z-index: 5;
-  width: 250px;
-  height: 250px;
-  --toggle-img-width: 250px;
+  padding: 0 !important;
+  border: 0 !important;
+  background-color: transparent !important;
+  top: calc(var(--toggle-img-width)/-5.5);
+  right: calc(var(--toggle-img-width)/-4.4);
 }
 .mode-toggle-img:hover {
   cursor: pointer;
@@ -323,18 +329,12 @@ a.breadcrums-item:hover {
   border: 1px solid white;
 }
 .bg-img-default {
-  top: calc(var(--toggle-img-width)/-5.5);
-  right: calc(var(--toggle-img-width)/-4.4);
   transform: rotate(105deg);
 }
 .bg-img-light {
-  top: calc(var(--toggle-img-width)/-5.5);
-  right: calc(var(--toggle-img-width)/-4.4);
   transform: rotate(105deg);
 }
 .bg-img-dark {
-  top: calc(var(--toggle-img-width)/-5);
-  right: calc(var(--toggle-img-width)/-5);
   transform: rotate(-70deg);
 }
 .main-page-light {
@@ -438,10 +438,18 @@ a.canvasjs-chart-credit {
 }
 @media (max-width: 1000px) {.order-one { order: 0; }}
 /* TUTORING PAGE END */
+@media (min-width: 1300px) {
+  .mode-toggle-img {
+    width: 250px !important;
+    height: 250px !important;
+    background-color: transparent !important;
+    --toggle-img-width: 250px;
+  }
+}
 @media (max-width: 1300px) {
   .mode-toggle-img {
-    width: 160px;
-    height: 160px;
+    width: 160px !important;
+    height: 160px !important;
     --toggle-img-width: 150px;
   }
 }
@@ -456,15 +464,15 @@ a.canvasjs-chart-credit {
     justify-content: center;
   }
   .mode-toggle-img {
-    width: 140px;
-    height: 140px;
-    --toggle-img-width: 140px;
+    width: 140px !important;
+    height: 140px !important;
+    --toggle-img-width: 140px !important;
   }
 }
 @media (max-width: 300px) {
   .mode-toggle-img {
-    width: 0px;
-    height: 0px;
+    width: 0px !important;
+    height: 0px !important;
     --toggle-img-width: 0px;
   }
 }
