@@ -369,6 +369,14 @@ a.canvasjs-chart-credit {
   display: none !important;
 }
 /* INCOME TRACKER END */
+/* INCOME TRACKER START */
+.wiki-input > span {
+  width: 120px !important;
+}
+.wiki-input > .input-wrapper {
+  width: 300px !important;
+}
+/* INCOME TRACKER END */
 /* TUTORING PAGE START */
 .color-link {
   padding: 2px;
@@ -467,6 +475,9 @@ a.canvasjs-chart-credit {
     width: 140px !important;
     height: 140px !important;
     --toggle-img-width: 140px !important;
+  }
+  .wiki-input > .input-wrapper {
+    width: 200px !important;
   }
 }
 @media (max-width: 300px) {
