@@ -446,6 +446,11 @@ a.canvasjs-chart-credit {
 }
 @media (max-width: 1000px) {.order-one { order: 0; }}
 /* TUTORING PAGE END */
+/* Compass */
+.compass-input > div {
+  width: 500px;
+}
+/* Compass */
 @media (min-width: 1300px) {
   .mode-toggle-img {
     width: 250px !important;
