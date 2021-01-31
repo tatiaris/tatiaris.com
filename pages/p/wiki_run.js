@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Copyright from '../../components/Copyright';
-import { Page, Breadcrumbs, Input, Text, Row } from '@geist-ui/react';
+import { Page, Breadcrumbs, Input, Text, Row, Button, Spacer } from '@geist-ui/react';
+import { ArrowRight } from '@geist-ui/react-icons';
 
 const Project = () => {
+  const [wikiFrom, setWikiFrom] = useState('https://en.wikipedia.org/wiki/Apple');
+  const [wikiTo, setWikiTo] = useState('https://en.wikipedia.org/wiki/Dinosaur');
+
+  const findPath = (fromLink, toLink) => {
+    console.log('finding path from', fromLink, 'to', toLink);
+  };
+
+  const startFindingPath = () => findPath(wikiFrom, wikiTo);
+
   return (
     <Page id="project-container">
       <Head>
@@ -21,18 +31,23 @@ const Project = () => {
       <Breadcrumbs>
         <Breadcrumbs.Item href="/">tatiaris</Breadcrumbs.Item>
         <Breadcrumbs.Item>projects</Breadcrumbs.Item>
-        <Breadcrumbs.Item>about_you</Breadcrumbs.Item>
+        <Breadcrumbs.Item>wiki_run</Breadcrumbs.Item>
       </Breadcrumbs>
       <br />
       <Text h3>WIKI RUN</Text>
       <Row justify="space-between" style={{ flexWrap: 'wrap' }}>
         <div>
-          <Input label="From Wikipedia" className="wiki-input" placeholder="https://en.wikipedia.org/wiki/Apple" />
+          <Input onChange={(e) => setWikiFrom(e.target.value)} label="From Wikipedia" initialValue={wikiFrom} className="wiki-input" placeholder="https://en.wikipedia.org/wiki/Apple" />
         </div>
         <div>
-          <Input label="To Wikipedia" className="wiki-input" placeholder="https://en.wikipedia.org/wiki/Dinosaur" />
+          <Input onChange={(e) => setWikiTo(e.target.value)} label="To Wikipedia" initialValue={wikiTo} className="wiki-input" placeholder="https://en.wikipedia.org/wiki/Dinosaur" />
         </div>
       </Row>
+      <Spacer y={1} />
+      <Button onClick={startFindingPath} auto>
+        <span style={{ marginRight: '1rem' }}>Find Path </span>
+        <ArrowRight size="25" />
+      </Button>
       <Copyright theme="light" />
     </Page>
   );
