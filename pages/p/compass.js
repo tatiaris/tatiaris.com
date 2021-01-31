@@ -37,7 +37,7 @@ const Project = () => {
   const handleOrientation = (event) => {
     let newAlpha = event.alpha;
     if (Math.abs(orientation.alpha - newAlpha) > Math.abs(orientation.alpha + 360 - newAlpha)) {
-      newAlpha = orientation.alpha + (360 - newAlpha);
+      newAlpha = orientation.alpha + (orientation.alpha + 360 - newAlpha);
     }
     setOrientation({
       absolute: event.absolute,
@@ -67,7 +67,6 @@ const Project = () => {
 
   const allowGyroData = () => {
     window.addEventListener('deviceorientation', handleOrientation, true);
-    console.log(navigator.userAgent);
     const isIOS = navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/);
     if (isIOS) {
       DeviceOrientationEvent.requestPermission()
@@ -106,7 +105,6 @@ const Project = () => {
       </Breadcrumbs>
       <br />
       <Text h3>{pageDetails.title.toUpperCase()}</Text>
-      <Text>{JSON.stringify(orientation)}</Text>
       <Button onClick={allowGyroData}>Allow gyro data</Button>
       <Spacer y={0.5} />
       <Input className="compass-input" label="Latitude" placeholder="0" value={coords.latitude} />
