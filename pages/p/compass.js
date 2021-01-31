@@ -33,6 +33,25 @@ const Project = () => {
     });
   };
 
+  const allowGyroData = () => {
+    window.addEventListener('deviceorientation', handleOrientation, true);
+    console.log(navigator.userAgent);
+    const isIOS = navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/);
+    if (isIOS) {
+      DeviceOrientationEvent.requestPermission()
+        .then((response) => {
+          if (response === 'granted') {
+            window.addEventListener('deviceorientation', handleOrientation, true);
+          } else {
+            alert('has to be allowed!');
+          }
+        })
+        .catch(() => alert('not supported'));
+    } else {
+      window.addEventListener('deviceorientationabsolute', handleOrientation, true);
+    }
+  };
+
   useEffect(() => {
     if ('geolocation' in navigator) {
       navigator.geolocation.watchPosition((p) => {
@@ -42,25 +61,6 @@ const Project = () => {
           altitude: p.coords.altitude
         });
       });
-    }
-    if (window) {
-      window.addEventListener('deviceorientation', handleOrientation, true);
-      console.log(navigator.userAgent);
-      const isIOS = navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/);
-      if (isIOS && DeviceOrientationEvent) {
-        console.log(typeof DeviceOrientationEvent);
-        DeviceOrientationEvent.requestPermission()
-          .then((response) => {
-            if (response === 'granted') {
-              window.addEventListener('deviceorientation', handleOrientation, true);
-            } else {
-              alert('has to be allowed!');
-            }
-          })
-          .catch(() => alert('not supported'));
-      } else {
-        window.addEventListener('deviceorientationabsolute', handleOrientation, true);
-      }
     }
   }, []);
 
@@ -76,6 +76,8 @@ const Project = () => {
       <Text h3>{pageDetails.title.toUpperCase()}</Text>
       <Text>{JSON.stringify(coords)}</Text>
       <Text>{JSON.stringify(orientation)}</Text>
+      <Button onClick={allowGyroData}>Allow gyro data</Button>
+      <Spacer y={0.5} />
       <Input label="Latitude" placeholder="0" value={coords.latitude} />
       <Spacer y={0.5} />
       <Input label="Longitude" placeholder="0" value={coords.longitude} />
