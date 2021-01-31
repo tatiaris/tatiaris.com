@@ -36,9 +36,9 @@ const Project = () => {
 
   const handleOrientation = (event) => {
     let newAlpha = event.alpha;
-    if (Math.abs(orientation.alpha - newAlpha) > Math.abs(orientation.alpha + 360 - newAlpha)) {
-      newAlpha = orientation.alpha + (orientation.alpha + 360 - newAlpha);
-    }
+    // if (Math.abs(orientation.alpha - newAlpha) > Math.abs(orientation.alpha + 360 - newAlpha)) {
+    //   newAlpha = orientation.alpha + (orientation.alpha + 360 - newAlpha);
+    // }
     setOrientation({
       absolute: event.absolute,
       alpha: newAlpha,
