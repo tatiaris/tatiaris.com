@@ -11,26 +11,56 @@ const Project = () => {
     url: 'tatiaris.com/compass'
   };
 
-  const [coords, setCoords] = useState('');
-  const [orientation, setOrientation] = useState('');
+  const [coords, setCoords] = useState({
+    latitude: 0,
+    longitude: 0,
+    altitude: 0
+  });
+
+  const [orientation, setOrientation] = useState({
+    absolute: 0,
+    alpha: 0,
+    beta: 0,
+    gamma: 0
+  });
 
   const handleOrientation = (event) => {
-    let absolute = event.absolute;
-    let alpha = event.alpha;
-    let beta = event.beta;
-    let gamma = event.gamma;
-
-    setOrientation(`Absolute: ${absolute}, Alpha: ${alpha}, Beta: ${beta}, Gamma: ${gamma}`);
+    setOrientation({
+      absolute: event.absolute,
+      alpha: event.alpha,
+      beta: event.beta,
+      gamma: event.gamma
+    });
   };
 
   useEffect(() => {
     if ('geolocation' in navigator) {
       navigator.geolocation.watchPosition((p) => {
-        setCoords(`Latitude: ${p.coords.latitude}, Longitude ${p.coords.longitude}, Altitude ${p.coords.altitude}`);
+        setCoords({
+          latitude: p.coords.latitude,
+          longitude: p.coords.longitude,
+          altitude: p.coords.altitude
+        });
       });
     }
     if (window) {
       window.addEventListener('deviceorientation', handleOrientation, true);
+      console.log(navigator.userAgent);
+      const isIOS = navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/);
+      if (isIOS && DeviceOrientationEvent) {
+        console.log(typeof DeviceOrientationEvent);
+        DeviceOrientationEvent.requestPermission()
+          .then((response) => {
+            if (response === 'granted') {
+              window.addEventListener('deviceorientation', handleOrientation, true);
+            } else {
+              alert('has to be allowed!');
+            }
+          })
+          .catch(() => alert('not supported'));
+      } else {
+        window.addEventListener('deviceorientationabsolute', handleOrientation, true);
+      }
     }
   }, []);
 
@@ -44,9 +74,16 @@ const Project = () => {
       </Breadcrumbs>
       <br />
       <Text h3>{pageDetails.title.toUpperCase()}</Text>
-      <Text>{coords}</Text>
-      <br />
-      <Text>{orientation}</Text>
+      <Text>{JSON.stringify(coords)}</Text>
+      <Text>{JSON.stringify(orientation)}</Text>
+      <Input label="Latitude" placeholder="0" value={coords.latitude} />
+      <Spacer y={0.5} />
+      <Input label="Longitude" placeholder="0" value={coords.longitude} />
+      <Spacer y={0.5} />
+      <Input label="Altitude" placeholder="0" value={coords.altitude} />
+      <Spacer y={0.5} />
+      <Input label="Location Name" placeholder="A" value={coords.latitude} />
+      <Spacer y={0.5} />
       <Copyright theme="light" />
     </Page>
   );
