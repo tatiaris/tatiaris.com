@@ -452,7 +452,7 @@ a.canvasjs-chart-credit {
 }
 #compass-container > img {
   position: absolute;
-  width: 50%;
+  width: 100%;
 }
 /* Compass */
 @media (min-width: 1300px) {

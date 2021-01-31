@@ -10,6 +10,10 @@ const Project = () => {
   //   setNodeType(val);
   // };
 
+  const normalizeDirection = (deg) => {
+    return Math.round(deg);
+  };
+
   const pageDetails = {
     title: 'Compass that is golden',
     description: 'leads to where you most desire',
@@ -31,9 +35,13 @@ const Project = () => {
   });
 
   const handleOrientation = (event) => {
+    let newAlpha = event.alpha;
+    if (Math.abs(orientation.alpha - newAlpha) > Math.abs(orientation.alpha + 360 - newAlpha)) {
+      newAlpha = orientation.alpha + (360 - newAlpha);
+    }
     setOrientation({
       absolute: event.absolute,
-      alpha: event.alpha,
+      alpha: newAlpha,
       beta: event.beta,
       gamma: event.gamma
     });
@@ -121,11 +129,10 @@ const Project = () => {
       <Spacer y={1} /> */}
       <div id="compass-container">
         <img className="compass-bottom" src="/img/compass/bottom.png" alt="" />
-        <img style={{ transform: `rotate(${orientation.alpha}deg)` }} className="compass-top" src="/img/compass/top.png" alt="" />
+        <img style={{ transform: `rotate(${normalizeDirection(orientation.alpha)}deg)` }} className="compass-top" src="/img/compass/top.png" alt="" />
         <img className="compass-glow" src="/img/compass/glow.png" alt="" />
       </div>
       {/* <Copyright theme="light" /> */}
-      test
     </Page>
   );
 };
