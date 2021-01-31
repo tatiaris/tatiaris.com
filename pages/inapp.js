@@ -20,6 +20,7 @@ const Inapp = () => {
       <br />
       <Text h3>{pageDetails.title.toUpperCase()}</Text>
       <Spacer y={2} />
+      <Text h4>USE THE WWW FILTER EXTENSION ON THIS PAGE TO SEE THE DIFFERENCES</Text>
       <Text h4>Text Examples</Text>
       <Spacer y={1} />
       <Description
