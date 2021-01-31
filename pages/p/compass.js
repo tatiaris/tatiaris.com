@@ -3,12 +3,12 @@ import { Page, Breadcrumbs, Input, Text, Button, Spacer, Select } from '@geist-u
 import CustomHead from '../../components/CustomHead';
 
 const Project = () => {
-  // const [locationName, setLocationName] = useState('');
-  // const [locationNeighbors, setLocationNeighbors] = useState('');
-  // const [nodeType, setNodeType] = useState('path');
-  // const handleTypeChange = (val) => {
-  //   setNodeType(val);
-  // };
+  const [locationName, setLocationName] = useState('');
+  const [locationNeighbors, setLocationNeighbors] = useState('');
+  const [nodeType, setNodeType] = useState('path');
+  const handleTypeChange = (val) => {
+    setNodeType(val);
+  };
 
   const normalizeDirection = (deg) => {
     return Math.round(deg);
@@ -47,23 +47,26 @@ const Project = () => {
     });
   };
 
-  // const submitCoorData = () => {
-  //   const coorData = {
-  //     latitude: coords.latitude,
-  //     longitude: coords.longitude,
-  //     altitude: coords.altitude,
-  //     nodeName: locationName,
-  //     nodeNeighbors: locationNeighbors,
-  //     nodeType: nodeType
-  //   };
-  //   fetch('/api/compass', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify(coorData)
-  //   }).then(r => console.log(r)).catch(err => console.log(err))
-  // };
+  const submitCoorData = () => {
+    const coorData = {
+      latitude: coords.latitude,
+      longitude: coords.longitude,
+      altitude: coords.altitude,
+      nodeName: locationName,
+      nodeNeighbors: locationNeighbors,
+      nodeType: nodeType
+    };
+    console.log(coorData);
+    fetch('/api/compass', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(coorData)
+    })
+      .then((r) => console.log(r))
+      .catch((err) => console.log(err));
+  };
 
   const allowGyroData = () => {
     window.addEventListener('deviceorientation', handleOrientation, true);
@@ -105,6 +108,7 @@ const Project = () => {
       </Breadcrumbs>
       <br />
       <Text h3>{pageDetails.title.toUpperCase()}</Text>
+      <br />
       <Button onClick={allowGyroData}>Allow gyro data</Button>
       <Spacer y={0.5} />
       <Input className="compass-input" label="Latitude" placeholder="0" value={coords.latitude} />
@@ -113,18 +117,20 @@ const Project = () => {
       <Spacer y={0.5} />
       <Input className="compass-input" label="Altitude" placeholder="0" value={coords.altitude} />
       <Spacer y={0.5} />
-      <Input className="compass-input" label="Location Name" placeholder="346" />
+      <Input onChange={(e) => setLocationName(e.target.value)} className="compass-input" label="Location Name" placeholder="346" />
       <Spacer y={0.5} />
-      <Input className="compass-input" label="Location Neighbors" placeholder="345:1, 344:2" />
+      <Input onChange={(e) => setLocationNeighbors(e.target.value)} className="compass-input" label="Location Neighbors" placeholder="345,344" />
       <Spacer y={1} />
-      {/* <span style={{ paddingRight: '1em' }}>Type:</span>
+      <span style={{ paddingRight: '1em' }}>Type:</span>
       <Select placeholder="Type" onChange={handleTypeChange}>
-        <Select.Option value="1">Path</Select.Option>
-        <Select.Option value="2">Location</Select.Option>
-        <Select.Option value="3">Staircase</Select.Option>
-        <Select.Option value="4">Elevator</Select.Option>
+        <Select.Option value="path">Path</Select.Option>
+        <Select.Option value="location">Location</Select.Option>
+        <Select.Option value="staircase">Staircase</Select.Option>
+        <Select.Option value="elevator">Elevator</Select.Option>
       </Select>
-      <Spacer y={1} /> */}
+      <Spacer y={1} />
+      <Button onClick={submitCoorData}>Submit</Button>
+      <Spacer y={1} />
       <div id="compass-container">
         <img className="compass-bottom" src="/img/compass/bottom.png" alt="" />
         <img style={{ transform: `rotate(${normalizeDirection(orientation.alpha)}deg)` }} className="compass-top" src="/img/compass/top.png" alt="" />
