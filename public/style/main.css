@@ -450,6 +450,10 @@ a.canvasjs-chart-credit {
 .compass-input > div {
   width: 500px;
 }
+#compass-container > img {
+  position: absolute;
+  width: 50%;
+}
 /* Compass */
 @media (min-width: 1300px) {
   .mode-toggle-img {

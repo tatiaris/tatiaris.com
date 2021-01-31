@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import Copyright from '../../components/Copyright';
-import { Page, Breadcrumbs, Input, Text, Row, Button, Spacer, Select } from '@geist-ui/react';
+import { Page, Breadcrumbs, Input, Text, Button, Spacer, Select } from '@geist-ui/react';
 import CustomHead from '../../components/CustomHead';
 
 const Project = () => {
-  const [locationName, setLocationName] = useState('');
-  const [locationNeighbors, setLocationNeighbors] = useState('');
-  const [nodeType, setNodeType] = useState('path');
-  const handleTypeChange = (val) => {
-    setNodeType(val);
-  };
+  // const [locationName, setLocationName] = useState('');
+  // const [locationNeighbors, setLocationNeighbors] = useState('');
+  // const [nodeType, setNodeType] = useState('path');
+  // const handleTypeChange = (val) => {
+  //   setNodeType(val);
+  // };
 
   const pageDetails = {
     title: 'Compass that is golden',
@@ -40,23 +39,23 @@ const Project = () => {
     });
   };
 
-  const submitCoorData = () => {
-    const coorData = {
-      latitude: coords.latitude,
-      longitude: coords.longitude,
-      altitude: coords.altitude,
-      nodeName: locationName,
-      nodeNeighbors: locationNeighbors,
-      nodeType: nodeType
-    };
-    // fetch('/api/compass', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(coorData)
-    // }).then(r => console.log(r)).catch(err => console.log(err))
-  };
+  // const submitCoorData = () => {
+  //   const coorData = {
+  //     latitude: coords.latitude,
+  //     longitude: coords.longitude,
+  //     altitude: coords.altitude,
+  //     nodeName: locationName,
+  //     nodeNeighbors: locationNeighbors,
+  //     nodeType: nodeType
+  //   };
+  //   fetch('/api/compass', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify(coorData)
+  //   }).then(r => console.log(r)).catch(err => console.log(err))
+  // };
 
   const allowGyroData = () => {
     window.addEventListener('deviceorientation', handleOrientation, true);
@@ -108,20 +107,25 @@ const Project = () => {
       <Spacer y={0.5} />
       <Input className="compass-input" label="Altitude" placeholder="0" value={coords.altitude} />
       <Spacer y={0.5} />
-      <Input className="compass-input" onChange={(e) => setLocationName(e.target.value)} label="Location Name" placeholder="346" />
+      <Input className="compass-input" label="Location Name" placeholder="346" />
       <Spacer y={0.5} />
-      <Input className="compass-input" onChange={(e) => setLocationName(e.target.value)} label="Location Neighbors" placeholder="345:1, 344:2" />
+      <Input className="compass-input" label="Location Neighbors" placeholder="345:1, 344:2" />
       <Spacer y={1} />
-      <span style={{ paddingRight: '1em' }}>Type:</span>
+      {/* <span style={{ paddingRight: '1em' }}>Type:</span>
       <Select placeholder="Type" onChange={handleTypeChange}>
         <Select.Option value="1">Path</Select.Option>
         <Select.Option value="2">Location</Select.Option>
         <Select.Option value="3">Staircase</Select.Option>
         <Select.Option value="4">Elevator</Select.Option>
       </Select>
-      <Spacer y={0.5} />
-      <Button onClick={submitCoorData}>Submit</Button>
-      <Copyright theme="light" />
+      <Spacer y={1} /> */}
+      <div id="compass-container">
+        <img className="compass-bottom" src="/img/compass/bottom.png" alt="" />
+        <img style={{ transform: `rotate(${orientation.alpha}deg)` }} className="compass-top" src="/img/compass/top.png" alt="" />
+        <img className="compass-glow" src="/img/compass/glow.png" alt="" />
+      </div>
+      {/* <Copyright theme="light" /> */}
+      test
     </Page>
   );
 };
