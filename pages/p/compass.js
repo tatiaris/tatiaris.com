@@ -12,12 +12,25 @@ const Project = () => {
   };
 
   const [coords, setCoords] = useState('');
+  const [orientation, setOrientation] = useState('');
+
+  const handleOrientation = (event) => {
+    let absolute = event.absolute;
+    let alpha = event.alpha;
+    let beta = event.beta;
+    let gamma = event.gamma;
+
+    setOrientation(`Absolute: ${absolute}, Alpha: ${alpha}, Beta: ${beta}, Gamma: ${gamma}`);
+  };
 
   useEffect(() => {
     if ('geolocation' in navigator) {
       navigator.geolocation.watchPosition((p) => {
         setCoords(`Latitude: ${p.coords.latitude}, Longitude ${p.coords.longitude}, Altitude ${p.coords.altitude}`);
       });
+    }
+    if (window) {
+      window.addEventListener('deviceorientation', handleOrientation, true);
     }
   }, []);
 
@@ -30,9 +43,10 @@ const Project = () => {
         <Breadcrumbs.Item>compass</Breadcrumbs.Item>
       </Breadcrumbs>
       <br />
+      <Text h3>{pageDetails.title.toUpperCase()}</Text>
       <Text>{coords}</Text>
       <br />
-      <Text h3>{pageDetails.title.toUpperCase()}</Text>
+      <Text>{orientation}</Text>
       <Copyright theme="light" />
     </Page>
   );
