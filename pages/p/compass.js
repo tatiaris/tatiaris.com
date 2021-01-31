@@ -11,14 +11,13 @@ const Project = () => {
     url: 'tatiaris.com/compass'
   };
 
+  const [coords, setCoords] = useState('');
+
   useEffect(() => {
     if ('geolocation' in navigator) {
-      console.log(
-        'available',
-        navigator.geolocation.getCurrentPosition((p) => {
-          console.log(p.coords);
-        })
-      );
+      navigator.geolocation.watchPosition((p) => {
+        setCoords(`Latitude: ${p.coords.latitude}, Longitude ${p.coords.longitude}, Altitude ${p.coords.altitude}`);
+      });
     }
   }, []);
 
@@ -31,6 +30,7 @@ const Project = () => {
         <Breadcrumbs.Item>compass</Breadcrumbs.Item>
       </Breadcrumbs>
       <br />
+      <Text>{coords}</Text>
       <br />
       <Text h3>{pageDetails.title.toUpperCase()}</Text>
       <Copyright theme="light" />
