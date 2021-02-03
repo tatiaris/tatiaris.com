@@ -349,8 +349,32 @@ a.breadcrums-item:hover {
 .dot {
   background-color: black !important;
 }
+.lg-input > div {
+  width: 250px;
+}
+.select-inp-container {
+  display: flex;
+}
+.select-inp-container > .select {
+  border-radius: 0px 5px 5px 0px !important;
+}
+.select-inp-container > .select > .value > .option {
+  font-size: .875rem;
+}
+.select-inp-label {
+  font-size: .875rem;
+  padding: 5px 10px;
+  background: #fafafa;
+  color: #888;
+  border: 1px solid #eaeaea;
+  border-radius: 5px 0px 0px 5px;
+  border-right: 0px;
+}
+pre, pre code {
+  color: #db006d !important;
+}
 /* INCOME TRACKER START */
-.input-container > span {
+.inc-tracker-inp > span {
   width: 200px !important;
 }
 .mini-inp-container > span {
@@ -359,7 +383,7 @@ a.breadcrums-item:hover {
 .mini-inp-container > div {
   width: 100px !important;
 }
-.input-container > span.right {
+.inc-tracker-inp > span.right {
   width: 50px !important;
 }
 .with-label {
@@ -369,14 +393,14 @@ a.canvasjs-chart-credit {
   display: none !important;
 }
 /* INCOME TRACKER END */
-/* INCOME TRACKER START */
+/* WIKI RUN START */
 .wiki-input > span {
   width: 120px !important;
 }
 .wiki-input > .input-wrapper {
   width: 300px !important;
 }
-/* INCOME TRACKER END */
+/* WIKI RUN END */
 /* TUTORING PAGE START */
 .color-link {
   padding: 2px;
