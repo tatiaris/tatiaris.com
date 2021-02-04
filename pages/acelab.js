@@ -13,30 +13,30 @@ const Acelab = () => {
   };
 
   // Employee variables
-  const [employeeName, setEmployeeName] = useState('John Doe');
-  const [employeeSection, setEmployeeSection] = useState('developmentTeamSection');
-  const [employeeImg, setEmployeeImg] = useState('https://acelab.tamu.edu/jd-img.png');
-  const [employeeLinkedin, setEmployeeLinkedin] = useState('https://linkedin.com/in/johndoe');
-  const [employeePage, setEmployeePage] = useState('https://acelab.tamu.edu/johndoe');
-  const [employeeEmail, setEmployeeEmail] = useState('johndoe@tamu.edu');
-  const [employeeRole, setEmployeeRole] = useState('Web Developer');
+  const [employeeName, setEmployeeName] = useState('');
+  const [employeeSection, setEmployeeSection] = useState('');
+  const [employeeImg, setEmployeeImg] = useState('');
+  const [employeeLinkedin, setEmployeeLinkedin] = useState('');
+  const [employeePage, setEmployeePage] = useState('');
+  const [employeeEmail, setEmployeeEmail] = useState('');
+  const [employeeRole, setEmployeeRole] = useState('');
   const handleEmployeeSection = (val) => setEmployeeSection(val);
 
   // Publication variables
-  const [pubTitle, setPubTitle] = useState('Example Publication');
-  const [pubLink, setPubLink] = useState('https://acelab.tamu.edu/ex-pub');
-  const [pubId, setPubId] = useState('42');
-  const [pubDetails, setPubDetails] = useState('Details for the example publication');
-  const [pubImg, setPubImg] = useState('https://acelab.tamu.edu/ex-pub.png');
-  const [pubAuthors, setPubAuthors] = useState('Name F., Name S., Name T., Name F. (2021).');
+  const [pubTitle, setPubTitle] = useState('');
+  const [pubLink, setPubLink] = useState('');
+  const [pubId, setPubId] = useState('');
+  const [pubDetails, setPubDetails] = useState('');
+  const [pubImg, setPubImg] = useState('');
+  const [pubAuthors, setPubAuthors] = useState('');
 
   // News variables
-  const [newsOrder, setNewsOrder] = useState('67');
-  const [newsTitle, setNewsTitle] = useState('Example News Title');
-  const [newsDescription, setNewsDescription] = useState('Example news description...');
-  const [newsImg, setNewsImg] = useState('https://acelab.tamu.edu/news-img.png');
-  const [newsDate, setNewsDate] = useState('Feb. 02, 2021');
-  const [newsUrl, setNewsUrl] = useState('https://acelab.tamu.edu/news-article');
+  const [newsOrder, setNewsOrder] = useState('');
+  const [newsTitle, setNewsTitle] = useState('');
+  const [newsDescription, setNewsDescription] = useState('');
+  const [newsImg, setNewsImg] = useState('');
+  const [newsDate, setNewsDate] = useState('');
+  const [newsUrl, setNewsUrl] = useState('');
 
   const newEmployeeCode = `{
   name: "${employeeName}",
