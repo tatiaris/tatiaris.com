@@ -82,25 +82,25 @@ const Acelab = () => {
 </div>
 <style>
 .site-inner {
-min-height: 72vh;
+  min-height: 72vh;
 }
 .content .entry {
-background-color: transparent;
+  background-color: transparent;
 }
 article.page.type-page.status-publish.entry {
-background-color: transparent;
+  background-color: transparent;
 }
 div.site-container {
-background: url('https://382451-1200779-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/11/White-honeycomb-hexagon-Mirrored.jpg') no-repeat center center fixed;
-background-size: cover;
+  background: url('https://382451-1200779-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/11/White-honeycomb-hexagon-Mirrored.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 header.entry-header h1 {
-background-color: #fff;
-border-radius: 4px;
-display: inline-block;
-padding: .8vw;
-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-margin-bottom: 2rem;
+  background-color: #fff;
+  border-radius: 4px;
+  display: inline-block;
+  padding: .8vw;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  margin-bottom: 2rem;
 }
 </style>`;
 
