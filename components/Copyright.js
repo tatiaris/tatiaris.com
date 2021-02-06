@@ -9,7 +9,7 @@ export const Copyright = (props) => {
     <>
       <Divider></Divider>
       <Text small style={{ float: 'right' }} type="secondary" className={`copyright-statement ${props.theme}`}>
-        Copyright © 2020 - 2021 Rishabh Tatia
+        Copyright © 2020 - 2021 <a href="/">Rishabh Tatia</a>
       </Text>
     </>
   );

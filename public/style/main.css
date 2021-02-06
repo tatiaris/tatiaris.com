@@ -26,7 +26,16 @@ ul, ol {
   background-color: black;
   color: white;
 }
+.copyright-statement > a {
+  color: #666666;
+}
+.copyright-statement > a:hover {
+  text-decoration: underline;
+}
 .copyright-statement.dark {
+  color: #bbb;
+}
+.copyright-statement.dark > a {
   color: #bbb;
 }
 .nav-tabs-dark > .hide-divider > .tab.active {
@@ -470,7 +479,7 @@ a.canvasjs-chart-credit {
 }
 @media (max-width: 1000px) {.order-one { order: 0; }}
 /* TUTORING PAGE END */
-/* Compass */
+/* Compass Start */
 .compass-input > div {
   width: 500px;
 }
@@ -478,7 +487,88 @@ a.canvasjs-chart-credit {
   position: absolute;
   width: 100%;
 }
-/* Compass */
+/* Compass End */
+/* Album Cover Start */
+.phone-screen {
+  width: 400px;
+  height: 700px;
+  background: linear-gradient(to left top, rgba(140, 100, 100, 1) 0%, rgba(220, 200, 200, 1) 100%), linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+}
+.phone-screen > * {
+  color: white;
+  font-weight: bold;
+}
+.status-bar {
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 20px;
+}
+.status-bar > * {
+  font-weight: bold;
+}
+.phone-time-container {
+  display: flex;
+}
+.phone-symbols-container {
+  display: flex;
+}
+.album-img-container {
+  margin: 40px 20px;
+  width: 360px;
+  height: 360px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 20px 20px 60px #0000002e, -20px -20px 60px #0000002e
+}
+.song-data-container {
+  margin: 15px 25px;
+  overflow: hidden;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+.song-data-container::after {
+	/* background-image: linear-gradient(to right, transparent, #997575); */
+	right: 90px;
+	position: absolute;
+	height: 50px;
+	top: 480px;
+	width: 50px;
+	content: "";
+}
+.song-title {
+  white-space: nowrap;
+  overflow: hidden;
+}
+.song-artist {
+  font-weight: normal;
+  color: #ddd;
+}
+.music-controls-container {
+  margin: 30px 25px;
+}
+.music-controls-container > .slider > .dot {
+  font-size: 1px !important;
+  border-radius: 50%;
+  background-color: white !important;
+	width: 6px !important;
+	height: 6px !important;
+	overflow: hidden;
+  padding: 0 !important;
+}
+.music-controls-container > .slider {
+  height: 0.15rem !important;
+  background-color: #ffffff80 !important;
+}
+.music-btns-container {
+  margin: 45px 25px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.music-btns-container > svg {
+  fill: white;
+}
+/* Album Cover End */
 @media (min-width: 1300px) {
   .mode-toggle-img {
     width: 250px !important;
