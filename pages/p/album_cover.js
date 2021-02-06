@@ -3,6 +3,7 @@ import { Page, Breadcrumbs, Input, Text, Row, Spacer, Col, Slider, Button } from
 import CustomHead from '../../components/CustomHead';
 import Copyright from '../../components/Copyright';
 import { PauseFill, FastForward, Rewind, Wifi, BatteryCharging, Activity, Bell } from '@geist-ui/react-icons';
+import html2canvas from 'html2canvas';
 
 const Project = () => {
   const [coverImgUrl, setCoverImgUrl] = useState('https://tatiaris.com/img/bm_hooligans_cover.jpg');
@@ -15,7 +16,7 @@ const Project = () => {
   const [accentColor, setAccentColor] = useState('#aaa');
 
   const pageDetails = {
-    title: 'Album Cover Generator',
+    title: 'Album Cover Screenshot',
     description: 'Create your own tiktok album cover with this filter tool',
     icon: 'favicon.ico',
     url: 'tatiaris.com/p/album_cover'
@@ -25,12 +26,22 @@ const Project = () => {
     const getImgFeatures = async () => {
       const imgFeaturesRes = await fetch(`/api/image_features?imgUrl=${encodeURIComponent(coverImgUrl)}`);
       const imgFeatures = await imgFeaturesRes.json();
-      console.log(imgFeatures);
       setDominantColor(imgFeatures.colorData.dominantColorForeground);
       setAccentColor(`#${imgFeatures.colorData.accentColor}`);
     };
     getImgFeatures();
   }, [coverImgUrl]);
+
+  const takeScreenshot = () => {
+    window.scrollTo(0, 0);
+    const configOptions = {
+      allowTaint: true,
+      imageTimeout: 200000
+    };
+    html2canvas(document.getElementById('phone-screen'), configOptions).then((canvas) => {
+      document.body.appendChild(canvas);
+    });
+  };
 
   return (
     <Page id="project-container">
@@ -59,9 +70,14 @@ const Project = () => {
           <Input label="Custom Dominant Color" initialValue={dominantColor} onChange={(e) => setDominantColor(e.target.value)} type="color" />
           <Spacer y={0.5} />
           <Input label="Custom Accent Color" initialValue={accentColor} onChange={(e) => setAccentColor(e.target.value)} type="color" />
+          <Spacer y={1} />
+          {/* <Button onClick={takeScreenshot} style={{ backgroundColor: accentColor, color: "white" }}>Download Screenshot</Button> */}
         </Col>
         <Col style={{ width: '450px', marginTop: '15px' }}>
-          <div className="phone-screen" style={{ background: `linear-gradient(to right top, ${accentColor} 0%, ${dominantColor} 100%), linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))` }}>
+          <div
+            id="phone-screen"
+            className="phone-screen"
+            style={{ background: `linear-gradient(to right top, ${accentColor} 0%, ${dominantColor} 100%), linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))` }}>
             <div className="status-bar">
               <div className="phone-time-container">
                 {currentTime}
