@@ -13,6 +13,9 @@
   scrollbar-width: none;
   font-weight: 400;
 }
+input {
+  min-width: 20px !important;
+}
 ul, ol {
   color: inherit !important;
 }
@@ -490,9 +493,9 @@ a.canvasjs-chart-credit {
 /* Compass End */
 /* Album Cover Start */
 .phone-screen {
+  float: right;
   width: 400px;
   height: 700px;
-  background: linear-gradient(to left top, rgba(140, 100, 100, 1) 0%, rgba(220, 200, 200, 1) 100%), linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
 }
 .phone-screen > * {
   color: white;

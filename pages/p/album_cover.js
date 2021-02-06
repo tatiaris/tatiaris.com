@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { Page, Breadcrumbs, Input, Text, Row, Spacer, Col, Slider } from '@geist-ui/react';
+import { Page, Breadcrumbs, Input, Text, Row, Spacer, Col, Slider, Button } from '@geist-ui/react';
 import CustomHead from '../../components/CustomHead';
 import Copyright from '../../components/Copyright';
 import { PauseFill, FastForward, Rewind, Wifi, BatteryCharging, Activity, Bell } from '@geist-ui/react-icons';
 
 const Project = () => {
-  const [coverImgUrl, setCoverImgUrl] = useState('https://picsum.photos/330/330');
-  const [artistName, setArtistName] = useState('Kanye West');
-  const [songName, setSongName] = useState('Heartless');
+  const [coverImgUrl, setCoverImgUrl] = useState('https://tatiaris.com/img/bm_hooligans_cover.jpg');
+  const [artistName, setArtistName] = useState('Bruno Mars');
+  const [songName, setSongName] = useState('Count on Me');
   const [currentTime, setCurrentTime] = useState('11:25');
-  const [songLength, setSongLength] = useState('3:42');
+  const [songLength, setSongLength] = useState('3:17');
   const [songPoint, setSongPoint] = useState('0:01');
+  const [dominantColor, setDominantColor] = useState('#eee');
+  const [accentColor, setAccentColor] = useState('#aaa');
 
   const pageDetails = {
     title: 'Album Cover Generator',
@@ -24,6 +26,8 @@ const Project = () => {
       const imgFeaturesRes = await fetch(`/api/image_features?imgUrl=${encodeURIComponent(coverImgUrl)}`);
       const imgFeatures = await imgFeaturesRes.json();
       console.log(imgFeatures);
+      setDominantColor(imgFeatures.colorData.dominantColorForeground);
+      setAccentColor(`#${imgFeatures.colorData.accentColor}`);
     };
     getImgFeatures();
   }, [coverImgUrl]);
@@ -40,20 +44,24 @@ const Project = () => {
       <Text h3>{pageDetails.title.toUpperCase()}</Text>
       <Row style={{ flexWrap: 'wrap' }} justify="space-between">
         <Col style={{ width: '450px', marginTop: '15px' }}>
-          <Input label="Image" placeholder="https://picsum.photos/360/360" initialValue={coverImgUrl} onChange={(e) => setCoverImgUrl(e.target.value)} />
+          <Input label="Image" placeholder="https://tatiaris.com/img/bm_hooligans_cover.jpg" initialValue={coverImgUrl} onChange={(e) => setCoverImgUrl(e.target.value)} />
           <Spacer y={0.5} />
-          <Input label="Song Title" placeholder="Heartless" initialValue={songName} onChange={(e) => setSongName(e.target.value)} />
+          <Input label="Song Title" placeholder="Count on Me" initialValue={songName} onChange={(e) => setSongName(e.target.value)} />
           <Spacer y={0.5} />
-          <Input label="Artist Name" placeholder="Green Day" initialValue={artistName} onChange={(e) => setArtistName(e.target.value)} />
+          <Input label="Artist Name" placeholder="Bruno Mars" initialValue={artistName} onChange={(e) => setArtistName(e.target.value)} />
           <Spacer y={0.5} />
           <Input label="Clock Time" placeholder="11:25" initialValue={currentTime} onChange={(e) => setCurrentTime(e.target.value)} />
           <Spacer y={0.5} />
-          <Input label="Song Length" placeholder="3:42" initialValue={songLength} onChange={(e) => setSongLength(e.target.value)} />
+          <Input label="Song Length" placeholder="3:17" initialValue={songLength} onChange={(e) => setSongLength(e.target.value)} />
           <Spacer y={0.5} />
           <Input label="Song Location" placeholder="0:01" initialValue={songPoint} onChange={(e) => setSongPoint(e.target.value)} />
+          <Spacer y={0.5} />
+          <Input label="Custom Dominant Color" initialValue={dominantColor} onChange={(e) => setDominantColor(e.target.value)} type="color" />
+          <Spacer y={0.5} />
+          <Input label="Custom Accent Color" initialValue={accentColor} onChange={(e) => setAccentColor(e.target.value)} type="color" />
         </Col>
         <Col style={{ width: '450px', marginTop: '15px' }}>
-          <div className="phone-screen">
+          <div className="phone-screen" style={{ background: `linear-gradient(to right top, ${accentColor} 0%, ${dominantColor} 100%), linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))` }}>
             <div className="status-bar">
               <div className="phone-time-container">
                 {currentTime}
