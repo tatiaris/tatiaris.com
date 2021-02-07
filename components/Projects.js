@@ -4,6 +4,30 @@ import { ExternalLink, Code, X, ArrowLeft, ArrowRight } from '@geist-ui/react-ic
 
 const projectList = [
   {
+    id: 15,
+    name: 'Album Cover Screenshot',
+    img: 'wealth_tracker.png',
+    description: 'Create your own album cover screenshot with this filter tool.',
+    features: [
+      {
+        name: '',
+        description: 'Visualize your own music album cover.'
+      },
+      {
+        name: '',
+        description: 'Customize all elements of a phone screen for an ideal screenshot.'
+      },
+      {
+        name: '',
+        description: 'No photoshop skills required, super easy to use.'
+      }
+    ],
+    tools: ['React', 'Geist UI'],
+    demo_link: '/p/album_cover',
+    github_link: 'https://github.com/tatiaris/tatiaris.com/tree/master/pages/p/album_cover.js',
+    status: 'completed'
+  },
+  {
     id: 14,
     name: 'Wealth Tracker',
     img: 'wealth_tracker.png',
