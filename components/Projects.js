@@ -6,7 +6,7 @@ const projectList = [
   {
     id: 15,
     name: 'Album Cover Screenshot',
-    img: 'wealth_tracker.png',
+    img: 'album_cover_ss.jpg',
     description: 'Create your own album cover screenshot with this filter tool.',
     features: [
       {
