@@ -19,6 +19,12 @@ input {
 ul, ol {
   color: inherit !important;
 }
+h5 {
+  margin: 0 !important;
+}
+p {
+  margin: 0 !important;
+}
 .dark {
   color: white;
 }
