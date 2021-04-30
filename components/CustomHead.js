@@ -17,6 +17,11 @@ export const CustomHead = (props) => {
       <meta property="og:url" content={props.pageDetails.url} />
       <meta property="og:description" content={props.pageDetails.description} />
       <meta property="og:type" content="profile" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:creator" content="@Rishabh77022392" />
+      <meta name="twitter:title" content={props.pageDetails.title} />
+      <meta name="twitter:description" content={props.pageDetails.description} />
+      <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/33273930?v=4" />
       <meta httpEquiv="content-language" content="en" />
     </Head>
   );

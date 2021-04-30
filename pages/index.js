@@ -37,6 +37,11 @@ export default function Home() {
           <meta property="og:url" content="tatiaris.com" />
           <meta property="og:description" content="Rishabh Tatia's personal website. Welcome to my portfolio page, here you can get to know me and my projects." />
           <meta property="og:type" content="profile" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:creator" content="@Rishabh77022392" />
+          <meta name="twitter:title" content={`Rishabh Tatia | Portfolio`} />
+          <meta name="twitter:description" content="Rishabh Tatia's personal website. Welcome to my portfolio page, here you can get to know me and my projects." />
+          <meta name="twitter:image" content="https://tatiaris.com/img/thumbnail.png" />
           <meta httpEquiv="content-language" content="en" />
         </Head>
         <GeistNavbar theme={theme} />
