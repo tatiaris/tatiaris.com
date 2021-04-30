@@ -37,6 +37,7 @@ export default function Home() {
           <meta property="og:site_name" content="Rishabh Tatia" />
           <meta property="og:url" content="tatiaris.com" />
           <meta property="og:description" content="Rishabh Tatia's personal website. Welcome to my portfolio page, here you can get to know me and my projects." />
+          <meta property="og:image" content="https://tatiaris.com/img/thumbnail.png" />
           <meta property="og:type" content="profile" />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:creator" content="@Rishabh77022392" />
