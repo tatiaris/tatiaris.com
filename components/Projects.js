@@ -77,7 +77,7 @@ const projectList = [
   },
   {
     id: 12,
-    name: 'Resubae',
+    name: 'Resuville',
     img: 'resubae.png',
     description: 'Easy to use Resume Builder with custom templates',
     features: [
@@ -99,8 +99,8 @@ const projectList = [
       }
     ],
     tools: ['Next.js', 'Node.js', 'React', 'MongoDB', 'Auth0', 'Bootstrap'],
-    demo_link: 'https://resubae.net',
-    github_link: 'https://github.com/tatiaris/resubae',
+    demo_link: 'https://resuville.com',
+    github_link: 'https://github.com/tatiaris/resuville',
     status: 'ongoing'
   },
   {

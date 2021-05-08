@@ -1,0 +1,134 @@
+<head>
+  <meta charset="utf-8">
+  <title>Resume</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: portrait;
+      margin: 0;
+    }
+
+    body {
+      margin: 0 !important;
+    }
+
+    #resume-container {
+      width: calc(1030px - 1in);
+      height: calc(1327px - 1in);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #resume-container>* {
+      font-family: "Roboto", sans-serif;
+      box-sizing: border-box;
+      overflow: hide;
+      color: inherit;
+      scrollbar-width: none;
+      font-weight: lighter;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-weight: 400;
+    }
+
+    li {
+      display: list-item;
+      list-style-type: "\2014";
+      padding-inline-start: 1ch;
+      margin-bottom: 0;
+      font-size: 1em;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<thead></thead>
+<div style="width: max-content;font-size: 1rem;line-height: 1.5;letter-spacing: 0;margin: 0; padding: 0.5in">
+  <div id="resume-container">
+    <div style="text-align: center; width: 100%;">
+      <div>
+        <h4 id="full_name" style="font-size: 1.5rem;font-weight: 500;line-height: 1.2;margin: 0px;"></h4>
+      </div>
+      <div>
+        <h5 id="subtitle" style="font-size: 1rem;font-weight: 500;line-height: 1.2;margin: 0px;"></h5>
+      </div>
+      <span style="font-weight: 400;"><span id="city"></span>, <span id="state">TX</span> | <span
+          id="phone_no"></span> | <span id="email_address"></span></span>
+    </div>
+    <div style="width: 100%; text-align: left; padding-top: 15px;">
+      <h4
+        style="border-bottom: 2px solid black;font-size: 1.5rem;font-weight: 500;line-height: 1.2;margin: 0px;margin-bottom: 10px !important;">
+        Education</h4> <span style="float: right;"><span id="university_start_day"></span> - <span
+          id="university_end_day"></span></span> <span id="university" style="font-weight: 500;"></span> - <span
+        id="university_location"></span><br> <span id="major" style="font-weight: 500;"></span><br> <span
+        style="font-weight: 500;">Sample of Courses Taken:</span> <span id="sample_courses_description"></span> <br><br>
+      <h4
+        style="border-bottom: 2px solid black;font-size: 1.5rem;font-weight: 500;line-height: 1.2;margin: 0px;margin-bottom: 10px !important;">
+        Professional Experience</h4> <span id="work_role_1" style="font-weight: 500;"></span>, <span
+        id="work_name_1"></span>, <span id="work_location_1"></span> (<a id="work_url_1"></a>) <span style="float: right;"><span
+          id="work_start_day_1"></span> - <span id="work_end_day_1"></span></span>
+      <ul style="margin-top: 0 !important;margin-bottom: 0 !important;">
+        <li id="work_bullet_1_1"></li>
+        <li id="work_bullet_1_2"></li>
+        <li id="work_bullet_1_3"></li>
+      </ul>
+      <br>
+      <span id="work_role_2" style="font-weight: 500;"></span>, <span id="work_name_2"></span>, <span id="work_location_2"></span> (<a id="work_url_2"></a>)
+      <span style="float: right;"><span id="work_start_day_2"></span> - <span id="work_end_day_2"></span></span>
+      <ul style="margin-top: 0 !important;margin-bottom: 0 !important;">
+        <li id="work_bullet_2_1"></li>
+        <li id="work_bullet_2_2"></li>
+        <li id="work_bullet_2_3"></li>
+      </ul>
+      <br>
+      <span id="work_role_3" style="font-weight: 500;"></span>, <span id="work_name_3"></span>, <span id="work_location_3"></span> (<a id="work_url_3"></a>)
+      <span style="float: right;"><span id="work_start_day_3"></span> - <span id="work_end_day_3"></span></span>
+      <ul style="margin-top: 0 !important;margin-bottom: 0 !important;">
+        <li id="work_bullet_3_1"></li>
+        <li id="work_bullet_3_2"></li>
+        <li id="work_bullet_3_3"></li>
+      </ul>
+      <br>
+      <h4 style="border-bottom: 2px solid black;font-size: 1.5rem;font-weight: 500;line-height: 1.2;margin: 0px;margin-bottom: 10px !important;">Projects</h4>
+      <span id="project_role_1" style="font-weight: 500;"></span>, <span id="project_title_1"></span>, <span id="project_brief_description_1"></span> (<a id="project_url_1"></a>)
+      <span style="float: right;"><span id="project_start_day_1"></span> - <span id="project_end_day_1"></span></span>
+      <ul style="margin-top: 0 !important;margin-bottom: 0 !important;">
+        <li id="project_bullet_1_1"></li>
+        <li id="project_bullet_1_2"></li>
+        <li id="project_bullet_1_3"></li>
+      </ul>
+      <br>
+      <span id="project_role_2" style="font-weight: 500;"></span>, <span id="project_title_2"></span>, <span id="project_brief_description_2"></span> (<a id="project_url_2"></a>)
+      <span style="float: right;"><span id="project_start_day_2"></span> - <span id="project_end_day_2"></span></span>
+      <ul style="margin-top: 0 !important;margin-bottom: 0 !important;">
+        <li id="project_bullet_2_1"></li>
+        <li id="project_bullet_2_2"></li>
+        <li id="project_bullet_2_3"></li>
+      </ul>
+      <br>
+      <span id="project_role_3" style="font-weight: 500;"></span>, <span id="project_title_3"></span>, <span id="project_brief_description_3"></span> (<a id="project_url_3"></a>)
+      <span style="float: right;"><span id="project_start_day_3"></span> - <span id="project_end_day_3"></span></span>
+      <ul style="margin-top: 0 !important;margin-bottom: 0 !important;">
+        <li id="project_bullet_3_1"></li>
+        <li id="project_bullet_3_2"></li>
+        <li id="project_bullet_3_3"></li>
+      </ul>
+      <br>
+      <h4
+        style="border-bottom: 2px solid black;font-size: 1.5rem;font-weight: 500;line-height: 1.2;margin: 0px;margin-bottom: 10px !important;">
+        Profile</h4>
+      <ul style="margin-top: 0 !important;margin-bottom: 0 !important;">
+        <li><span style="font-weight: 500;">Technical Skills:</span> <span id="technical_skills_description"></span></li>
+        <li><span style="font-weight: 500;">Spoken Languages:</span> <span id="spoken_languages_description"></span></li>
+        <li><span style="font-weight: 500;">Hobbies:</span> <span id="hobbies_description"></span></li>
+        <li><span style="font-weight: 500;">Links:</span> <a id="personal_url"></a>, <a id="github_url"></a>, <a id="linkedin_url"></a></li>
+      </ul>
+    </div>
+  </div>
+  <tfoot></tfoot>
+</div>
