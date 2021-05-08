@@ -144,7 +144,7 @@ export const Homepage = (props) => {
               <Mail />
             </Link>
           </Tooltip>
-          <Link download onClick={(e) => launchToast('Downloading Resume PDF...')} className="misc-link" href="/docs/RISHABH_TATIA_RESUME_12_20_v1.pdf" block>
+          <Link download onClick={(e) => launchToast('Downloading Resume PDF...')} className="misc-link" href="/docs/Rishabh_Tatia_Resume_5_21.pdf" block>
             <FileText />
             <span style={{ marginLeft: '5px' }}>Resume</span>
           </Link>
