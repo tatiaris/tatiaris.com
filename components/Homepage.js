@@ -14,25 +14,25 @@ export const Homepage = (props) => {
       <div className="content-wrapper">
         <Row style={{ alignItems: 'center', flexWrap: 'wrap', marginTop: '1em' }}>
           <Col style={{ width: 'max-content', marginTop: '1em', marginRight: '1em' }}>
-            <User src="img/avatar.png" altText="user-img" name="Rishabh Tatia" className={`user-tag-${props.theme}`} style={{ padding: '0' }}>
+            <User src="img/avatar.png" altText="user-img" name="Rishabh Tatia" className="user-tag" style={{ padding: '0' }}>
               Full Stack Developer
             </User>
           </Col>
           <Col style={{ width: 'max-content', marginTop: '1em' }}>
             <Row>
-              <Badge type="secondary" className={`badge-link ${props.theme}`}>
+              <Badge type="secondary" className="badge-link">
                 <a href="https://intuit.com" target="_blank" rel="noreferrer">
                   @INTUIT
                 </a>
               </Badge>
               <Spacer x={0.5} />
-              <Badge type="secondary" className={`badge-link ${props.theme}`}>
+              <Badge type="secondary" className="badge-link">
                 <a href="https://acelab.tamu.edu" target="_blank" rel="noreferrer">
                   @ACELAB
                 </a>
               </Badge>
               <Spacer x={0.5} />
-              <Badge type="secondary" className={`badge-link ${props.theme}`}>
+              <Badge type="secondary" className="badge-link">
                 <a href="https://tamudatathon.com" target="_blank" rel="noreferrer">
                   @TAMU_DATATHON
                 </a>
@@ -41,84 +41,100 @@ export const Homepage = (props) => {
           </Col>
         </Row>
         <br />
-        <Divider align="start">My Life</Divider>
+        <Divider align="start">Experience</Divider>
         <Text>
           <span style={{ fontSize: '1.2em' }}>Hello,</span>
           <br />
-          My name is <b>Rishabh Tatia</b>. I am a Junior at{' '}
-          <a href="https://tamu.edu" className={`about-link tamu ${props.theme}`} target="_blank" rel="noreferrer">
+          My name is <b>Rishabh Tatia</b>. I am a senior at{' '}
+          <a href="https://tamu.edu" className={`about-link tamu`} target="_blank" rel="noreferrer">
             Texas A&M University
           </a>{' '}
           studying Mathematics and Computer Science. I started programming as a freshman in high school when I wanted to develop games, automate processes, and create helpful applications for the
           public.
         </Text>
+        <br />
+        <b>@INTUIT</b> | Software Engineering Intern | San Diego, California <span style={{ float: 'right' }}>05/21 &#8212; 08/21</span>
         <ul>
           <li>
-            I was born on January 3rd 2001 in{' '}
-            <a
-              href="https://www.google.com/maps/place/Gwalior,+Madhya+Pradesh,+India/@28.7853139,59.1335284,3.83z/data=!4m5!3m4!1s0x3976c5d1792291fb:0xff4fb56d65bc3adf!8m2!3d26.2195191!4d78.1842041"
-              className={`about-link city ${props.theme}`}
-              target="_blank"
-              rel="noreferrer">
-              Gwalior, India
-            </a>
+            I will be working on the File and Finish team to ensure ease of tax filing for all{' '}
+            <Link target="_blank" rel="noreferrer" href="https://turbotax.intuit.com">
+              TurboTax
+            </Link>{' '}
+            customers.
+          </li>
+          <li>ReactJS, Spring, Typescript, Java</li>
+        </ul>
+        <br />
+        <b>@TAMU DATATHON</b> | Software Developer | College Station, Texas <span style={{ float: 'right' }}>05/20 &#8212; Curr</span>
+        <ul className={props.theme}>
+          <li>
+            Developed{' '}
+            <Link target="_blank" rel="noreferrer" href="https://github.com/tamu-datathon-org/mercury">
+              Mercury
+            </Link>
+            , a mailing web application integrated with Mailgun to edit, view, and send custom HTML templated emails.
+          </li>
+          <li>
+            Created{' '}
+            <Link target="_blank" rel="noreferrer" href="https://github.com/tamu-datathon-org/portal">
+              Portal
+            </Link>
+            , an event showcase web application where events are stored as markdown files for ease of information update.
+          </li>
+          <li>
+            Contributed to the organization&apos;s landing page and several other open-source projects including{' '}
+            <Link target="_blank" rel="noreferrer" href="https://github.com/tamu-datathon-org/gatekeeper">
+              Gatekeeper
+            </Link>{' '}
+            and{' '}
+            <Link target="_blank" rel="noreferrer" href="https://github.com/tamu-datathon-org/r2d2">
+              R2D2
+            </Link>
             .
           </li>
-          <li>I attended a boarding school for 4 years of my life, where I discovered my passion for sports and science.</li>
-          <li>I moved to the U.S. in 2013, and attended high school in Chicago and Houston.</li>
-          <li>I love playing sports and have played Table Tennis, Soccer, and Racquetball competitively.</li>
+        </ul>
+        <br />
+        <b>@ACELAB</b> | Full Stack Developer | College Station, Texas <span style={{ float: 'right' }}>02/20 &#8212; Curr</span>
+        <ul>
           <li>
-            I enjoy participating in hackathons and am currently a developer and organizer for{' '}
-            <a href="https://tamudatathon.com" className={`about-link datathon ${props.theme}`} target="_blank" rel="noreferrer">
-              TAMU Datathon
-            </a>
-            .
+            Collaborated with a doctoral student to develop{' '}
+            <Link target="_blank" rel="noreferrer" href="https://github.com/tatiaris/wieat">
+              WIEAT
+            </Link>
+            , a web-based data entry, visualization, and analysis application.
           </li>
           <li>
-            I am currently a web developer at{' '}
-            <a href="https://acelab.tamu.edu" className={`about-link tamu ${props.theme}`} target="_blank" rel="noreferrer">
-              Acelab
-            </a>{' '}
-            and will be interning at{' '}
-            <a href="https://intuit.com" className={`about-link intuit ${props.theme}`} target="_blank" rel="noreferrer">
-              Intuit
-            </a>{' '}
-            over Summer 2021.
+            Redesigned, updated, and maintained the official{' '}
+            <Link target="_blank" rel="noreferrer" href="https://acelab.tamu.edu">
+              lab website
+            </Link>{' '}
+            which serves over 12000 users every year.
           </li>
-          <li>I like listening to Alternative, Pop, EDM, Hip-hop and Rock music.</li>
-          <li>
-            I am passionate about teaching and{' '}
-            <a href="/tutoring" className={`about-link tutoring ${props.theme}`}>
-              privately tutor
-            </a>{' '}
-            people in computer science and it&apos;s applications.
-          </li>
-          <li>My life long goal is to travel and document as many places around the world as I can.</li>
         </ul>
         <Divider style={{ marginTop: '2.5em' }} align="start">
-          My Hobbies & Interests
+          Hobbies & Interests
         </Divider>
         <Row style={{ flexWrap: 'wrap' }}>
-          <Tag className={`hobby ${props.theme}`}>Racquetball</Tag>
+          <Tag className="hobby">Racquetball</Tag>
           <Spacer x={0.5} />
-          <Tag className={`hobby ${props.theme}`}>Longboarding</Tag>
+          <Tag className="hobby">Longboarding</Tag>
           <Spacer x={0.5} />
-          <Tag className={`hobby ${props.theme}`}>Ping Pong</Tag>
+          <Tag className="hobby">Ping Pong</Tag>
           <Spacer x={0.5} />
-          <Tag className={`hobby ${props.theme}`}>Basketball</Tag>
+          <Tag className="hobby">Basketball</Tag>
           <Spacer x={0.5} />
-          <Tag className={`hobby ${props.theme}`}>Pool</Tag>
+          <Tag className="hobby">Pool</Tag>
           <Spacer x={0.5} />
-          <Tag className={`hobby ${props.theme}`}>Video Games</Tag>
+          <Tag className="hobby">Video Games</Tag>
           <Spacer x={0.5} />
-          <Tag className={`hobby ${props.theme}`}>Board Games</Tag>
+          <Tag className="hobby">Board Games</Tag>
           <Spacer x={0.5} />
-          <Tag className={`hobby ${props.theme}`}>Speed Cubing</Tag>
+          <Tag className="hobby">Cubing</Tag>
         </Row>
         <Divider style={{ marginTop: '2.5em' }} align="start">
-          My Links
+          Connect
         </Divider>
-        <Row style={{ flexWrap: 'wrap' }} className={`${props.theme}`}>
+        <Row style={{ flexWrap: 'wrap' }}>
           <Tooltip text={'Github'} placement="bottom" enterDelay="1000">
             <Link className="misc-link" target="_blank" rel="noreferrer" href="https://github.com/tatiaris" block>
               <Github />
@@ -135,7 +151,7 @@ export const Homepage = (props) => {
             </Link>
           </Tooltip>
           <Tooltip text={'Twitter'} placement="bottom" enterDelay="1000">
-            <Link className="misc-link" target="_blank" rel="noreferrer" href="https://twitter.com/Rishabh77022392" block>
+            <Link className="misc-link" target="_blank" rel="noreferrer" href="https://twitter.com/tatia_ris" block>
               <Twitter />
             </Link>
           </Tooltip>

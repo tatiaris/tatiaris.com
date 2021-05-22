@@ -453,16 +453,16 @@ const Projects = (props) => {
     <>
       <div className="content-wrapper">
         <Collapse.Group style={{ padding: '0', marginTop: '1em' }}>
-          <Collapse title="Ongoing" initialVisible className={`${props.theme}`} style={{ borderTop: '0' }}>
+          <Collapse title="Ongoing" initialVisible style={{ borderTop: '0' }}>
             <Row className="projects-container">
               {currentProjectList.map((project, i) => (
-                <Card key={`project-card-${i}`} hoverable className={`project-card ${props.theme}`}>
+                <Card key={`project-card-${i}`} hoverable className="project-card">
                   <div className="project-card-content">
                     <Image src={`/img/${project.img}`} height="150" width="150" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
                     <div style={{ padding: '0.75em' }}>
                       <h4>{project.name}</h4>
                       {project.description} <br />
-                      <Button onClick={(e) => displayMoreInfo(project.id)} size="mini" auto style={{ marginTop: '0.5rem' }}>
+                      <Button onClick={() => displayMoreInfo(project.id)} size="mini" auto style={{ marginTop: '0.5rem' }}>
                         Learn more&nbsp;
                         <ArrowRight size="15" />
                       </Button>
@@ -482,10 +482,10 @@ const Projects = (props) => {
               ))}
             </Row>
           </Collapse>
-          <Collapse title="Completed" className={`${props.theme}`} style={{ borderTop: '0' }}>
+          <Collapse title="Completed" style={{ borderTop: '0' }}>
             <Row className="projects-container">
               {completedProjectList.map((project, i) => (
-                <Card key={`project-card-${i}`} hoverable className={`project-card ${props.theme}`}>
+                <Card key={`project-card-${i}`} hoverable className="project-card">
                   <div className="project-card-content">
                     <Image src={`/img/${project.img}`} height="150" width="150" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
                     <div style={{ padding: '0.75em' }}>
@@ -511,10 +511,10 @@ const Projects = (props) => {
               ))}
             </Row>
           </Collapse>
-          <Collapse title="Not maintained" className={`last-collapse ${props.theme}`}>
+          <Collapse title="Not maintained" className="last-collapse">
             <Row className="projects-container">
               {unmaintainedProjectList.map((project, i) => (
-                <Card key={`project-card-${i}`} hoverable className={`project-card ${props.theme}`}>
+                <Card key={`project-card-${i}`} hoverable className="project-card">
                   <div className="project-card-content">
                     <Image src={`/img/${project.img}`} height="150" width="150" style={{ objectFit: 'cover' }} alt={`project-img-${i}`} />
                     <div style={{ padding: '0.75em' }}>
@@ -541,7 +541,7 @@ const Projects = (props) => {
             </Row>
           </Collapse>
         </Collapse.Group>
-        <Modal {...bindings} width="60rem" className={`modal-${props.theme}`} style={{ minWidth: '30rem', width: 'max-content' }}>
+        <Modal {...bindings} width="60rem" className="modal" style={{ minWidth: '30rem', width: 'max-content' }}>
           <Modal.Title style={{ justifyContent: 'left' }}>{chosenProject.name}</Modal.Title>
           <Modal.Subtitle style={{ textAlign: 'left' }}>{chosenProject.description}</Modal.Subtitle>
           <Modal.Content>
@@ -557,7 +557,7 @@ const Projects = (props) => {
                 </ul>
                 <Row style={{ flexWrap: 'wrap', marginLeft: '20px' }}>
                   {chosenProject.tools.map((t, i) => (
-                    <Tag key={`project-tag-${i}`} className={`modal-tag ${props.theme}`}>
+                    <Tag key={`project-tag-${i}`} className={`modal-tag`}>
                       {t}
                     </Tag>
                   ))}
@@ -581,7 +581,7 @@ const Projects = (props) => {
           <Modal.Action passive onClick={() => setVisible(false)} className="misc-link-r">
             <X />
           </Modal.Action>
-          <Modal.Action passive onClick={(e) => changeChosenProject(-1)}>
+          <Modal.Action passive onClick={() => changeChosenProject(-1)}>
             <ArrowRight />
           </Modal.Action>
         </Modal>

@@ -12,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     if (theme != 'default') {
-      document.body.className = `body-${theme}`;
+      document.body.className = theme;
       localStorage.setItem('theme', theme);
     }
   }, [theme]);
@@ -41,7 +41,7 @@ export default function Home() {
           <meta property="og:image" content="https://tatiaris.com/img/thumbnail.png" />
           <meta property="og:type" content="profile" />
           <meta name="twitter:card" content="summary" />
-          <meta name="twitter:creator" content="@Rishabh77022392" />
+          <meta name="twitter:creator" content="@tatia_ris" />
           <meta name="twitter:title" content={`Rishabh Tatia | Portfolio`} />
           <meta name="twitter:description" content="Rishabh Tatia's personal website. Welcome to my portfolio page, here you can get to know me and my projects." />
           <meta name="twitter:image" content="https://tatiaris.com/img/thumbnail.png" />

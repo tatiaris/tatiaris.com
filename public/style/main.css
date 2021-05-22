@@ -25,108 +25,88 @@ h5 {
 p {
   margin: 0 !important;
 }
+.light {
+  --text-color: black;
+  --link-color: #0070f3;
+  --link-hover-color: rgba(0, 112, 243, 0.1);
+  --background-color: white;
+  --secondary-color: #666666;
+  --tertiary-color: #444;
+  --tamu-color: #e5d9d9;
+  --border-color: #eaeaea;
+  --badge-bg-color: rgba(0,0,0,.08);
+  --badge-bg-color-hover: rgba(0,0,0,.19);
+  --card-box-shadow-color: rgba(0, 0, 0, 0.12);
+  --modal-bg: #fff;
+  --modal-border-color: #eaeaea;
+}
 .dark {
-  color: white;
+  --text-color: white;
+  --link-color: #79ffe1;
+  --link-hover-color: rgba(121, 255, 225, 0.2);
+  --background-color: black;
+  --secondary-color: #bbb;
+  --tertiary-color: #ccc;
+  --tamu-color: #500;
+  --border-color: #444;
+  --badge-bg-color: #202020;
+  --badge-bg-color-hover: #2b2b2b;
+  --card-box-shadow-color: rgba(255, 255, 255, 0.15);
+  --modal-bg: #79ffe1;
+  --modal-border-color: #00bb91;
 }
-.body-light {
-  background-color: white;
+body {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
 }
-.body-dark {
-  background-color: black;
-  color: white;
+a {
+  color: var(--link-color) !important;
 }
 .copyright-statement > a {
-  color: #666666;
+  color: var(--secondary-color);
 }
 .copyright-statement > a:hover {
   text-decoration: underline;
 }
-.copyright-statement.dark {
-  color: #bbb;
+.copyright-statement {
+  color: var(--secondary-color) !important;
 }
-.copyright-statement.dark > a {
-  color: #bbb;
+.tab {
+  color: var(--tertiary-color) !important;
 }
-.nav-tabs-dark > .hide-divider > .tab.active {
-  color: white;
+.tab.active {
+  color: var(--text-color) !important;
 }
-.nav-tabs-dark > .hide-divider > .tab.active::after {
-  background-color: white;
+.tab.active::after {
+  background-color: var(--text-color) !important;
 }
-.nav-tabs-dark > .hide-divider > .tab {
-  color: #ccc;
+.user .name {
+  color: var(--text-color) !important;
 }
-.user-tag-dark > .names > .name {
-  color: white;
-}
-.user-tag-dark > .names > .social {
-  color: #ccc;
+.user .social {
+  color: var(--tertiary-color) !important;
 }
 .badge-link {
-  background-color: #00000015 !important;
+  background-color: var(--badge-bg-color) !important;
 }
 .badge-link:hover {
-  background-color: #00000030 !important;
+  background-color: var(--badge-bg-color-hover) !important;
 }
 .badge-link > a {
   line-height: 1.5;
   color: black !important;
   text-transform: uppercase;
 }
-.badge-link.dark {
-  background-color: #202020 !important;
-}
-.badge-link.dark:hover {
-  background-color: #2b2b2b !important;
-}
-.badge-link.dark > a {
-  color: white !important;
+.badge-link > a {
+  color: var(--text-color) !important;
 }
 a.about-link {
   padding: 0 2px;
-  color: black !important;
   font-weight: bold;
-}
-a.about-link.dark {
-  color: white !important;
+  color: var(--text-color) !important;
 }
 .tamu:hover {
-  background-color: #e5d9d9;
-  border-radius: 2px;
-}
-.tamu.dark:hover {
-  background-color: #500;
-}
-.city:hover {
-  background-color: #e5ffd9;
-  border-radius: 2px;
-}
-.city.dark:hover {
-  background-color: #1f6400;
-}
-.datathon:hover {
-  background-color: #f8d9ff;
-  border-radius: 2px;
-}
-.datathon.dark:hover {
-  background-color: #d000ff;
-}
-.intuit:hover {
-  background-color: #bfddf1;
-  border-radius: 2px;
-}
-.intuit.dark:hover {
-  background-color: #0077c5;
-}
-.tutoring:hover {
-  background-color: #ffcde6;
-  border-radius: 2px;
-}
-.tutoring.dark:hover {
-  background-color: #ff0080;
-}
-.bg-yellow:hover {
-  background-color: rgba(255, 255, 0, 0.15);
+  background-color: var(--tamu-color);
   border-radius: 2px;
 }
 .hobby {
@@ -134,23 +114,9 @@ a.about-link.dark {
   height: auto !important;
   font-size: 1em !important;
   margin-top: 0.5em !important;
-}
-.hobby.dark {
-  color: white !important;
-  background-color: black;
-  border-color: white;
-}
-.dark > .tooltip > .misc-link {
-  color: #79ffe1 !important;
-}
-.dark > .misc-link {
-  color: #79ffe1 !important;
-}
-.dark > .tooltip > .misc-link:hover {
-  background-color: rgba(121, 255, 225, 0.2) !important;
-}
-.dark > .misc-link:hover {
-  background-color: rgba(121, 255, 225, 0.2) !important;
+  color: var(--text-color) !important;
+  background-color: var(--background-color) !important;
+  border-color: var(--text-color) !important;
 }
 .misc-link {
   line-height: 1.5 !important;
@@ -166,8 +132,14 @@ a.about-link.dark {
   font-size: 1em !important;
   align-items: center !important;
 }
-.collapse.dark > .view > .title {
-  color: white !important;
+.dark .misc-link:hover {
+  background-color: rgba(121, 255, 225, 0.2) !important;
+}
+.dark .misc-link:hover {
+  background-color: rgba(121, 255, 225, 0.2) !important;
+}
+.collapse > .view > .title {
+  color: var(--text-color) !important;
 }
 .collapse-group > .last-collapse {
   border-bottom: 0px !important;
@@ -218,33 +190,31 @@ footer > button {
   width: 400px !important;
   max-width: 400px !important;
   flex: 0 auto !important;
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
 }
-.project-card.dark {
-  background-color: black !important;
-  color: white !important;
-  border-color: #444 !important;
+.project-card:hover {
+  box-shadow: 0 5px 10px var(--card-box-shadow-color) !important;
 }
-.project-card.dark:hover {
-  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.15) !important;
+.project-card > footer {
+  border-color: var(--border-color) !important;
 }
-.project-card.dark > footer {
-  border-color: #444;
+.project-card > footer > .misc-link-r {
+  color: var(--link-color) !important;
 }
-.project-card.dark > footer > .misc-link-r {
-  color: #79ffe1 !important;
+.project-card > footer > .misc-link-r:hover {
+  background-color: var(--link-hover-color) !important;
 }
-.project-card.dark > footer > .misc-link-r:hover {
-  background-color: rgba(121, 255, 225, 0.2) !important;
-}
-.project-card.dark > .content > .project-card-content > div > .btn {
-  background-color: black !important;
-  border: 1px solid #aaa;
-  color: #bbb;
+.project-card > .content > .project-card-content > div > .btn {
+  background-color: var(--background-color) !important;
+  border: 1px solid var(--border-color);
+  color: var(--secondary-color);
   box-shadow: none;
 }
-.project-card.dark > .content > .project-card-content > div > .btn:hover {
-  border: 1px solid white;
-  color: white;
+.project-card > .content > .project-card-content > div > .btn:hover {
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
 }
 .project-card > .content {
   padding: 0 !important
@@ -271,28 +241,23 @@ footer > button {
 .body-dark > #geist-ui-modal > .backdrop > .layer {
   opacity: 0.75 !important;
 }
-.body-dark > #geist-ui-modal > .backdrop > .content > .wrapper {
-  box-shadow: 0 30px 60px rgba(255, 255, 255, 0.15);
-  background: black;
-  color: white;
+#geist-ui-modal > .backdrop > .content > .wrapper {
+  box-shadow: 0 30px 60px var(--card-box-shadow-color);
+  background: var(--modal-bg);
 }
-.body-dark > #geist-ui-modal > .backdrop > .content > .wrapper > h2 {
-  color: white;
+#geist-ui-modal > .backdrop > .content > .wrapper > .content > .row > .modal-section-img {
+  background-color: transparent;
 }
-.body-dark > #geist-ui-modal > .backdrop > .content > .wrapper > p {
-  color: #bbb;
+#geist-ui-modal > .backdrop > .content > .wrapper > footer {
+  border-color: var(--modal-border-color);
 }
-.body-dark > #geist-ui-modal > .backdrop > .content > .wrapper > .content > .row > .modal-section-img {
-  background-color: white;
-  border-radius: 5px;
+#geist-ui-modal > .backdrop > .content > .wrapper > footer > .btn {
+  background-color: var(--modal-bg);
+  color: black !important;
+  border-color: var(--modal-border-color) !important;
 }
-.body-dark > #geist-ui-modal > .backdrop > .content > .wrapper > footer {
-  border-color: #444;
-}
-.body-dark > #geist-ui-modal > .backdrop > .content > .wrapper > footer > .btn {
-  background-color: black;
-  color: #ddd;
-  border-color: #444;
+#geist-ui-modal .btn a {
+  color: black !important;
 }
 .body-dark > #geist-ui-modal > .backdrop > .content > .wrapper > footer > .btn:hover {
   background-color: #111;
@@ -301,6 +266,23 @@ footer > button {
 .tooltip-content > .inner {
   padding: 0 1em !important;
 }
+.modal-tag {
+  margin-top: 0.5em;
+  margin-right: 0.5em;
+  background-color: transparent !important;
+}
+.bg-img-default {
+  transform: rotate(105deg);
+}
+.bg-img-light {
+  transform: rotate(105deg);
+}
+.bg-img-dark {
+  transform: rotate(-70deg);
+}
+
+/* Project CSS */
+
 a.breadcrums-item:hover {
   color: black !important;
 }
@@ -336,30 +318,6 @@ a.breadcrums-item:hover {
 }
 .mode-toggle-img:hover {
   cursor: pointer;
-}
-.modal-tag {
-  margin-top: 0.5em;
-  margin-right: 0.5em;
-}
-.modal-tag.dark {
-  background-color: black;
-  color: white;
-  border: 1px solid white;
-}
-.bg-img-default {
-  transform: rotate(105deg);
-}
-.bg-img-light {
-  transform: rotate(105deg);
-}
-.bg-img-dark {
-  transform: rotate(-70deg);
-}
-.main-page-light {
-  background-color: white;
-}
-.main-page-dark {
-  background-color: black;
 }
 .slider.jsx-993346371 {
   background-color: #eee !important;
