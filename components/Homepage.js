@@ -15,7 +15,7 @@ export const Homepage = (props) => {
         <Row style={{ alignItems: 'center', flexWrap: 'wrap', marginTop: '1em' }}>
           <Col style={{ width: 'max-content', marginTop: '1em', marginRight: '1em' }}>
             <User src="img/avatar.png" altText="user-img" name="Rishabh Tatia" className="user-tag" style={{ padding: '0' }}>
-              Full Stack Developer
+              Developer
             </User>
           </Col>
           <Col style={{ width: 'max-content', marginTop: '1em' }}>
@@ -27,14 +27,14 @@ export const Homepage = (props) => {
               </Badge>
               <Spacer x={0.5} />
               <Badge type="secondary" className="badge-link">
-                <a href="https://acelab.tamu.edu" target="_blank" rel="noreferrer">
-                  @ACELAB
+                <a href="https://tamudatathon.com" target="_blank" rel="noreferrer">
+                  @TAMU_DATATHON
                 </a>
               </Badge>
               <Spacer x={0.5} />
               <Badge type="secondary" className="badge-link">
-                <a href="https://tamudatathon.com" target="_blank" rel="noreferrer">
-                  @TAMU_DATATHON
+                <a href="https://acelab.tamu.edu" target="_blank" rel="noreferrer">
+                  @ACELAB
                 </a>
               </Badge>
             </Row>
@@ -53,64 +53,70 @@ export const Homepage = (props) => {
           public.
         </Text>
         <br />
-        <b>@INTUIT</b> | Software Engineering Intern | San Diego, California <span style={{ float: 'right' }}>05/21 &#8212; 08/21</span>
-        <ul>
-          <li>
-            I will be working on the File and Finish team to ensure ease of tax filing for all{' '}
-            <Link target="_blank" rel="noreferrer" href="https://turbotax.intuit.com">
-              TurboTax
-            </Link>{' '}
-            customers.
-          </li>
-          <li>ReactJS, Spring, Typescript, Java</li>
-        </ul>
+        <div className="exp-section" id="intuit-section">
+          <b>@INTUIT</b> | Software Engineering Intern | San Diego, California <span style={{ float: 'right' }}>05/21 &#8212; 08/21</span>
+          <ul>
+            <li>
+              I will be working on the File and Finish team to ensure ease of tax filing for all{' '}
+              <Link target="_blank" rel="noreferrer" href="https://turbotax.intuit.com">
+                TurboTax
+              </Link>{' '}
+              customers.
+            </li>
+            <li>ReactJS, Spring, Typescript, Java</li>
+          </ul>
+        </div>
         <br />
-        <b>@TAMU DATATHON</b> | Software Developer | College Station, Texas <span style={{ float: 'right' }}>05/20 &#8212; Curr</span>
-        <ul className={props.theme}>
-          <li>
-            Developed{' '}
-            <Link target="_blank" rel="noreferrer" href="https://github.com/tamu-datathon-org/mercury">
-              Mercury
-            </Link>
-            , a mailing web application integrated with Mailgun to edit, view, and send custom HTML templated emails.
-          </li>
-          <li>
-            Created{' '}
-            <Link target="_blank" rel="noreferrer" href="https://github.com/tamu-datathon-org/portal">
-              Portal
-            </Link>
-            , an event showcase web application where events are stored as markdown files for ease of information update.
-          </li>
-          <li>
-            Contributed to the organization&apos;s landing page and several other open-source projects including{' '}
-            <Link target="_blank" rel="noreferrer" href="https://github.com/tamu-datathon-org/gatekeeper">
-              Gatekeeper
-            </Link>{' '}
-            and{' '}
-            <Link target="_blank" rel="noreferrer" href="https://github.com/tamu-datathon-org/r2d2">
-              R2D2
-            </Link>
-            .
-          </li>
-        </ul>
+        <div className="exp-section" id="td-section">
+          <b>@TAMU DATATHON</b> | Software Developer | College Station, Texas <span style={{ float: 'right' }}>05/20 &#8212; Curr</span>
+          <ul className={props.theme}>
+            <li>
+              Developed{' '}
+              <Link target="_blank" rel="noreferrer" href="https://github.com/tamu-datathon-org/mercury">
+                Mercury
+              </Link>
+              , a mailing web application integrated with Mailgun to edit, view, and send custom HTML templated emails.
+            </li>
+            <li>
+              Created{' '}
+              <Link target="_blank" rel="noreferrer" href="https://github.com/tamu-datathon-org/portal">
+                Portal
+              </Link>
+              , an event showcase web application where events are stored as markdown files for ease of information update.
+            </li>
+            <li>
+              Contributed to the organization&apos;s landing page and several other open-source projects including{' '}
+              <Link target="_blank" rel="noreferrer" href="https://github.com/tamu-datathon-org/gatekeeper">
+                Gatekeeper
+              </Link>{' '}
+              and{' '}
+              <Link target="_blank" rel="noreferrer" href="https://github.com/tamu-datathon-org/r2d2">
+                R2D2
+              </Link>
+              .
+            </li>
+          </ul>
+        </div>
         <br />
-        <b>@ACELAB</b> | Full Stack Developer | College Station, Texas <span style={{ float: 'right' }}>02/20 &#8212; Curr</span>
-        <ul>
-          <li>
-            Collaborated with a doctoral student to develop{' '}
-            <Link target="_blank" rel="noreferrer" href="https://github.com/tatiaris/wieat">
-              WIEAT
-            </Link>
-            , a web-based data entry, visualization, and analysis application.
-          </li>
-          <li>
-            Redesigned, updated, and maintained the official{' '}
-            <Link target="_blank" rel="noreferrer" href="https://acelab.tamu.edu">
-              lab website
-            </Link>{' '}
-            which serves over 12000 users every year.
-          </li>
-        </ul>
+        <div className="exp-section" id="acelab-section">
+          <b>@ACELAB</b> | Full Stack Developer | College Station, Texas <span style={{ float: 'right' }}>02/20 &#8212; Curr</span>
+          <ul>
+            <li>
+              Collaborated with a doctoral student to develop{' '}
+              <Link target="_blank" rel="noreferrer" href="https://github.com/tatiaris/wieat">
+                WIEAT
+              </Link>
+              , a web-based data entry, visualization, and analysis application.
+            </li>
+            <li>
+              Redesigned, updated, and maintained the official{' '}
+              <Link target="_blank" rel="noreferrer" href="https://acelab.tamu.edu">
+                acelab
+              </Link>{' '}
+              website which serves over 12000 users every year.
+            </li>
+          </ul>
+        </div>
         <Divider style={{ marginTop: '2.5em' }} align="start">
           Hobbies & Interests
         </Divider>

@@ -280,6 +280,34 @@ footer > button {
 .bg-img-dark {
   transform: rotate(-70deg);
 }
+.exp-section {
+  position: relative;
+}
+.exp-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -110px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 100%;
+  border-radius: 40%;
+}
+#intuit-section::before {
+  background-image: url('https://pbs.twimg.com/profile_images/1268281514891964416/PW1MdxLP_400x400.jpg');
+}
+#acelab-section::before {
+  background-image: url('/img/tamu-logo.jpg');
+  background-color: white;
+}
+#td-section::before {
+  background-image: url('/img/td-logo.jpg');
+}
+
+@media (max-width: 1200px) {.exp-section::before { display: none; }}
 
 /* Project CSS */
 
