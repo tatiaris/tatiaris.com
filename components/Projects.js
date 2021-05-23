@@ -447,7 +447,7 @@ const Projects = (props) => {
     }
   };
 
-  if (document) document.onkeydown = handleKeyPress;
+  if (typeof document !== 'undefined') document.onkeydown = handleKeyPress;
 
   return (
     <>
