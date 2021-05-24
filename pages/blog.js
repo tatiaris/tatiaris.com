@@ -23,6 +23,7 @@ export default function Home() {
     if (typeof localStorage.getItem('theme') != 'undefined' && (localStorage.getItem('theme') == 'light' || localStorage.getItem('theme') == 'dark')) setTheme(localStorage.getItem('theme'));
   }, []);
 
+  if (theme == 'default') return <></>;
   return (
     <>
       <button onClick={toggleTheme} className={`mode-toggle-img`}>
