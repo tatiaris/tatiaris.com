@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { Button, Page, Text, Image } from '@geist-ui/react';
-import GeistNavbar from '../components/GeistNavbar';
 import Copyright from '../components/Copyright';
 import Navbar from '../components/Navbar';
 import Homepage from '../components/Homepage';
@@ -21,6 +20,7 @@ export default function Home() {
 
   useEffect(() => {
     if (typeof localStorage.getItem('theme') != 'undefined' && (localStorage.getItem('theme') == 'light' || localStorage.getItem('theme') == 'dark')) setTheme(localStorage.getItem('theme'));
+    else setTheme('light');
   }, []);
 
   if (theme == 'default') return <></>;

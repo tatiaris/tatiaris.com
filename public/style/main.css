@@ -68,13 +68,18 @@ a {
 }
 .nav {
   display: flex;
-  gap: 20px;
 }
 .nav a {
   color: var(--text-color) !important;
 }
 .nav svg {
   width: 1rem;
+}
+.nav-item {
+  display: flex;
+}
+.nav-item svg {
+  margin-right: 5px;
 }
 a.underline {
   display: block;
