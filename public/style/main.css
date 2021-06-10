@@ -32,6 +32,7 @@ p {
 .light {
   --text-color: black;
   --link-color: #0070f3;
+  --badge-text-color: black;
   --link-hover-color: rgba(0, 112, 243, 0.1);
   --background-color: white;
   --secondary-color: #666666;
@@ -43,6 +44,22 @@ p {
   --card-box-shadow-color: rgba(0, 0, 0, 0.12);
   --modal-bg: #fff;
   --modal-border-color: #eaeaea;
+}
+.night {
+	--text-color: white;
+	--link-color: #ebff00;
+  --badge-text-color: #221b44;
+	--link-hover-color: #f4ff7827;
+	--background-color: #221b44;
+	--secondary-color: #bbb;
+	--tertiary-color: #ccc;
+	--tamu-color: #500;
+	--border-color: #3a2e75;
+	--badge-bg-color: #ebff00;
+	--badge-bg-color-hover: #f4ff78;
+  --card-box-shadow-color: #3a2e75;
+	--modal-bg: #fff;
+	--modal-border-color: #eaeaea;
 }
 .dark {
   --text-color: white;
@@ -133,11 +150,10 @@ a.underline.active::after {
 }
 .badge-link > a {
   line-height: 1.5;
-  color: black !important;
   text-transform: uppercase;
 }
 .badge-link > a {
-  color: var(--text-color) !important;
+  color: var(--badge-text-color) !important;
 }
 a.about-link {
   padding: 0 2px;
@@ -171,11 +187,8 @@ a.about-link {
   font-size: 1em !important;
   align-items: center !important;
 }
-.dark .misc-link:hover {
-  background-color: rgba(121, 255, 225, 0.2) !important;
-}
-.dark .misc-link:hover {
-  background-color: rgba(121, 255, 225, 0.2) !important;
+.misc-link:hover {
+  background-color: var(--link-hover-color) !important;
 }
 .collapse > .view > .title {
   color: var(--text-color) !important;
@@ -644,3 +657,11 @@ a.canvasjs-chart-credit {
     --toggle-img-width: 0px;
   }
 }
+
+/* 
+Name
+School
+Group @intuit
+Have you been at intuit before
+what animak are you and why?
+*/

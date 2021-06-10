@@ -54,21 +54,21 @@ export const Homepage = (props) => {
         </Text>
         <br />
         <div className="exp-section" id="intuit-section">
-          <b>@INTUIT</b> | Software Engineering Intern | San Diego, California <span style={{ float: 'right' }}>05/21 &#8212; 08/21</span>
+          <b>@INTUIT</b> | Software Engineering Intern | San Diego, California
           <ul>
             <li>
-              I will be working on the File and Finish team to ensure ease of tax filing for all{' '}
+              Worked on a large scaling backend to power the Finish and File section for
               <Link target="_blank" rel="noreferrer" href="https://turbotax.intuit.com">
                 TurboTax
               </Link>{' '}
-              customers.
+              using Spring Boot and Java.
             </li>
-            <li>ReactJS, Spring, Typescript, Java</li>
+            <li>Developed and extended libraries to improve server side rendering functionality for TurboTax Online</li>
           </ul>
         </div>
         <br />
         <div className="exp-section" id="td-section">
-          <b>@TAMU DATATHON</b> | Software Developer | College Station, Texas <span style={{ float: 'right' }}>05/20 &#8212; Curr</span>
+          <b>@TAMU DATATHON</b> | Software Developer | College Station, Texas
           <ul className={props.theme}>
             <li>
               Developed{' '}
@@ -99,7 +99,7 @@ export const Homepage = (props) => {
         </div>
         <br />
         <div className="exp-section" id="acelab-section">
-          <b>@ACELAB</b> | Full Stack Developer | College Station, Texas <span style={{ float: 'right' }}>02/20 &#8212; Curr</span>
+          <b>@ACELAB</b> | Full Stack Developer | College Station, Texas
           <ul>
             <li>
               Collaborated with a doctoral student to develop{' '}
