@@ -57,7 +57,7 @@ export const Homepage = (props) => {
           <b>@INTUIT</b> | Software Engineering Intern
           <ul>
             <li>
-              Worked on a large scaling backend to power the Finish and File section for
+              Worked on a large scaling backend to power the Finish and File section for{' '}
               <Link target="_blank" rel="noreferrer" href="https://turbotax.intuit.com">
                 TurboTax
               </Link>{' '}
