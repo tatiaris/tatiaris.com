@@ -54,7 +54,7 @@ export const Homepage = (props) => {
         </Text>
         <br />
         <div className="exp-section" id="intuit-section">
-          <b>@INTUIT</b> | Software Engineering Intern | San Diego, California
+          <b>@INTUIT</b> | Software Engineering Intern
           <ul>
             <li>
               Worked on a large scaling backend to power the Finish and File section for
@@ -68,7 +68,7 @@ export const Homepage = (props) => {
         </div>
         <br />
         <div className="exp-section" id="td-section">
-          <b>@TAMU DATATHON</b> | Software Developer | College Station, Texas
+          <b>@TAMU DATATHON</b> | Software Developer
           <ul className={props.theme}>
             <li>
               Developed{' '}
@@ -99,7 +99,7 @@ export const Homepage = (props) => {
         </div>
         <br />
         <div className="exp-section" id="acelab-section">
-          <b>@ACELAB</b> | Full Stack Developer | College Station, Texas
+          <b>@ACELAB</b> | Full Stack Developer
           <ul>
             <li>
               Collaborated with a doctoral student to develop{' '}
