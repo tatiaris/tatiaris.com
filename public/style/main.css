@@ -658,10 +658,24 @@ a.canvasjs-chart-credit {
   }
 }
 
-/* 
-Name
-School
-Group @intuit
-Have you been at intuit before
-what animak are you and why?
-*/
+/* BLOG START */
+.blog-link {
+  transition: 200ms !important;
+}
+.blog-link:hover {
+  padding-left: 20px;
+}
+.link-text {
+  color: var(--link-color);
+}
+.theme-tutorial-container {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: calc(16pt * 0.75) 16pt;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* BLOG END */

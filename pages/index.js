@@ -26,12 +26,12 @@ export default function Home() {
   if (theme == 'default') return <></>;
   return (
     <>
-      <button onClick={toggleTheme} className={`mode-toggle-img`}>
+      {/* <button onClick={toggleTheme} className={`mode-toggle-img`}>
         <Image className={`bg-img-${theme}`} src="/img/bg-top-right.png" alt="theme-toggle-img" />
-      </button>
+      </button> */}
       <Page>
         <Head>
-          <title>Rishabh Tatia | Portfolio</title>
+          <title>Portfolio | Rishabh Tatia</title>
           <link rel="icon" href="/favicon.ico" />
           <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=5, minimum-scale=1, width=device-width" />
           <meta name="description" content="Rishabh Tatia's personal website. Welcome to my portfolio page, here you can get to know me and my projects." />
