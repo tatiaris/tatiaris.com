@@ -1,5 +1,5 @@
 import { Code } from '@geist-ui/react';
-import ThemeChangeExample from './blog/themeChangeExample';
+import ThemeChangeExample from './blog/ThemeChangeExample';
 
 export const articles = {
   'organizing-website-themes': {
