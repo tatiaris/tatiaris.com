@@ -92,6 +92,12 @@ const RecommendMe = () => {
             <SearchResult key={`result-${i}`} result={t} recommended={userRecPlaylist.has(t.id)} addSongToPlaylist={addSongToPlaylist} />
           ))}
         </div>
+        <br />
+        <div>
+          <a href="https://open.spotify.com/playlist/7qF7ucb45acJ28Z6Qa47Hp" className="spotify-btn" target="_blank" rel="noopener noreferrer">
+            See what I&apos;m listening to
+          </a>
+        </div>
       </Page>
     </div>
   );
