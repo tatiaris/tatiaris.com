@@ -63,4 +63,13 @@ document.body.classList.add('dark');`}</Code>
       </>
     )
   }
+  // 'infinite-zoom-art': {
+  //   title: 'Infinite Zoom Art',
+  //   description: 'Zoom in art, one of the coolest modern forms of art in my opinion',
+  //   group: 'coding',
+  //   date: '06/30/21',
+  //   content: (
+  //     <></>
+  //   )
+  // }
 };

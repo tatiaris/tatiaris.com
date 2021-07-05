@@ -679,3 +679,113 @@ a.canvasjs-chart-credit {
   flex-wrap: wrap;
 }
 /* BLOG END */
+
+/* SONG RECOMMEND START */
+.song-search-input {
+  width: 100%;
+  padding: 0 30px;
+  line-height: 3;
+  border: 0;
+  border-radius: 30px;
+  box-shadow: inset 1px 1px 5px #bebebe, inset -1px -1px 5px #ffffff;
+  transition: 200ms;
+  font-size: 1rem;
+  transition: 0ms;
+}
+.results-shown .song-search-input {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  box-shadow: none;
+}
+.song-search-input:focus {
+  border: 0 !important;
+}
+button:hover {
+  cursor: pointer;
+}
+.search-results-container {
+  width: 100%;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
+}
+.search-result-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #191414;
+  color: #1db954;
+  border-top: 1px solid #333;
+  padding: 14px 30px;
+  height: 80px;
+  width: 100%;
+}
+.search-result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 75%;
+  overflow: hidden;
+}
+.search-result-details-container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 5px;
+}
+.search-result-details-container > * {
+	height: 1.25rem;
+  white-space: nowrap;
+}
+.track-artists-container a {
+  color: #1db954;
+}
+.track-artists-container a:hover {
+  text-decoration: underline;
+}
+.recommend-btn-container {
+  display: flex;
+  align-items: center;
+}
+.recommend-btn {
+  display: flex;
+	background-color: #191414;
+	color: #fff;
+	border: 2px solid white;
+	border-radius: 30px;
+	padding: 10px 30px;
+  transition: 300ms;
+}
+.recommend-btn.small {
+  display: none;
+  padding: 10px;
+}
+.recommend-btn.recommended {
+  background-color: #1db954;
+  padding: 12px;
+  color: #191414;
+  border: 0px;
+}
+.recommend-btn:hover {
+  background-color: white;
+  color: #191414;
+}
+.recommend-btn.recommended:hover {
+  background-color: #1db954;
+  color: #191414;
+}
+.track-title {
+  color: white !important;
+}
+.track-title:hover {
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .recommend-btn.large {
+    display: none;
+  }
+  .recommend-btn.small {
+    display: flex;
+  }
+}
+/* SONG RECOMMEND END */
