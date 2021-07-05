@@ -1,61 +1,63 @@
 import React, { useEffect, useState } from 'react';
-import Head from 'next/head'
-import { Page, Breadcrumbs, Table, Text, Row } from '@geist-ui/react'
+import Head from 'next/head';
+import { Page, Breadcrumbs, Table, Text, Row } from '@geist-ui/react';
 
 const Project = () => {
   const [userIpData, setUserIpData] = useState({
-    "ip": "undetermined",
-    "isp": "undetermined",
-    "org": "undetermined",
-    "hostname": "undetermined",
-    "latitude": 0,
-    "longitude": 0,
-    "postal_code": "undetermined",
-    "city": "undetermined",
-    "country_code": "undetermined",
-    "country_name": "undetermined",
-    "continent_code": "undetermined",
-    "continent_name": "undetermined",
-    "region": "undetermined",
-    "district": "undetermined",
-    "timezone_name": "undetermined",
-    "connection_type": "undetermined",
-    "asn_number": 0,
-    "asn_org": "undetermined",
-    "asn": "undetermined",
-    "currency_code": "undetermined",
-    "currency_name": "undetermined",
-    "success": false,
-    "premium": false
-  })
+    ip: 'undetermined',
+    isp: 'undetermined',
+    org: 'undetermined',
+    hostname: 'undetermined',
+    latitude: 0,
+    longitude: 0,
+    postal_code: 'undetermined',
+    city: 'undetermined',
+    country_code: 'undetermined',
+    country_name: 'undetermined',
+    continent_code: 'undetermined',
+    continent_name: 'undetermined',
+    region: 'undetermined',
+    district: 'undetermined',
+    timezone_name: 'undetermined',
+    connection_type: 'undetermined',
+    asn_number: 0,
+    asn_org: 'undetermined',
+    asn: 'undetermined',
+    currency_code: 'undetermined',
+    currency_name: 'undetermined',
+    success: false,
+    premium: false
+  });
 
   const [userDeviceData, setUserDeviceData] = useState({
-    browser: "could not determine",
-    os: "could not determine",
+    browser: 'could not determine',
+    os: 'could not determine',
     screen_width: 0,
-    screen_height: 0,
-  })
+    screen_height: 0
+  });
 
   const loadUserDeviceData = () => {
-    const userAgentData = navigator.userAgent.split(/[()]+/)
+    const userAgentData = navigator.userAgent.split(/[()]+/);
     setUserDeviceData({
       browser: userAgentData[userAgentData.length - 1],
-      os: (navigator.oscpu) ? navigator.oscpu : "could not determine",
+      os: navigator.oscpu ? navigator.oscpu : 'could not determine',
       screen_width: Math.max(window.screen.width, window.innerWidth, window.screen.availWidth),
-      screen_height: Math.max(window.screen.height, window.innerHeight, window.screen.availHeight),
-    })
-  }
+      screen_height: Math.max(window.screen.height, window.innerHeight, window.screen.availHeight)
+    });
+  };
 
   const fetchIpData = async () => {
-    const geoIPRes = await fetch('https://json.geoiplookup.io/')
-    const ipData = await geoIPRes.json()
-    if (ipData) { setUserIpData(ipData) }
-  }
+    const geoIPRes = await fetch('https://json.geoiplookup.io/');
+    const ipData = await geoIPRes.json();
+    if (ipData) {
+      setUserIpData(ipData);
+    }
+  };
 
   useEffect(() => {
-    if (document) fetchIpData()
+    if (document) fetchIpData();
     loadUserDeviceData();
-  }, [])
+  }, []);
 
   const userData = [
     { property: 'Operating System', type: 'Device', value: userDeviceData.os },
@@ -67,9 +69,17 @@ const Project = () => {
     { property: 'Region', type: 'IP', value: userIpData.region },
     { property: 'City', type: 'IP', value: userIpData.city },
     { property: 'Postal Code', type: 'IP', value: userIpData.postal_code },
-    { property: 'Coordinates', type: 'IP', value: <Text style={{ color: '#f827e6' }}>{userIpData.latitude}, {userIpData.longitude}</Text> },
-    { property: 'Internet Service Provider', type: 'IP', value: userIpData.isp },
-  ]
+    {
+      property: 'Coordinates',
+      type: 'IP',
+      value: (
+        <Text style={{ color: '#f827e6' }}>
+          {userIpData.latitude}, {userIpData.longitude}
+        </Text>
+      )
+    },
+    { property: 'Internet Service Provider', type: 'IP', value: userIpData.isp }
+  ];
 
   return (
     <Page id="project-container">
@@ -90,23 +100,26 @@ const Project = () => {
         <Breadcrumbs.Item>projects</Breadcrumbs.Item>
         <Breadcrumbs.Item>about_you</Breadcrumbs.Item>
       </Breadcrumbs>
-      <br/>
+      <br />
       <Text h3>ABOUT YOU</Text>
       <Text>
-        This tool was created for informational purposes in order to let people know about their 
-        data that is <b>easily</b> accessible to someone via the web. In order to protect or "curtain"
-        your data from websites and several other benefits, 
-        please use a <a href="https://www.forbes.com/sites/tjmccue/2019/06/20/why-use-a-vpn/">VPN</a>.
+        This tool was created for informational purposes in order to let people know about their data that is <b>easily</b> accessible to someone via the web. In order to protect your data from
+        websites and several other benefits, please use a <a href="https://www.forbes.com/sites/tjmccue/2019/06/20/why-use-a-vpn/">VPN</a>.
       </Text>
-      <Table data={userData} style={{ marginTop: "2em" }}>
+      <Table data={userData} style={{ marginTop: '2em' }}>
         <Table.Column prop="property" label="property" />
         <Table.Column prop="type" label="type" />
         <Table.Column prop="value" label="value" />
       </Table>
-      <br/>
-      <Row justify="center">Created by &nbsp;<a href="/" className="about-link bg-yellow">Rishabh Tatia</a></Row>
+      <br />
+      <Row justify="center">
+        Created by &nbsp;
+        <a href="/" className="about-link bg-yellow">
+          Rishabh Tatia
+        </a>
+      </Row>
     </Page>
-  )
-}
+  );
+};
 
 export default Project;

@@ -1,5 +1,5 @@
-import { GeistProvider, CssBaseline } from '@geist-ui/react'
-import "../public/style/main.css"
+import { GeistProvider, CssBaseline } from '@geist-ui/react';
+import '../public/style/main.css';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -7,6 +7,6 @@ function MyApp({ Component, pageProps }) {
       <CssBaseline />
       <Component {...pageProps} />
     </GeistProvider>
-  )
+  );
 }
-export default MyApp
+export default MyApp;
