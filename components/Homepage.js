@@ -121,6 +121,12 @@ export const Homepage = (props) => {
           Hobbies & Interests
         </Divider>
         <Row style={{ flexWrap: 'wrap' }}>
+          <a href="/recommend-music">
+            <Tag className="hobby music" type="success" invert>
+              Recommend me some music
+            </Tag>
+          </a>
+          <Spacer x={0.5} />
           <Tag className="hobby">Racquetball</Tag>
           <Spacer x={0.5} />
           <Tag className="hobby">Longboarding</Tag>
@@ -154,11 +160,6 @@ export const Homepage = (props) => {
           <Tooltip text={'Instagram'} placement="bottom" enterDelay="1000">
             <Link className="misc-link" target="_blank" rel="noreferrer" href="https://www.instagram.com/tat.ris/" block>
               <Instagram />
-            </Link>
-          </Tooltip>
-          <Tooltip text={'Twitter'} placement="bottom" enterDelay="1000">
-            <Link className="misc-link" target="_blank" rel="noreferrer" href="https://twitter.com/tatia_ris" block>
-              <Twitter />
             </Link>
           </Tooltip>
           <Tooltip text={'E-mail'} placement="bottom" enterDelay="1000">

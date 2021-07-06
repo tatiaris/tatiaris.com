@@ -5,6 +5,30 @@ import { ExternalLink, Code, X, ArrowLeft, ArrowRight } from '@geist-ui/react-ic
 const projectList = [
   {
     id: 15,
+    name: 'Spotify Recommend Widget',
+    img: 'spotify-logo.png',
+    description: 'Make music recommendation easy.',
+    features: [
+      {
+        name: '',
+        description: 'Anyone can search and recommend you a song through spotify.'
+      },
+      {
+        name: '',
+        description: 'Ensures that you do not have duplicate song recommendations.'
+      },
+      {
+        name: '',
+        description: 'One tap recommendation.'
+      }
+    ],
+    tools: ['React', 'Spotify'],
+    demo_link: '/recommend-music',
+    github_link: 'https://github.com/tatiaris/tatiaris.com/tree/master/pages/recommend-music.js',
+    status: 'completed'
+  },
+  {
+    id: 15,
     name: 'Album Cover Screenshot',
     img: 'album_cover_ss.jpg',
     description: 'Create your own album cover screenshot with this filter tool.',
@@ -125,7 +149,7 @@ const projectList = [
     tools: ['Next.js', 'Node.js', 'React', 'MongoDB', 'Cheerio', 'Bootstrap'],
     demo_link: 'https://tamudp.vercel.app',
     github_link: 'https://github.com/tatiaris/degreeplanner',
-    status: 'ongoing'
+    status: 'completed'
   },
   {
     id: 10,
@@ -177,7 +201,7 @@ const projectList = [
     tools: ['Next.js', 'Node.js', 'React', 'MongoDB', 'React-Vis', 'Bootstrap'],
     demo_link: 'https://wieat.vercel.app',
     github_link: 'https://github.com/tatiaris/wieat',
-    status: 'ongoing'
+    status: 'completed'
   },
   {
     id: 8,

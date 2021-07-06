@@ -173,6 +173,10 @@ a.about-link {
   background-color: var(--background-color) !important;
   border-color: var(--text-color) !important;
 }
+.hobby.music {
+  background-color: #1db954 !important;
+  border-color: #1db954 !important;
+}
 .misc-link {
   line-height: 1.5 !important;
   height: auto !important;
