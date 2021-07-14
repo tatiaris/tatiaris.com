@@ -4,7 +4,7 @@ import { ExternalLink, Code, X, ArrowLeft, ArrowRight } from '@geist-ui/react-ic
 
 const projectList = [
   {
-    id: 15,
+    id: 16,
     name: 'Spotify Recommend Widget',
     img: 'spotify-logo.png',
     description: 'Make music recommendation easy.',
