@@ -63,7 +63,8 @@ export const Homepage = (props) => {
               </Link>{' '}
               using Spring Boot and Java.
             </li>
-            <li>Developed and extended libraries to improve server side rendering functionality for TurboTax Online</li>
+            <li>Developed and extended libraries to improve server side rendering functionality for TurboTax Online.</li>
+            <li>Enhanced the front-end plugins and widgets used to guide users on Turbotax using React, Redux, and Lottie.</li>
           </ul>
         </div>
         <br />
