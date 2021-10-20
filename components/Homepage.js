@@ -45,7 +45,7 @@ export const Homepage = (props) => {
         <Text>
           <span style={{ fontSize: '1.2em' }}>Hello,</span>
           <br />
-          My name is <b>Rishabh Tatia</b>. I am a senior at{' '}
+          I'm <b>Rishabh</b>, a senior at{' '}
           <a href="https://tamu.edu" className={`about-link tamu`} target="_blank" rel="noreferrer">
             Texas A&M University
           </a>{' '}
