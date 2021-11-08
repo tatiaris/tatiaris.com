@@ -42,6 +42,7 @@ const Tutoring = () => {
         </a>{' '}
         .
       </Text>
+      <br />
       <Text h4>WHY should you learn it?</Text>
       <Text style={{ marginTop: 0 }}>
         Good computer scientists are in <b>high demand</b> today, and are expected to stay so for a very long time. Even if you do not choose to work a computer science job, programming is an{' '}
@@ -52,6 +53,7 @@ const Tutoring = () => {
         </a>{' '}
         through programming.
       </Text>
+      <br />
       <Text h4>WHO can help you learn?</Text>
       <Text style={{ marginTop: 0 }}>
         Me! My name is{' '}
@@ -64,6 +66,7 @@ const Tutoring = () => {
         </a>
         . I have <b>6 years of experience</b> programming and developing various softwares and am <b>passionate about teaching</b> this useful skill to anyone willing to learn.
       </Text>
+      <br />
       <Text h4>HOW will you learn?</Text>
       <Text style={{ marginTop: 0 }}>
         We will be using{' '}
@@ -81,7 +84,7 @@ const Tutoring = () => {
         </div>
         <div className="class-details">
           <Text h4>
-            Intro to Programming | <span style={{ color: 'hotpink' }}>$30/Hr</span> | <span style={{ color: 'darkorange' }}>Easy</span>
+            Intro to Programming | <span style={{ color: 'hotpink' }}>$40/Hr</span> | <span style={{ color: 'darkorange' }}>Easy</span>
           </Text>
           <Text>
             Learn about programming, how it is used today, and the basics of any{' '}
@@ -109,7 +112,7 @@ const Tutoring = () => {
         </div>
         <div className="class-details">
           <Text h4>
-            AP Computer Science Prep | <span style={{ color: 'hotpink' }}>$30/Hr</span> | <span style={{ color: 'darkorange' }}>Medium</span>
+            AP Computer Science Prep | <span style={{ color: 'hotpink' }}>$40/Hr</span> | <span style={{ color: 'darkorange' }}>Medium</span>
           </Text>
           <Text>
             Master the content that appears on the <b>AP Computer Science A</b> exam and get a 5 on it!
@@ -139,7 +142,7 @@ const Tutoring = () => {
         </div>
         <div className="class-details">
           <Text h4>
-            Web Development | <span style={{ color: 'hotpink' }}>$40/Hr</span> | <span style={{ color: 'darkorange' }}>Medium</span>
+            Web Development | <span style={{ color: 'hotpink' }}>$50/Hr</span> | <span style={{ color: 'darkorange' }}>Medium</span>
           </Text>
           <Text>
             Design, build, and publish beautiful, <b>responsive websites</b> using HTML, CSS, and Javascript.
@@ -165,7 +168,7 @@ const Tutoring = () => {
         </div>
         <div className="class-details">
           <Text h4>
-            Problem Solving | <span style={{ color: 'hotpink' }}>$40/Hr</span> | <span style={{ color: 'darkorange' }}>Hard</span>
+            Problem Solving | <span style={{ color: 'hotpink' }}>$50/Hr</span> | <span style={{ color: 'darkorange' }}>Hard</span>
           </Text>
           <Text>
             Use advanced <b>programming logic</b> to solve complex and challenging coding problems.
@@ -204,7 +207,7 @@ const Tutoring = () => {
           <Globe />
           <span style={{ marginLeft: '5px' }}>Portfolio</span>
         </Link>
-        <Link download onClick={(e) => launchToast('Downloading Resume PDF...')} className="misc-link" href="/docs/Rishabh_Tatia_Resume_5_21.pdf" block>
+        <Link download onClick={(e) => launchToast('Downloading Resume PDF...')} className="misc-link" href="/docs/Rishabh-Tatia-Resume-10-21.pdf" block>
           <FileText />
           <span style={{ marginLeft: '5px' }}>Resume</span>
         </Link>
