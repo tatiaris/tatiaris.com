@@ -130,6 +130,8 @@ export const Homepage = (props) => {
           <Spacer x={0.5} />
           <Tag className="hobby">Racquetball</Tag>
           <Spacer x={0.5} />
+          <Tag className="hobby">Badminton</Tag>
+          <Spacer x={0.5} />
           <Tag className="hobby">Longboarding</Tag>
           <Spacer x={0.5} />
           <Tag className="hobby">Ping Pong</Tag>

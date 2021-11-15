@@ -26,9 +26,9 @@ export default function Home() {
   if (theme == 'default') return <></>;
   return (
     <>
-      {/* <button onClick={toggleTheme} className={`mode-toggle-img`}>
+      <button onClick={toggleTheme} className={`mode-toggle-img`}>
         <Image className={`bg-img-${theme}`} src="/img/bg-top-right.png" alt="theme-toggle-img" />
-      </button> */}
+      </button>
       <Page>
         <Head>
           <title>Portfolio | Rishabh Tatia</title>
