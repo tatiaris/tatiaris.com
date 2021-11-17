@@ -2,6 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import Title from '../../components/slides/396/title';
 import Recap from '../../components/slides/396/recap';
+import Hamming from '../../components/slides/396/hamming';
+import HammingExample from '../../components/slides/396/hamming-example';
+import HammingTheory from '../../components/slides/396/hamming-theory';
+import HammingTheory1 from '../../components/slides/396/hamming-theory-1';
+import HammingTheory2 from '../../components/slides/396/hamming-theory-2';
 
 function useKey(key, cb) {
   const callbackRef = useRef(cb);
@@ -20,8 +25,17 @@ function useKey(key, cb) {
 }
 
 const Project = () => {
+  const [resumePageScale, setResumePageScale] = useState(1);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [<Title key="slide-0" />, <Recap key="slide-1" />];
+  const slides = [
+    <Title key="slide-0" />,
+    <Recap key="slide-1" />,
+    <Hamming key="slide-2" />,
+    <HammingExample key="slide-3" />,
+    <HammingTheory key="slide-4" />,
+    <HammingTheory1 key="slide-5" />,
+    <HammingTheory2 key="slide-6" />
+  ];
 
   function previousSlide() {
     if (currentSlide > 0) setCurrentSlide(currentSlide - 1);
@@ -34,10 +48,8 @@ const Project = () => {
     if (elem.requestFullscreen) {
       elem.requestFullscreen();
     } else if (elem.webkitRequestFullscreen) {
-      /* Safari */
       elem.webkitRequestFullscreen();
     } else if (elem.msRequestFullscreen) {
-      /* IE11 */
       elem.msRequestFullscreen();
     }
   }
@@ -46,6 +58,14 @@ const Project = () => {
   useKey('Space', nextSlide);
   useKey('ArrowRight', nextSlide);
   useKey('KeyF', openFullscreen);
+
+  const calculatePageScale = () => {
+    setResumePageScale(document.getElementsByTagName('html')[0].clientWidth / 1600);
+  };
+  useEffect(() => {
+    if (window) window.onresize = calculatePageScale;
+    if (document) calculatePageScale();
+  }, []);
 
   return (
     <>
@@ -61,7 +81,13 @@ const Project = () => {
         <meta property="og:type" content="profile" />
         <meta httpEquiv="content-language" content="en" />
       </Head>
-      <div className="slide-container">{slides[currentSlide]}</div>
+      <div className="slide-container" style={{ transformOrigin: 'top left', scale: `${resumePageScale}` }}>
+        {slides[currentSlide]}
+        <div className="slide-nav-container">
+          <button onClick={previousSlide}>&larr;</button>
+          <button onClick={nextSlide}>&rarr;</button>
+        </div>
+      </div>
     </>
   );
 };

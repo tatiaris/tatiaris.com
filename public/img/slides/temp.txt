@@ -1,0 +1,30 @@
+\begin{pmatrix}
+d_1 \\
+d_2 \\
+d_3 \\
+d_4 \\
+p_1 \\
+p_2 \\
+p_3 \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+d_1 \\
+d_2 \\
+d_3 \\
+d_4 \\
+\end{pmatrix}
+\begin{pmatrix}
+1 & 0 & 0 & 0 & 1 & 1 & 0 \\
+0 & 1 & 0 & 0 & 1 & 0 & 1 \\
+0 & 0 & 1 & 0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 1 & 1 & 1 & 1 \\
+\end{pmatrix}
+
+
+P =
+\begin{pmatrix}
+1 & 1 & 0 & 1 & 1 & 0 & 0 \\
+1 & 0 & 1 & 1 & 0 & 1 & 0 \\
+0 & 1 & 1 & 1 & 0 & 0 & 1 \\
+\end{pmatrix}
