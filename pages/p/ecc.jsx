@@ -7,6 +7,9 @@ import HammingExample from '../../components/slides/396/hamming-example';
 import HammingTheory from '../../components/slides/396/hamming-theory';
 import HammingTheory1 from '../../components/slides/396/hamming-theory-1';
 import HammingTheory2 from '../../components/slides/396/hamming-theory-2';
+import HammingTheory3 from '../../components/slides/396/hamming-theory-3';
+import GolayCode from '../../components/slides/396/golay-code';
+import End from '../../components/slides/396/end';
 
 function useKey(key, cb) {
   const callbackRef = useRef(cb);
@@ -34,7 +37,10 @@ const Project = () => {
     <HammingExample key="slide-3" />,
     <HammingTheory key="slide-4" />,
     <HammingTheory1 key="slide-5" />,
-    <HammingTheory2 key="slide-6" />
+    <HammingTheory2 key="slide-6" />,
+    <HammingTheory3 key="slide-7" />,
+    <GolayCode key="slide-8" />,
+    <End key="slide-9" />
   ];
 
   function previousSlide() {
@@ -84,8 +90,8 @@ const Project = () => {
       <div className="slide-container" style={{ transformOrigin: 'top left', scale: `${resumePageScale}` }}>
         {slides[currentSlide]}
         <div className="slide-nav-container">
-          <button onClick={previousSlide}>&larr;</button>
-          <button onClick={nextSlide}>&rarr;</button>
+          {currentSlide > 0 ? <button onClick={previousSlide}>&larr;</button> : <></>}
+          {currentSlide < slides.length - 1 ? <button onClick={nextSlide}>&rarr;</button> : <></>}
         </div>
       </div>
     </>
