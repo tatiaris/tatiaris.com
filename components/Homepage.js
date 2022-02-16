@@ -40,7 +40,7 @@ export const Homepage = (props) => {
             </Row>
           </Col>
         </Row>
-        <br />
+        {/* <br /> */}
         {/* <Divider align="start">Experience</Divider>
         <Text>
           <span style={{ fontSize: '1.2em' }}>Hello,</span>
