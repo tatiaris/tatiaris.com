@@ -4,6 +4,30 @@ import { ExternalLink, Code, X, ArrowLeft, ArrowRight } from '@geist-ui/react-ic
 
 const projectList = [
   {
+    id: 17,
+    name: 'Rekkme',
+    img: 'rekkme-logo.svg',
+    description: 'Recommend anything to anyone!',
+    features: [
+      {
+        name: '',
+        description: 'Peer to peer in app recommendation support for several categories.'
+      },
+      {
+        name: '',
+        description: 'View trending recommendations around the world and get recommended by people with similar taste.'
+      },
+      {
+        name: '',
+        description: 'See what your friends and and people you follow are recommending each other.'
+      }
+    ],
+    tools: ['Next.js', 'Spring Boot', 'TS', 'Java'],
+    demo_link: 'https://rekkme.vercel.app',
+    github_link: 'https://github.com/tatiaris/',
+    status: 'ongoing'
+  },
+  {
     id: 16,
     name: 'Spotify Recommend Widget',
     img: 'spotify-logo.png',
@@ -125,7 +149,7 @@ const projectList = [
     tools: ['Next.js', 'Node.js', 'React', 'MongoDB', 'Auth0', 'Bootstrap'],
     demo_link: 'https://resuville.com',
     github_link: 'https://github.com/tatiaris/resuville',
-    status: 'ongoing'
+    status: 'completed'
   },
   {
     id: 11,

@@ -41,7 +41,7 @@ export const Homepage = (props) => {
           </Col>
         </Row>
         <br />
-        <Divider align="start">Experience</Divider>
+        {/* <Divider align="start">Experience</Divider>
         <Text>
           <span style={{ fontSize: '1.2em' }}>Hello,</span>
           <br />
@@ -117,7 +117,7 @@ export const Homepage = (props) => {
               website which serves over 12000 users every year.
             </li>
           </ul>
-        </div>
+        </div> */}
         <Divider style={{ marginTop: '2.5em' }} align="start">
           Hobbies & Interests
         </Divider>
