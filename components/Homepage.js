@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, User, Divider, Row, Tag, Spacer, Col, Badge, Link, useToasts, Tooltip } from '@geist-ui/react';
 import { Github, FileText, Instagram, Twitter, Linkedin, Mail } from '@geist-ui/react-icons';
+import { articles } from './Articles';
 
 /**
  * Homepage component
@@ -12,142 +13,109 @@ export const Homepage = (props) => {
   return (
     <>
       <div className="content-wrapper">
-        <Row style={{ alignItems: 'center', flexWrap: 'wrap', marginTop: '1em' }}>
-          <Col style={{ width: 'max-content', marginTop: '1em', marginRight: '1em' }}>
-            <User src="img/avatar.png" altText="user-img" name="Rishabh Tatia" className="user-tag" style={{ padding: '0' }}>
-              Developer
-            </User>
-          </Col>
-          <Col style={{ width: 'max-content', marginTop: '1em' }}>
-            <Row>
-              <Badge type="secondary" className="badge-link">
-                <a href="https://intuit.com" target="_blank" rel="noreferrer">
-                  @INTUIT
-                </a>
-              </Badge>
-              <Spacer x={0.5} />
-              <Badge type="secondary" className="badge-link">
-                <a href="https://tamudatathon.com" target="_blank" rel="noreferrer">
-                  @TAMU_DATATHON
-                </a>
-              </Badge>
-              <Spacer x={0.5} />
-              <Badge type="secondary" className="badge-link">
-                <a href="https://acelab.tamu.edu" target="_blank" rel="noreferrer">
-                  @ACELAB
-                </a>
-              </Badge>
-            </Row>
-          </Col>
-        </Row>
-        {/* <br /> */}
-        {/* <Divider align="start">Experience</Divider>
-        <Text>
-          <span style={{ fontSize: '1.2em' }}>Hello,</span>
-          <br />
-          I&apos;m <b>Rishabh</b>, a senior at{' '}
-          <a href="https://tamu.edu" className={`about-link tamu`} target="_blank" rel="noreferrer">
-            Texas A&M University
-          </a>{' '}
-          studying Mathematics and Computer Science. I started programming as a freshman in high school when I wanted to develop games, automate processes, and create helpful applications for the
-          public.
-        </Text>
-        <br />
-        <div className="exp-section" id="intuit-section">
-          <b>@INTUIT</b> | Software Engineering Intern
-          <ul>
-            <li>
-              Worked on a large scaling backend to power the Finish and File section for{' '}
-              <Link target="_blank" rel="noreferrer" href="https://turbotax.intuit.com">
-                TurboTax
-              </Link>{' '}
-              using Spring Boot and Java.
-            </li>
-            <li>Developed and extended libraries to improve server side rendering functionality for TurboTax Online.</li>
-            <li>Enhanced the front-end plugins and widgets used to guide users on Turbotax using React, Redux, and Lottie.</li>
-          </ul>
+        <div style={{ marginTop: '1em' }}>
+          <div className="profile-intro-container">
+            <div>
+              <img width={250} src="/img/thumbnail.png" alt="" style={{ borderRadius: '50%' }} />
+            </div>
+            <div>
+              <h2>Hi!</h2>
+              <span style={{ fontSize: '22px' }}>
+                I&apos;m Rishabh, a senior at{' '}
+                <a className="tamu-link" href="https://tamu.edu" target="_blank" rel="noreferrer">
+                  Texas A&amp;M University
+                </a>{' '}
+                studying Applied Mathematics and Computer Science who loves building products and solving prolems!
+              </span>
+            </div>
+          </div>
         </div>
-        <br />
-        <div className="exp-section" id="td-section">
-          <b>@TAMU DATATHON</b> | Software Developer
-          <ul className={props.theme}>
-            <li>
-              Developed{' '}
-              <Link target="_blank" rel="noreferrer" href="https://github.com/tamu-datathon-org/mercury">
-                Mercury
-              </Link>
-              , a mailing web application integrated with Mailgun to edit, view, and send custom HTML templated emails.
-            </li>
-            <li>
-              Created{' '}
-              <Link target="_blank" rel="noreferrer" href="https://github.com/tamu-datathon-org/portal">
-                Portal
-              </Link>
-              , an event showcase web application where events are stored as markdown files for ease of information update.
-            </li>
-            <li>
-              Contributed to the organization&apos;s landing page and several other open-source projects including{' '}
-              <Link target="_blank" rel="noreferrer" href="https://github.com/tamu-datathon-org/gatekeeper">
-                Gatekeeper
-              </Link>{' '}
-              and{' '}
-              <Link target="_blank" rel="noreferrer" href="https://github.com/tamu-datathon-org/r2d2">
-                R2D2
-              </Link>
-              .
-            </li>
-          </ul>
-        </div>
-        <br />
-        <div className="exp-section" id="acelab-section">
-          <b>@ACELAB</b> | Full Stack Developer
-          <ul>
-            <li>
-              Collaborated with a doctoral student to develop{' '}
-              <Link target="_blank" rel="noreferrer" href="https://github.com/tatiaris/wieat">
-                WIEAT
-              </Link>
-              , a web-based data entry, visualization, and analysis application.
-            </li>
-            <li>
-              Redesigned, updated, and maintained the official{' '}
-              <Link target="_blank" rel="noreferrer" href="https://acelab.tamu.edu">
-                acelab
-              </Link>{' '}
-              website which serves over 12000 users every year.
-            </li>
-          </ul>
-        </div> */}
         <Divider style={{ marginTop: '2.5em' }} align="start">
-          Hobbies & Interests
+          I Worked
         </Divider>
         <Row style={{ flexWrap: 'wrap' }}>
-          <a href="/recommend-music">
-            <Tag className="hobby music" type="success" invert>
-              Recommend me some music
-            </Tag>
+          <Badge style={{ marginTop: '10px' }} type="secondary" className="badge-link intuit">
+            <a href="https://intuit.com" target="_blank" rel="noreferrer">
+              <span>@INTUIT</span>
+            </a>
+          </Badge>
+          <Spacer x={0.5} />
+          <Badge style={{ marginTop: '10px' }} type="secondary" className="badge-link tamudatathon">
+            <a href="https://tamudatathon.com" target="_blank" rel="noreferrer">
+              <span>@TAMU_DATATHON</span>
+            </a>
+          </Badge>
+          <Spacer x={0.5} />
+          <Badge style={{ marginTop: '10px' }} type="secondary" className="badge-link tamu">
+            <a href="https://acelab.tamu.edu" target="_blank" rel="noreferrer">
+              <span>@ACELAB</span>
+            </a>
+          </Badge>
+        </Row>
+        <Divider style={{ marginTop: '2.5em' }} align="start">
+          I Built
+        </Divider>
+        <Row style={{ flexWrap: 'wrap' }}>
+          <a href="https://rekkme.vercel.app">
+            <Tag className="project-tag">Rekkme</Tag>
           </a>
           <Spacer x={0.5} />
-          <Tag className="hobby">Racquetball</Tag>
+          <a href="https://resuville.com/">
+            <Tag className="project-tag">Resuville</Tag>
+          </a>
           <Spacer x={0.5} />
-          <Tag className="hobby">Badminton</Tag>
+          <a href="https://wieat.vercel.app/">
+            <Tag className="project-tag">WIEAT</Tag>
+          </a>
+          <Spacer x={0.5} />
+          <a href="https://tamudp.vercel.app/">
+            <Tag className="project-tag">TAMUDP</Tag>
+          </a>
+          <Spacer x={0.5} />
+          <a href="https://spanalysis.vercel.app/">
+            <Tag className="project-tag">S&amp;P Tracker</Tag>
+          </a>
+          <Spacer x={0.5} />
+          <a href="https://github.com/tatiaris?tab=repositories">
+            <Tag className="project-tag" style={{ fontWeight: 'bold' }}>
+              . . .
+            </Tag>
+          </a>
+        </Row>
+        <Divider style={{ marginTop: '2.5em' }} align="start">
+          I Wrote
+        </Divider>
+        <Row style={{ paddingTop: '10px' }}>
+          <ul>
+            {Object.keys(articles).map((article_id, i) => (
+              <li key={`article-${i}`}>
+                <Link href={`/blog/${article_id}`} className={`blog-link ${articles[article_id].group}`}>
+                  {articles[article_id].title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Row>
+        <Divider style={{ marginTop: '2.5em' }} align="start">
+          I Like
+        </Divider>
+        <Row style={{ flexWrap: 'wrap' }}>
+          <Tag className="hobby">Racquetball</Tag>
           <Spacer x={0.5} />
           <Tag className="hobby">Longboarding</Tag>
           <Spacer x={0.5} />
-          <Tag className="hobby">Ping Pong</Tag>
+          <Tag className="hobby">Badminton</Tag>
           <Spacer x={0.5} />
-          <Tag className="hobby">Basketball</Tag>
+          <Tag className="hobby">Video/Board Games</Tag>
           <Spacer x={0.5} />
-          <Tag className="hobby">Pool</Tag>
-          <Spacer x={0.5} />
-          <Tag className="hobby">Video Games</Tag>
-          <Spacer x={0.5} />
-          <Tag className="hobby">Board Games</Tag>
-          <Spacer x={0.5} />
-          <Tag className="hobby">Cubing</Tag>
+          <a href="/recommend-music">
+            <Tag className="hobby music" type="success" invert>
+              Recommend music to me
+            </Tag>
+          </a>
         </Row>
         <Divider style={{ marginTop: '2.5em' }} align="start">
-          Connect
+          I Use
         </Divider>
         <Row style={{ flexWrap: 'wrap' }}>
           <Tooltip text={'Github'} placement="bottom" enterDelay="1000">
@@ -163,6 +131,11 @@ export const Homepage = (props) => {
           <Tooltip text={'Instagram'} placement="bottom" enterDelay="1000">
             <Link className="misc-link" target="_blank" rel="noreferrer" href="https://www.instagram.com/tat.ris/" block>
               <Instagram />
+            </Link>
+          </Tooltip>
+          <Tooltip text={'Twitter'} placement="bottom" enterDelay="1000">
+            <Link className="misc-link" target="_blank" rel="noreferrer" href="https://twitter.com/tatia_ris/" block>
+              <Twitter />
             </Link>
           </Tooltip>
           <Tooltip text={'E-mail'} placement="bottom" enterDelay="1000">

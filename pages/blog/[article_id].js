@@ -36,7 +36,6 @@ export const Article = () => {
         </Head>
         <Breadcrumbs>
           <Breadcrumbs.Item href="/">tatiaris</Breadcrumbs.Item>
-          <Breadcrumbs.Item href="/blog">blog</Breadcrumbs.Item>
           <Breadcrumbs.Item>{article_id}</Breadcrumbs.Item>
         </Breadcrumbs>
         <br />
