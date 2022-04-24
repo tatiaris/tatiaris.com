@@ -82,7 +82,7 @@ export const Homepage = (props) => {
             </Tag>
           </a>
         </Row>
-        <Divider style={{ marginTop: '2.5em' }} align="start">
+        {/* <Divider style={{ marginTop: '2.5em' }} align="start">
           I Wrote
         </Divider>
         <Row style={{ paddingTop: '10px' }}>
@@ -95,7 +95,7 @@ export const Homepage = (props) => {
               </li>
             ))}
           </ul>
-        </Row>
+        </Row> */}
         <Divider style={{ marginTop: '2.5em' }} align="start">
           I Like
         </Divider>
