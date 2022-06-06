@@ -20,13 +20,7 @@ export const Homepage = (props) => {
             </div>
             <div>
               <h2>Hi!</h2>
-              <span style={{ fontSize: '22px' }}>
-                I&apos;m Rishabh, an Applied Mathematics and Computer Science graduate from{' '}
-                <a className="tamu-link" href="https://tamu.edu" target="_blank" rel="noreferrer">
-                  Texas A&amp;M University
-                </a>{' '}
-                who loves building products and solving prolems!
-              </span>
+              <span style={{ fontSize: '22px' }}>I&apos;m Rishabh, a mathematics and computer science enthusiast, full stack developer, and prolem solver!</span>
             </div>
           </div>
         </div>
