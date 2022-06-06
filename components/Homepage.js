@@ -21,11 +21,11 @@ export const Homepage = (props) => {
             <div>
               <h2>Hi!</h2>
               <span style={{ fontSize: '22px' }}>
-                I&apos;m Rishabh, a senior at{' '}
+                I&apos;m Rishabh, an Applied Mathematics and Computer Science graduate from{' '}
                 <a className="tamu-link" href="https://tamu.edu" target="_blank" rel="noreferrer">
                   Texas A&amp;M University
                 </a>{' '}
-                studying Applied Mathematics and Computer Science who loves building products and solving prolems!
+                who loves building products and solving prolems!
               </span>
             </div>
           </div>
@@ -34,29 +34,23 @@ export const Homepage = (props) => {
           I Worked
         </Divider>
         <Row style={{ flexWrap: 'wrap' }}>
-          <Badge style={{ marginTop: '10px' }} type="secondary" className="badge-link intuit">
-            <a href="https://intuit.com" target="_blank" rel="noreferrer">
-              <span>@INTUIT</span>
-            </a>
-          </Badge>
+          <a href="https://intuit.com">
+            <Tag className="project-tag">@INTUIT</Tag>
+          </a>
           <Spacer x={0.5} />
-          <Badge style={{ marginTop: '10px' }} type="secondary" className="badge-link tamudatathon">
-            <a href="https://tamudatathon.com" target="_blank" rel="noreferrer">
-              <span>@TAMU_DATATHON</span>
-            </a>
-          </Badge>
+          <a href="https://tamudatathon.com">
+            <Tag className="project-tag">@TAMU_DATATHON</Tag>
+          </a>
           <Spacer x={0.5} />
-          <Badge style={{ marginTop: '10px' }} type="secondary" className="badge-link tamu">
-            <a href="https://acelab.tamu.edu" target="_blank" rel="noreferrer">
-              <span>@ACELAB</span>
-            </a>
-          </Badge>
+          <a href="https://acelab.tamu.edu">
+            <Tag className="project-tag">@ACELAB</Tag>
+          </a>
         </Row>
         <Divider style={{ marginTop: '2.5em' }} align="start">
           I Built
         </Divider>
         <Row style={{ flexWrap: 'wrap' }}>
-          <a href="https://rekkme.vercel.app">
+          <a href="https://devpost.com/software/rekkme">
             <Tag className="project-tag">Rekkme</Tag>
           </a>
           <Spacer x={0.5} />
@@ -100,17 +94,17 @@ export const Homepage = (props) => {
           I Like
         </Divider>
         <Row style={{ flexWrap: 'wrap' }}>
-          <Tag className="hobby">Racquetball</Tag>
+          <Tag className="project-tag">Racquetball</Tag>
           <Spacer x={0.5} />
-          <Tag className="hobby">Longboarding</Tag>
+          <Tag className="project-tag">Longboarding</Tag>
           <Spacer x={0.5} />
-          <Tag className="hobby">Badminton</Tag>
+          <Tag className="project-tag">Badminton</Tag>
           <Spacer x={0.5} />
-          <Tag className="hobby">Video/Board Games</Tag>
+          <Tag className="project-tag">Video/Board Games</Tag>
           <Spacer x={0.5} />
           <a href="/recommend-music">
             <Tag className="hobby music" type="success" invert>
-              Recommend music to me
+              Music
             </Tag>
           </a>
         </Row>

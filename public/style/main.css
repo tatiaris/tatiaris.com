@@ -264,16 +264,20 @@ a.about-link {
   color: var(--text-color) !important;
   background-color: var(--background-color) !important;
   border-color: var(--text-color) !important;
+  border-radius: 25px 25px !important;
+  padding: 6px 25px !important;
 }
 
 .hobby.music {
   background-color: #27ff73 !important;
   border-color: #1db954 !important;
+  color: darkgreen !important;
 }
 
 .dark .hobby.music {
   background-color: #083518 !important;
   border-color: #1db954 !important;
+  color: lightgreen !important;
 }
 
 .project-tag {
