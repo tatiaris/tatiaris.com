@@ -20,7 +20,7 @@ export const Homepage = (props) => {
             </div>
             <div>
               <h2>Hi!</h2>
-              <span style={{ fontSize: '22px' }}>I&apos;m Rishabh, a mathematics and computer science enthusiast, full stack developer, and prolem solver!</span>
+              <span style={{ fontSize: '22px' }}>I&apos;m Rishabh, a mathematics and computer science enthusiast, full stack developer, and problem solver!</span>
             </div>
           </div>
         </div>
