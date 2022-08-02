@@ -1,0 +1,215 @@
+%-------------------------
+% Resume in Latex (Inspired by https://github.com/sb2nov/resume)
+% Author : Rishabh Tatia
+% Website: https://tatiaris.com/docs/resume.tex
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,hidelinks,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}\\}
+}
+\newcommand{\resumeEducationItem}[2]{
+  \item[]\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}\\
+  }
+}
+
+\newcommand{\resumeEducationSubheading}[4]{
+  \vspace{2pt}\item[]
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} -- #2 & #3\\
+      \textit{#4}\\
+    \end{tabular*}
+}
+
+\newcommand{\resumeProjectSubheading}[3]{
+  \vspace{2pt}\item[]
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} -- \textit{#2} & #3\\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{2pt}\item[]
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} -- \textit{#2} -- #3 & #4\\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0em]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeEducationItemListStart}{\begin{itemize}[leftmargin=0em]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{http://tatiaris.com/}{\Large RISHABH TATIA}} & \href{https://github.com/tatiaris}{github.com/tatiaris}\\
+  \href{mailto:tatiaris2001@gmail.com}{tatiaris2001@gmail.com} / +1-713-208-0982 / \href{https://tatiaris.com}{tatiaris.com} & \href{https://linkedin.com/in/tatiaris}{linkedin.com/in/tatiaris}\\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeEducationSubheading
+      {TEXAS A\&M UNIVERSITY}{College Station, TX}{Aug 2018 -- May 2022}
+      {Bachelor of Science in Computational Mathematics; Minor in Computer Science}
+      \resumeEducationItemListStart
+        \resumeEducationItem{Technical Skills}
+          {AWS, Firebase, Git, Node.js, Spring Boot, ReactJS, React Native, Typescript, Java, Python, C++.}
+        \resumeEducationItem{Relevant Coursework}
+          {Algorithm Design and Analysis, Data Structures and Algorithms, Discrete Mathematics.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {INTUIT}{Software Engineering Intern}{San Diego, CA}{May 2021 - Aug 2021}
+      \resumeItemListStart
+        \resumeItem
+          {Refactored and enhanced the backend powering the Finish and File section in Turbotax utilizing Spring Boot and Java.}
+        \resumeItem
+          {Devised and extended libraries to improve server side rendering and server-driven UI functionality for TurboTax Online.}
+        \resumeItem
+          {Enhanced front-end plugins and widgets used to guide users on Turbotax using React, Redux, and Lottie.}
+        \resumeItem
+          {Worked in an Agile environment with a Jira ticketing system to monitor projects and ensure timely delivery of value.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {TAMU DATATHON}{Tech Lead}{College Station, TX}{May 2020 - Present}
+      \resumeItemListStart
+        \resumeItem
+          {Organized one of largest MLH Datathon events with 1000+ applicants, spanning 100+ majors, and 120+ universities.}
+        \resumeItem
+          {Lead two teams of engineers to enhance the online presence and build the challenges platform for the event.}
+        \resumeItem
+          {Constructed Portal, an event showcase and participation platform combined with user tracking, with Node.js and React.}
+        \resumeItem
+          {Developed Mercury, a mailing web application consolidated with Mailgun to edit, view, and send custom HTML emails.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {ACELAB}{Full Stack Developer}{College Station, TX}{Feb 2020 - Present}
+      \resumeItemListStart
+        \resumeItem
+          {Designed and updated webpages for easier access to information and better user experience through HTML, JS, and CSS.}
+        \resumeItem
+          {Created WIEAT, a web-based data entry, visualization, and analysis application leveraging the Next.js framework.}
+        \resumeItem
+          {Applied best strategies for improving Acelab's online presence, boosting visitor count to 12,000+ users per year.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {4.0 TUTORING}{PHP Developer}{College Station, TX}{Aug 2019 - Jan 2020}
+      \resumeItemListStart
+        \resumeItem
+          {Devised a work logging platform with authentication to keep track of employee performance utilizing PHP and SQL.}
+        \resumeItem
+          {Assisted in boosting tutoring sales by 7\% over one semester by implementing a more efficient workflow for students.}
+        \resumeItem
+          {Redesigned webpages to provide better SEO, responsiveness and user friendliness with HTML, JS, and CSS.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectSubheading
+      {RESUVILLE}{\href{https://resuville.com}{resuville.com}}{Dec 2020 - May 2021}{}
+      \resumeItemListStart
+        \resumeItem
+          {Developed and launched a free and user friendly resume builder website for efficient templating with Node.js and React.}
+        \resumeItem
+          {Integrated sign up / log in functionality into the app leveraging Auth0 and data storage and tracking through MongoDB.}
+        \resumeItem
+          {Implemented a searching and filtering system, along with intricate customization for all available templates.}
+      \resumeItemListEnd
+    
+    \resumeProjectSubheading
+      {INTERACTIVE EPISODE ANALYSIS TOOL}{\href{https://wieat.vercel.app/}{wieat.vercel.app}}{Oct 2020 - Mar 2021}{}
+      \resumeItemListStart
+        \resumeItem
+          {Invented and published a data entry, visualization, and analysis tool to perform interactive episode analysis.}
+        \resumeItem
+          {Automated tedious process of data collection through a public Node.js API, enhancing research efficiency.}
+        \resumeItem
+          {Employed MongoDB to create a centralized database for all interactions and episodes for collective data analysis.}
+      \resumeItemListEnd
+    
+    \resumeProjectSubheading
+      {AGGIE DEGREE PLANNER}{\href{https://tamudp.vercel.app/}{tamudp.vercel.app}}{Nov 2020 - Dec 2020}{}
+      \resumeItemListStart
+        \resumeItem
+          {Constructed and deployed a generalized university degree planner application employing the Next.js framework.}
+        \resumeItem
+          {Used Axios and Cheerio to scrape major relevant courses and generate a database of graduation requirements.}
+        \resumeItem
+          {Designed React components to integrate progress tracking for students to conveniently check degree progression.}
+      \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+
+%
+%--------AWARDS------------
+\section{Awards}
+ \resumeSubHeadingListStart
+    \resumeProjectSubheading
+      {First Overall and Best Use of Google Cloud}{\href{https://resuville.com}{resuville.com}}{Dec 2020 - May 2021}{}
+      \resumeItemListStart
+        \resumeItem
+          {Developed and launched a free and user friendly resume builder website for efficient templating with Node.js and React.}
+        \resumeItem
+          {Integrated sign up / log in functionality into the app leveraging Auth0 and data storage and tracking through MongoDB.}
+        \resumeItem
+          {Implemented a searching and filtering system, along with intricate customization for all available templates.}
+      \resumeItemListEnd
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
