@@ -60,6 +60,13 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+\newcommand{\resumeAwardSubheading}[4]{
+  \vspace{2pt}\item[]
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} -- #2 -- \textit{#3} & #4\\
+    \end{tabular*}\vspace{-5pt}
+}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{2pt}\item[]
     \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
@@ -82,8 +89,8 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://tatiaris.com/}{\Large RISHABH TATIA}} & \href{https://github.com/tatiaris}{github.com/tatiaris}\\
-  \href{mailto:tatiaris2001@gmail.com}{tatiaris2001@gmail.com} / +1-713-208-0982 / \href{https://tatiaris.com}{tatiaris.com} & \href{https://linkedin.com/in/tatiaris}{linkedin.com/in/tatiaris}\\
+  \textbf{\href{http://tatiaris.com/}{\Large RISHABH TATIA}} & \textit{\href{https://github.com/tatiaris}{github.com/tatiaris}}\\
+  \href{mailto:tatiaris2001@gmail.com}{tatiaris2001@gmail.com} / +1-713-208-0982 / \textit{\href{https://tatiaris.com}{tatiaris.com}} & \textit{\href{https://linkedin.com/in/tatiaris}{linkedin.com/in/tatiaris}}\\
 \end{tabular*}
 
 
@@ -95,9 +102,12 @@
       {Bachelor of Science in Computational Mathematics; Minor in Computer Science}
       \resumeEducationItemListStart
         \resumeEducationItem{Technical Skills}
-          {AWS, Firebase, Git, Node.js, Spring Boot, ReactJS, React Native, Typescript, Java, Python, C++.}
+          {AWS, Firebase, Git, Node.js, Spring Boot, ReactJS, React Native, TypeScript, Java, Python, C++.}
         \resumeEducationItem{Relevant Coursework}
           {Algorithm Design and Analysis, Data Structures and Algorithms, Discrete Mathematics.}
+        \resumeEducationItem{Certifications}
+          {\textit{\href{https://www.hackerrank.com/certificates/831932b062b2}{JavaScript (Intermediate)}, \href{https://www.hackerrank.com/certificates/a8a9d2d37735}{Node.js (Intermediate)},
+          \href{https://www.hackerrank.com/certificates/acc5ef4e253e}{Problem Solving (Intermediate)}}}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -198,18 +208,17 @@
 %--------AWARDS------------
 \section{Awards}
  \resumeSubHeadingListStart
-    \resumeProjectSubheading
-      {First Overall and Best Use of Google Cloud}{\href{https://resuville.com}{resuville.com}}{Dec 2020 - May 2021}{}
+    \resumeAwardSubheading
+      {First Overall, Google Cloud Challenge}{TAMUHack 2022}{\href{https://devpost.com/software/rekkme}{devpost.com/software/rekkme}}{Jan 2022}
       \resumeItemListStart
         \resumeItem
-          {Developed and launched a free and user friendly resume builder website for efficient templating with Node.js and React.}
+          {Developed Rekkme, a social platform that aims to help people recommend and discover elements in several categories.}
         \resumeItem
-          {Integrated sign up / log in functionality into the app leveraging Auth0 and data storage and tracking through MongoDB.}
+          {Built a recommendation classifier and tag generator to classify various recommendations into their respective categories.}
         \resumeItem
-          {Implemented a searching and filtering system, along with intricate customization for all available templates.}
+          {Designed the UI/UX and implemented a smooth recommending process by making the website a progressive web app.}
       \resumeItemListEnd
  \resumeSubHeadingListEnd
-
 
 %-------------------------------------------
 \end{document}
