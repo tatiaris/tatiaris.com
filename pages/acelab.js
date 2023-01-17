@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Copyright from '../components/Copyright';
-import { Page, Breadcrumbs, Input, Text, Row, Col, Select, Spacer, Code, Snippet } from '@geist-ui/react';
+import { Page, Breadcrumbs, Input, Text, Grid, Col, Select, Spacer, Code, Snippet } from '@geist-ui/react';
 import CustomHead from '../components/CustomHead';
 
 const Acelab = () => {
@@ -119,7 +119,7 @@ header.entry-header h1 {
       <Text h3>{pageDetails.title.toUpperCase()}</Text>
       <br />
       <Text h4>New Employee</Text>
-      <Row style={{ flexWrap: 'wrap' }} justify="space-between">
+      <Grid.Container style={{ flexWrap: 'wrap' }} justify="space-between">
         <Col style={{ width: '450px' }}>
           <Input onChange={(e) => setEmployeeName(e.target.value)} label="Name" placeholder="John Doe" />
           <Spacer y={0.5} />
@@ -151,10 +151,10 @@ header.entry-header h1 {
         <Col style={{ width: '450px', marginTop: '15px' }}>
           <Snippet symbol="" text={newEmployeeCode} toastType="warning" />
         </Col>
-      </Row>
+      </Grid.Container>
       <Spacer y={2} />
       <Text h4>New Publication Article</Text>
-      <Row style={{ flexWrap: 'wrap' }} justify="space-between">
+      <Grid.Container style={{ flexWrap: 'wrap' }} justify="space-between">
         <Col style={{ width: '450px' }}>
           <Input onChange={(e) => setPubId(e.target.value)} label="ID" placeholder="42" />
           <Spacer y={0.1} />
@@ -171,10 +171,10 @@ header.entry-header h1 {
         <Col style={{ width: '450px', marginTop: '15px' }}>
           <Snippet symbol="" text={newPublicationCode} toastType="warning" />
         </Col>
-      </Row>
+      </Grid.Container>
       <Spacer y={2} />
       <Text h4>New News Article</Text>
-      <Row style={{ flexWrap: 'wrap' }} justify="space-between">
+      <Grid.Container style={{ flexWrap: 'wrap' }} justify="space-between">
         <Col style={{ width: '450px' }}>
           <Input onChange={(e) => setNewsOrder(e.target.value)} label="Order" placeholder="67" />
           <Spacer y={0.1} />
@@ -195,7 +195,7 @@ header.entry-header h1 {
         <Col style={{ width: '450px', marginTop: '15px' }}>
           <Snippet style={{ marginTop: '15px' }} symbol="" text={newsArticleCode} toastType="warning" />
         </Col>
-      </Row>
+      </Grid.Container>
       <Copyright theme="light" />
     </Page>
   );

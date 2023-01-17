@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Copyright from '../../components/Copyright';
 import Head from 'next/head';
-import { Page, Breadcrumbs, Row, Col, Text, Input, Spacer } from '@geist-ui/react';
+import { Page, Breadcrumbs, Grid, Col, Text, Input, Spacer } from '@geist-ui/react';
 
 const Project = () => {
   const [initialDeposit, setInitialDeposit] = useState(10000);
@@ -81,7 +81,7 @@ const Project = () => {
       <Text h3>WEALTH TRACKER</Text>
       <Text>Adjust and play around with the variables below to track and visualize your wealth and profits through investments and compounding interest over the chosen period of time.</Text>
       <Spacer y={0.5} />
-      <Row style={{ flexWrap: 'wrap' }}>
+      <Grid.Container style={{ flexWrap: 'wrap' }}>
         <Input
           className="inc-tracker-inp"
           label="Initial Deposit"
@@ -93,9 +93,9 @@ const Project = () => {
         />
         <Spacer x={1} />
         <Input className="inc-tracker-inp" label="Graph Range" labelRight="days" onChange={(e) => setRange(parseFloat(e.target.value))} initialValue={range} type="number" placeholder="ex: 365" />
-      </Row>
+      </Grid.Container>
       <Spacer y={0.5} />
-      <Row style={{ flexWrap: 'wrap' }}>
+      <Grid.Container style={{ flexWrap: 'wrap' }}>
         <Input
           className="inc-tracker-inp"
           label="Deposit Frequency"
@@ -115,9 +115,9 @@ const Project = () => {
           type="number"
           placeholder="ex: 50"
         />
-      </Row>
+      </Grid.Container>
       <Spacer y={0.5} />
-      <Row style={{ flexWrap: 'wrap' }}>
+      <Grid.Container style={{ flexWrap: 'wrap' }}>
         <Input
           className="inc-tracker-inp"
           label="Growth Frequency"
@@ -129,15 +129,15 @@ const Project = () => {
         />
         <Spacer x={1} />
         <Input className="inc-tracker-inp" label="Growth Rate" labelRight="%" onChange={(e) => setGrowthRate(parseFloat(e.target.value))} initialValue={growthRate} type="number" placeholder="ex: 1" />
-      </Row>
+      </Grid.Container>
       <Spacer y={0.5} />
-      <Row style={{ flexWrap: 'wrap' }}>
+      <Grid.Container style={{ flexWrap: 'wrap' }}>
         <Input className="mini-inp-container inc-tracker-inp" label="Total Input" labelRight="$" value={totalInput} disabled />
         <Spacer x={1} />
         <Input className="mini-inp-container inc-tracker-inp" label="Total Output" labelRight="$" value={totalOutput} disabled />
         <Spacer x={1} />
         <Input className="mini-inp-container inc-tracker-inp" label="Total Profit" labelRight="%" value={totalProfit} disabled />
-      </Row>
+      </Grid.Container>
       <br />
       <br />
       <div>{typeof window !== 'undefined' && <CanvasJSChart options={incomeLineChartOptions} />}</div>

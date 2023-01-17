@@ -29,7 +29,7 @@ export default function Home() {
       <button onClick={toggleTheme} className={`mode-toggle-img`}>
         <Image className={`bg-img-${theme}`} src="/img/bg-top-right.png" alt="theme-toggle-img" />
       </button>
-      <Page>
+      <Page style={{ maxWidth: '1000px' }}>
         <Head>
           <title>Rishabh Tatia</title>
           <link rel="icon" href="/favicon.ico" />

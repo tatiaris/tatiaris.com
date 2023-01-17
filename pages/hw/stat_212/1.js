@@ -1,5 +1,5 @@
 import React from 'react';
-import { Page, Image, Text, Row, Code, Description, Divider, Spacer } from '@geist-ui/react';
+import { Page, Image, Text, Grid, Code, Description, Divider, Spacer } from '@geist-ui/react';
 import CustomHead from '../../../components/CustomHead';
 
 const HW = () => {
@@ -70,7 +70,7 @@ lm(formula = log_Y_t ~ t, data = bacteria_data)
 Coefficients:
 (Intercept)            t  
      5.9732      -0.2184`}</Code>
-      <Row style={{ flexWrap: 'wrap' }}>
+      <Grid.Container style={{ flexWrap: 'wrap' }}>
         <div>
           <Text style={{ textAlign: 'center' }}>Y_t vs t Plot</Text>
           <Image width="450" src="/img/hw/p5_plot_1.png" />
@@ -85,7 +85,7 @@ Coefficients:
         <div>
           <Image width="450" src="/img/hw/p5_plot_4.png" />
         </div>
-      </Row>
+      </Grid.Container>
       <Text h5>Part A</Text>
       <Text>The (t, log(Y)) scatterplot suggests a linear relationship.</Text>
       <br />
@@ -174,7 +174,7 @@ x_inverse   -7.288348 -6.580747
 Output at X = 3.2 with 95% confidence = ( 0.6242943 , 0.9993336 )
 
 Output at X = 3.2 with 95% confidence = ( 2.096561 , 2.328663 )`}</Code>
-      <Row style={{ flexWrap: 'wrap' }}>
+      <Grid.Container style={{ flexWrap: 'wrap' }}>
         <div>
           <Image width="450" src="/img/hw/p6_plot_1.png" />
         </div>
@@ -196,7 +196,7 @@ Output at X = 3.2 with 95% confidence = ( 2.096561 , 2.328663 )`}</Code>
         <div>
           <Image width="450" src="/img/hw/p6_plot_7.png" />
         </div>
-      </Row>
+      </Grid.Container>
       <Text h5>Part A</Text>
       <Text>
         The <b>(1/x, y) scatterplot</b> suggests a linear relationship.
@@ -248,14 +248,14 @@ Output at X = 3.2 with 95% confidence = ( 2.096561 , 2.328663 )`}</Code>
       <Divider />
       <Spacer y={24} />
       <Text h4>Problem 3</Text>
-      <Row style={{ flexWrap: 'wrap' }}>
+      <Grid.Container style={{ flexWrap: 'wrap' }}>
         <div>
           <Image width="450" height="500" src="/img/hw/p7_img_1.jpg" />
         </div>
         <div>
           <Image width="450" height="500" src="/img/hw/p7_img_2.jpg" />
         </div>
-      </Row>
+      </Grid.Container>
       <Divider y={8}>End of Assignment</Divider>
     </Page>
   );

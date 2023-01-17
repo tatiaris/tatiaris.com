@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
-import { Tabs, Row, Loading } from '@geist-ui/react';
+import { Tabs, Grid, Loading } from '@geist-ui/react';
 import { Homepage } from './Homepage';
 import { BookOpen, Home, Monitor, Paperclip } from '@geist-ui/react-icons';
 

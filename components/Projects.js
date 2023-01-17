@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Modal, Tag, Row, Card, Col, Image, Link, Button, Collapse, useModal } from '@geist-ui/react';
+import { Modal, Tag, Grid, Card, Col, Image, Link, Button, Collapse, useModal } from '@geist-ui/react';
 import { ExternalLink, Code, X, ArrowLeft, ArrowRight } from '@geist-ui/react-icons';
 
 const projectList = [
@@ -502,7 +502,7 @@ const Projects = (props) => {
       <div className="content-wrapper">
         <Collapse.Group style={{ padding: '0', marginTop: '1em' }}>
           <Collapse title="Ongoing" initialVisible style={{ borderTop: '0' }}>
-            <Row className="projects-container">
+            <Grid.Container className="projects-container">
               {currentProjectList.map((project, i) => (
                 <Card key={`project-card-${i}`} hoverable className="project-card">
                   <div className="project-card-content">
@@ -528,10 +528,10 @@ const Projects = (props) => {
                   </Card.Footer>
                 </Card>
               ))}
-            </Row>
+            </Grid.Container>
           </Collapse>
           <Collapse title="Completed" style={{ borderTop: '0' }}>
-            <Row className="projects-container">
+            <Grid.Container className="projects-container">
               {completedProjectList.map((project, i) => (
                 <Card key={`project-card-${i}`} hoverable className="project-card">
                   <div className="project-card-content">
@@ -557,10 +557,10 @@ const Projects = (props) => {
                   </Card.Footer>
                 </Card>
               ))}
-            </Row>
+            </Grid.Container>
           </Collapse>
           <Collapse title="Not maintained" className="last-collapse">
-            <Row className="projects-container">
+            <Grid.Container className="projects-container">
               {unmaintainedProjectList.map((project, i) => (
                 <Card key={`project-card-${i}`} hoverable className="project-card">
                   <div className="project-card-content">
@@ -586,14 +586,14 @@ const Projects = (props) => {
                   </Card.Footer>
                 </Card>
               ))}
-            </Row>
+            </Grid.Container>
           </Collapse>
         </Collapse.Group>
         <Modal {...bindings} width="60rem" className="modal" style={{ minWidth: '30rem', width: 'max-content' }}>
           <Modal.Title style={{ justifyContent: 'left' }}>{chosenProject.name}</Modal.Title>
           <Modal.Subtitle style={{ textAlign: 'left' }}>{chosenProject.description}</Modal.Subtitle>
           <Modal.Content>
-            <Row style={{ flexWrap: 'wrap' }}>
+            <Grid.Container style={{ flexWrap: 'wrap' }}>
               <Col className="modal-section-img">
                 <Image src={`/img/${chosenProject.img}`} height="250" width="250" style={{ objectFit: 'cover' }} alt={`chosen-project-img`} />
               </Col>
@@ -603,15 +603,15 @@ const Projects = (props) => {
                     <li key={`project-bullet-${i}`}>{f.description}</li>
                   ))}
                 </ul>
-                <Row style={{ flexWrap: 'wrap', marginLeft: '20px' }}>
+                <Grid.Container style={{ flexWrap: 'wrap', marginLeft: '20px' }}>
                   {chosenProject.tools.map((t, i) => (
                     <Tag key={`project-tag-${i}`} className={`modal-tag`}>
                       {t}
                     </Tag>
                   ))}
-                </Row>
+                </Grid.Container>
               </Col>
-            </Row>
+            </Grid.Container>
           </Modal.Content>
           <Modal.Action passive onClick={(e) => changeChosenProject(1)}>
             <ArrowLeft />

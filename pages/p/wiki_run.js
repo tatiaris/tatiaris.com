@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Copyright from '../../components/Copyright';
-import { Page, Breadcrumbs, Input, Text, Row, Button, Spacer } from '@geist-ui/react';
+import { Page, Breadcrumbs, Input, Text, Grid, Button, Spacer } from '@geist-ui/react';
 import { ArrowRight } from '@geist-ui/react-icons';
 
 const Project = () => {
@@ -35,14 +35,14 @@ const Project = () => {
       </Breadcrumbs>
       <br />
       <Text h3>WIKI RUN</Text>
-      <Row justify="space-between" style={{ flexWrap: 'wrap' }}>
+      <Grid.Container justify="space-between" style={{ flexWrap: 'wrap' }}>
         <div>
           <Input onChange={(e) => setWikiFrom(e.target.value)} label="From Wikipedia" initialValue={wikiFrom} className="wiki-input" placeholder="https://en.wikipedia.org/wiki/Apple" />
         </div>
         <div>
           <Input onChange={(e) => setWikiTo(e.target.value)} label="To Wikipedia" initialValue={wikiTo} className="wiki-input" placeholder="https://en.wikipedia.org/wiki/Dinosaur" />
         </div>
-      </Row>
+      </Grid.Container>
       <Spacer y={1} />
       <Button onClick={startFindingPath} auto>
         <span style={{ marginRight: '1rem' }}>Find Path </span>

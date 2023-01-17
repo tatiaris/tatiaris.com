@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Copyright from '../components/Copyright';
-import { Page, Breadcrumbs, Text, Image, Divider, Row, Tooltip, Link, useToasts } from '@geist-ui/react';
+import { Page, Breadcrumbs, Text, Image, Divider, Grid, Tooltip, Link, useToasts } from '@geist-ui/react';
 import { Github, FileText, Linkedin, Mail, Globe } from '@geist-ui/react-icons';
 
 const Tutoring = () => {
@@ -78,7 +78,7 @@ const Tutoring = () => {
       <Divider align="start" y={5}>
         CLASSES
       </Divider>
-      <Row className="class-info-container" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
+      <Grid.Container className="class-info-container" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
         <div className="class-image-container">
           <Image src="/tutoring/intro_programmer.svg" alt="intro_programmer" />
         </div>
@@ -104,9 +104,9 @@ const Tutoring = () => {
             </li>
           </ul>
         </div>
-      </Row>
+      </Grid.Container>
       <Divider />
-      <Row className="class-info-container" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
+      <Grid.Container className="class-info-container" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
         <div className="class-image-container order-one">
           <Image src="/tutoring/ap_cs_prep.svg" alt="ap_cs_prep" />
         </div>
@@ -134,9 +134,9 @@ const Tutoring = () => {
             </li>
           </ul>
         </div>
-      </Row>
+      </Grid.Container>
       <Divider />
-      <Row className="class-info-container" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
+      <Grid.Container className="class-info-container" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
         <div className="class-image-container">
           <Image src="/tutoring/web_dev_1.svg" alt="intro_programmer" />
         </div>
@@ -160,9 +160,9 @@ const Tutoring = () => {
             </li>
           </ul>
         </div>
-      </Row>
+      </Grid.Container>
       <Divider />
-      <Row className="class-info-container" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
+      <Grid.Container className="class-info-container" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
         <div className="class-image-container order-one">
           <Image src="/tutoring/problem_solving_2.svg" alt="problem_solving_2" />
         </div>
@@ -186,11 +186,11 @@ const Tutoring = () => {
             </li>
           </ul>
         </div>
-      </Row>
+      </Grid.Container>
       <Divider align="start" y={5} style={{ marginBottom: 'calc(15.25pt + 1px * 0)' }}>
         GET IN TOUCH
       </Divider>
-      <Row style={{ flexWrap: 'wrap' }} className="ligt">
+      <Grid.Container style={{ flexWrap: 'wrap' }} className="ligt">
         <Link className="misc-link" target="_blank" rel="noreferrer" href="mailto:tatiaris2001@gmail.com?Subject=Hello!" block>
           <Mail />
           <span style={{ marginLeft: '5px' }}>tatiaris2001@gmail.com</span>
@@ -211,7 +211,7 @@ const Tutoring = () => {
           <FileText />
           <span style={{ marginLeft: '5px' }}>Resume</span>
         </Link>
-      </Row>
+      </Grid.Container>
       <Copyright theme="light" />
     </Page>
   );

@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
-import { Tabs, Row, Loading } from '@geist-ui/react';
+import { Tabs, Grid, Loading } from '@geist-ui/react';
 import { Homepage } from './Homepage';
 import { Home, Monitor, Paperclip } from '@geist-ui/react-icons';
 
@@ -32,9 +32,9 @@ export const GeistNavbar = (props) => {
         value="projects">
         <Suspense
           fallback={
-            <Row style={{ padding: '10px 0' }}>
+            <Grid.Container style={{ padding: '10px 0' }}>
               <Loading />
-            </Row>
+            </Grid.Container>
           }>
           <Projects {...props} />
         </Suspense>
@@ -49,9 +49,9 @@ export const GeistNavbar = (props) => {
         value="blogs">
         <Suspense
           fallback={
-            <Row style={{ padding: '10px 0' }}>
+            <Grid.Container style={{ padding: '10px 0' }}>
               <Loading />
-            </Row>
+            </Grid.Container>
           }>
           <Blogs {...props} />
         </Suspense>

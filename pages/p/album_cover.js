@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Page, Breadcrumbs, Input, Text, Row, Spacer, Col, Slider, Button } from '@geist-ui/react';
+import { Page, Breadcrumbs, Input, Text, Grid, Spacer, Col, Slider, Button } from '@geist-ui/react';
 import CustomHead from '../../components/CustomHead';
 import Copyright from '../../components/Copyright';
 import { PauseFill, FastForward, Rewind, Wifi, BatteryCharging, Activity, Bell } from '@geist-ui/react-icons';
@@ -53,7 +53,7 @@ const Project = () => {
       </Breadcrumbs>
       <br />
       <Text h3>{pageDetails.title.toUpperCase()}</Text>
-      <Row style={{ flexWrap: 'wrap' }} justify="space-between">
+      <Grid.Container style={{ flexWrap: 'wrap' }} justify="space-between">
         <Col style={{ width: '450px', marginTop: '15px' }}>
           <Input label="Image" placeholder="https://tatiaris.com/img/bm_hooligans_cover.jpg" initialValue={coverImgUrl} onChange={(e) => setCoverImgUrl(e.target.value)} />
           <Spacer y={0.5} />
@@ -114,7 +114,7 @@ const Project = () => {
             </div>
           </div>
         </Col>
-      </Row>
+      </Grid.Container>
       <Copyright theme="light" />
     </Page>
   );

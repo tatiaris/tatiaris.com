@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, User, Divider, Row, Tag, Spacer, Col, Badge, Link, useToasts, Tooltip } from '@geist-ui/react';
+import { Text, User, Divider, Grid, Tag, Spacer, Col, Badge, Link, useToasts, Tooltip } from '@geist-ui/react';
 import { Github, FileText, Instagram, Twitter, Linkedin, Mail } from '@geist-ui/react-icons';
 import { articles } from './Articles';
 
@@ -27,7 +27,7 @@ export const Homepage = (props) => {
         <Divider style={{ marginTop: '2.5em' }} align="start">
           I Worked
         </Divider>
-        <Row style={{ flexWrap: 'wrap' }}>
+        <Grid.Container style={{ flexWrap: 'wrap' }}>
           <a href="https://intuit.com">
             <Tag className="project-tag">@INTUIT</Tag>
           </a>
@@ -39,11 +39,11 @@ export const Homepage = (props) => {
           <a href="https://acelab.tamu.edu">
             <Tag className="project-tag">@ACELAB</Tag>
           </a>
-        </Row>
+        </Grid.Container>
         <Divider style={{ marginTop: '2.5em' }} align="start">
           I Built
         </Divider>
-        <Row style={{ flexWrap: 'wrap' }}>
+        <Grid.Container style={{ flexWrap: 'wrap' }}>
           <a href="https://devpost.com/software/rekkme">
             <Tag className="project-tag">Rekkme</Tag>
           </a>
@@ -69,11 +69,11 @@ export const Homepage = (props) => {
               . . .
             </Tag>
           </a>
-        </Row>
+        </Grid.Container>
         {/* <Divider style={{ marginTop: '2.5em' }} align="start">
           I Wrote
         </Divider>
-        <Row style={{ paddingTop: '10px' }}>
+        <Grid.Container style={{ paddingTop: '10px' }}>
           <ul>
             {Object.keys(articles).map((article_id, i) => (
               <li key={`article-${i}`}>
@@ -83,11 +83,11 @@ export const Homepage = (props) => {
               </li>
             ))}
           </ul>
-        </Row> */}
+        </Grid.Container> */}
         <Divider style={{ marginTop: '2.5em' }} align="start">
           I Like
         </Divider>
-        <Row style={{ flexWrap: 'wrap' }}>
+        <Grid.Container style={{ flexWrap: 'wrap' }}>
           <Tag className="project-tag">Racquetball</Tag>
           <Spacer x={0.5} />
           <Tag className="project-tag">Longboarding</Tag>
@@ -101,11 +101,11 @@ export const Homepage = (props) => {
               Music
             </Tag>
           </a>
-        </Row>
+        </Grid.Container>
         <Divider style={{ marginTop: '2.5em' }} align="start">
           I Use
         </Divider>
-        <Row style={{ flexWrap: 'wrap' }}>
+        <Grid.Container style={{ flexWrap: 'wrap' }}>
           <Tooltip text={'Github'} placement="bottom" enterDelay="1000">
             <Link className="misc-link" target="_blank" rel="noreferrer" href="https://github.com/tatiaris" block>
               <Github />
@@ -135,7 +135,7 @@ export const Homepage = (props) => {
             <FileText />
             <span style={{ marginLeft: '5px' }}>Resume</span>
           </Link>
-        </Row>
+        </Grid.Container>
       </div>
     </>
   );

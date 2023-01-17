@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
-import { Page, Breadcrumbs, Button, Slider, Spacer, Row, Tooltip, Col, Modal, useModal, Text } from '@geist-ui/react';
+import { Page, Breadcrumbs, Button, Slider, Spacer, Grid, Tooltip, Col, Modal, useModal, Text } from '@geist-ui/react';
 import { ChevronRight, RefreshCcw, Play, Pause, Info } from '@geist-ui/react-icons';
 
 const Project = () => {
@@ -101,7 +101,7 @@ const Project = () => {
     if (isRunning) nextStep();
   }, [isRunning]);
 
-  const board = grid.map((row, i) => {
+  const board = grid.map((Grid, i) => {
     return (
       <div key={`row-${i}`} className="board-row">
         {row.map((c, j) =>
@@ -138,13 +138,13 @@ const Project = () => {
         <Breadcrumbs.Item>projects</Breadcrumbs.Item>
         <Breadcrumbs.Item>game_of_life</Breadcrumbs.Item>
       </Breadcrumbs>
-      <Row style={{ flexWrap: 'wrap' }}>
+      <Grid.Container style={{ flexWrap: 'wrap' }}>
         <Col style={{ marginTop: '1.5em', width: '100px' }}>Delay (ms):</Col>
         <Col style={{ display: 'flex', alignItems: 'center', marginTop: '1.5em', maxWidth: '100%', width: '850px' }}>
           <Slider step={50} showMarkers min={0} max={1000} value={speed} onChange={(val) => setSpeed(val)} />
         </Col>
-      </Row>
-      <Row style={{ flexWrap: 'wrap' }} justify="center">
+      </Grid.Container>
+      <Grid.Container style={{ flexWrap: 'wrap' }} justify="center">
         <Tooltip text={isRunning ? `Stop` : `Start`} placement="bottom" type="dark" enterDelay="1000">
           <Button className="control-btn" size="small" onClick={togglePlayPause}>
             {isRunning ? <Pause /> : <Play />}
@@ -168,16 +168,16 @@ const Project = () => {
             <Info />
           </Button>
         </Tooltip>
-      </Row>
+      </Grid.Container>
       <br />
       {board}
       <br />
-      <Row justify="center">
+      <Grid.Container justify="center">
         Created by &nbsp;
         <a href="/" className="about-link bg-yellow">
           Rishabh Tatia
         </a>
-      </Row>
+      </Grid.Container>
       <Modal {...bindings} width="60rem" style={{ minWidth: '30rem', width: 'max-content' }}>
         <Modal.Title style={{ justifyContent: 'left' }}>Game Of Life</Modal.Title>
         <Modal.Subtitle style={{ textAlign: 'left' }}>John Conway&apos;s Game of Life, the zero player game</Modal.Subtitle>

@@ -48,8 +48,8 @@ const RecommendMe = () => {
       });
   };
 
-  useEffect(() => searchMusic(), [searchInput]);
-  useEffect(() => getUserRecPlaylist(), []);
+  useEffect(() => {searchMusic()}, [searchInput]);
+  useEffect(() => {getUserRecPlaylist()}, []);
 
   return (
     <div style={{ backgroundColor: '#1DB954' }}>

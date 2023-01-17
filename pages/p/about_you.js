@@ -112,12 +112,12 @@ const Project = () => {
         <Table.Column prop="value" label="value" />
       </Table>
       <br />
-      <Row justify="center">
+      <Grid.Container justify="center">
         Created by &nbsp;
         <a href="/" className="about-link bg-yellow">
           Rishabh Tatia
         </a>
-      </Row>
+      </Grid.Container>
     </Page>
   );
 };
