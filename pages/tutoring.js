@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Copyright from '../components/Copyright';
-import { Page, Breadcrumbs, Text, Image, Divider, Grid, Tooltip, Link, useToasts } from '@geist-ui/react';
+import { Page, Breadcrumbs, Text, Image, Divider, Grid, Link, useToasts } from '@geist-ui/react';
 import { Github, FileText, Linkedin, Mail, Globe } from '@geist-ui/react-icons';
 
 const Tutoring = () => {
