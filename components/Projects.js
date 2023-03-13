@@ -47,8 +47,8 @@ const projectList = [
       }
     ],
     tools: ['React', 'Spotify'],
-    demo_link: '/recommend-music',
-    github_link: 'https://github.com/tatiaris/tatiaris.com/tree/master/pages/recommend-music.js',
+    demo_link: '/rekk',
+    github_link: 'https://github.com/tatiaris/tatiaris.com/tree/master/pages/rekk.js',
     status: 'completed'
   },
   {

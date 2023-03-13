@@ -96,7 +96,7 @@ export const Homepage = (props) => {
           <Spacer x={0.5} />
           <Tag className="project-tag">Video/Board Games</Tag>
           <Spacer x={0.5} />
-          <a href="/recommend-music">
+          <a href="/rekk">
             <Tag className="hobby music" type="success" invert>
               Music
             </Tag>
