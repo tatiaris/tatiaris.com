@@ -24,7 +24,7 @@ export const Homepage = (props) => {
             </div>
           </div>
         </div>
-        <Divider style={{ marginTop: '2.5em' }} align="start">
+        <Divider style={{ margin: '2.5em 0' }} align="start">
           I Worked
         </Divider>
         <Grid.Container style={{ flexWrap: 'wrap' }}>
@@ -40,7 +40,7 @@ export const Homepage = (props) => {
             <Tag className="project-tag">@ACELAB</Tag>
           </a>
         </Grid.Container>
-        <Divider style={{ marginTop: '2.5em' }} align="start">
+        <Divider style={{ margin: '2.5em 0' }} align="start">
           I Built
         </Divider>
         <Grid.Container style={{ flexWrap: 'wrap' }}>
@@ -70,7 +70,7 @@ export const Homepage = (props) => {
             </Tag>
           </a>
         </Grid.Container>
-        {/* <Divider style={{ marginTop: '2.5em' }} align="start">
+        {/* <Divider style={{ margin: '2.5em 0' }} align="start">
           I Wrote
         </Divider>
         <Grid.Container style={{ paddingTop: '10px' }}>
@@ -84,7 +84,7 @@ export const Homepage = (props) => {
             ))}
           </ul>
         </Grid.Container> */}
-        <Divider style={{ marginTop: '2.5em' }} align="start">
+        <Divider style={{ margin: '2.5em 0' }} align="start">
           I Enjoy
         </Divider>
         <Grid.Container style={{ flexWrap: 'wrap' }}>
@@ -102,7 +102,7 @@ export const Homepage = (props) => {
             </Tag>
           </a>
         </Grid.Container>
-        <Divider style={{ marginTop: '2.5em' }} align="start">
+        <Divider style={{ margin: '2.5em 0' }} align="start">
           I Use
         </Divider>
         <Grid.Container style={{ flexWrap: 'wrap' }}>
