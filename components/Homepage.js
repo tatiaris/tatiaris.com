@@ -20,7 +20,7 @@ export const Homepage = (props) => {
             </div>
             <div>
               <h2>Hi!</h2>
-              <span style={{ fontSize: '22px' }}>I&apos;m Rishabh, a mathematics and computer science enthusiast, full stack developer, and problem solver!</span>
+              <span style={{ fontSize: '22px' }}>I&apos;m Rishabh, welcome to my corner of the internet :)</span>
             </div>
           </div>
         </div>
@@ -85,14 +85,14 @@ export const Homepage = (props) => {
           </ul>
         </Grid.Container> */}
         <Divider style={{ marginTop: '2.5em' }} align="start">
-          I Like
+          I Enjoy
         </Divider>
         <Grid.Container style={{ flexWrap: 'wrap' }}>
-          <Tag className="project-tag">Racquetball</Tag>
+          <Tag className="project-tag">Badminton</Tag>
           <Spacer x={0.5} />
           <Tag className="project-tag">Longboarding</Tag>
           <Spacer x={0.5} />
-          <Tag className="project-tag">Badminton</Tag>
+          <Tag className="project-tag">Racquetball</Tag>
           <Spacer x={0.5} />
           <Tag className="project-tag">Video/Board Games</Tag>
           <Spacer x={0.5} />
