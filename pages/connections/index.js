@@ -132,7 +132,7 @@ const Connections = () => {
   }
 
   return (
-    <Page id="tutoring-page-container">
+    <Page id="connections-page-container" style={{ margin: 0, width: '100%' }}>
       <Head>
         <title>Rishabh Tatia | Connections</title>
         <link rel="icon" href="/favicon.ico" />
