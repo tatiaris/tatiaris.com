@@ -5,11 +5,13 @@ import { Text, Divider } from '@geist-ui/react';
  * GeistNavbar component
  */
 export const Copyright = (props) => {
+  const currentYear = new Date().getFullYear();
+  const nextYear = new Date().getFullYear() + 1;
   return (
     <>
       <Divider></Divider>
       <Text small style={{ float: 'right' }} type="secondary" className={`copyright-statement ${props.theme}`}>
-        Copyright © 2022 - 2023 <a href="/">Rishabh Tatia</a>
+        Copyright © {currentYear} - {nextYear} <a href="/">Rishabh Tatia</a>
       </Text>
     </>
   );

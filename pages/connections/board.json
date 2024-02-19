@@ -1,0 +1,42 @@
+{
+    "easy": {
+        "title": "can do no harm",
+        "color": "#EAE0CC",
+        "words": [
+            "Henry",
+            "Jennifer",
+            "Long N",
+            "Ethan"
+        ]
+    },
+    "medium": {
+        "title": "one piece nerds",
+        "color": "#AFE3C0",
+        "words": [
+            "Kim",
+            "Aivan",
+            "Irvin",
+            "Michael"
+        ]
+    },
+    "hard": {
+        "title": "go easy all the time",
+        "color": "#8AC4FF",
+        "words": [
+            "David L",
+            "Will",
+            "Jonathan",
+            "Steven"
+        ]
+    },
+    "tricky": {
+        "title": "not regulars but will play in tournaments",
+        "color": "#8B728E",
+        "words": [
+            "Christine",
+            "Brendan",
+            "Dom",
+            "Trisna"
+        ]
+    }
+}
