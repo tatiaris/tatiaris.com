@@ -1,34 +1,11 @@
-import { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { Button, Page, Text, Image } from '@geist-ui/react';
+import { Page } from '@geist-ui/react';
 import Copyright from '../components/Copyright';
-import Navbar from '../components/Navbar';
 import Homepage from '../components/Homepage';
 
 export default function Home() {
-  const [theme, setTheme] = useState('default');
-  const toggleTheme = () => {
-    theme == 'dark' ? setTheme('light') : setTheme('dark');
-  };
-
-  useEffect(() => {
-    if (theme != 'default') {
-      document.body.className = theme;
-      localStorage.setItem('theme', theme);
-    }
-  }, [theme]);
-
-  useEffect(() => {
-    if (typeof localStorage.getItem('theme') != 'undefined' && (localStorage.getItem('theme') == 'light' || localStorage.getItem('theme') == 'dark')) setTheme(localStorage.getItem('theme'));
-    else setTheme('light');
-  }, []);
-
-  if (theme == 'default') return <></>;
   return (
     <>
-      <button onClick={toggleTheme} className={`mode-toggle-img`}>
-        <Image className={`bg-img-${theme}`} src="/img/bg-top-right.png" alt="theme-toggle-img" />
-      </button>
       <Page style={{ maxWidth: '1000px' }}>
         <Head>
           <title>Rishabh Tatia</title>
@@ -50,10 +27,9 @@ export default function Home() {
           <meta name="twitter:image" content="https://tatiaris.com/img/thumbnail.png" />
           <meta httpEquiv="content-language" content="en" />
         </Head>
-        {/* <GeistNavbar theme={theme} page="home" /> */}
-        {/* <Navbar theme={theme} page="home" /> */}
         <Homepage />
-        <Copyright theme={theme} />
+        <br />
+        <Copyright theme={'light'} />
       </Page>
     </>
   );
