@@ -39,7 +39,7 @@ export const Homepage = (props) => {
                 I built{' '}
                 <Link href='https://devpost.com/software/rekkme'>rekkme</Link>
                 ,{' '}
-                <Link href='https://resuville.com/'>resuville</Link>
+                <Link href='https://resuville-tatiaris.vercel.app/'>resuville</Link>
                 ,{' '}
                 <Link href='https://wieat.vercel.app/'>wieat</Link>
                 ,{' '}
