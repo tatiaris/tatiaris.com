@@ -1,9 +1,6 @@
-import nextConnect from 'next-connect';
 import { getSearchResults } from '../../../lib/spotify';
 
-const handler = nextConnect();
-
-handler.get(async (req, res) => {
+export default async function handler(req, res) {
   const searchQuery = decodeURIComponent(req.query.q);
   getSearchResults(searchQuery)
     .then((data) => {
@@ -12,6 +9,4 @@ handler.get(async (req, res) => {
     .catch((error) => {
       console.error('Error:', error);
     });
-});
-
-export default handler;
+}
