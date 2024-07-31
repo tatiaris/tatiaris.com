@@ -848,3 +848,80 @@ tr:nth-child(even) {
 }
 
 /* CONNECTIONS END */
+
+/* BLOG START */
+
+.blog-page {
+  max-width: 800px !important;
+}
+
+.world-map-container {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.world-map {
+  position: relative;
+}
+
+.world-map img.pin {
+  position: absolute;
+  width: 15%;
+}
+
+.meta-data-table {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.field-value-container {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0px;
+}
+
+.expandable-wrapper {
+  display: flex;
+}
+
+.cost-breakdown-container {
+  padding-left: 20px;
+  height: 0px;
+  overflow: hidden;
+  transition: 200ms;
+}
+
+.expandable-wrapper.show .cost-breakdown-container {
+  height: 100%;
+}
+
+.cost-breakdown-container .field-value-container {
+  padding: 0px;
+  font-size: small;
+}
+
+.scroller {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+}
+
+.scroller-image {
+  position: absolute;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .blog-page {
+    width: 100% !important;
+  }
+}
+
+/* BLOG END */
