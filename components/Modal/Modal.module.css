@@ -1,0 +1,44 @@
+/* Modal.module.css */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Hide by default */
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 250ms;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.wrapper.active {
+  /* Show when active */
+  opacity: 1;
+  /* other styling */
+}
+
+.wrapper.inactive {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  transition: opacity 250ms, width 0ms, height 0ms;
+  /* Ensure hidden when inactive */
+  /* other styling */
+}
+
+.container {
+  /* other styling */
+  overflow: hidden;
+}
+
+.header {
+  /* other styling */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

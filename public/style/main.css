@@ -908,15 +908,27 @@ tr:nth-child(even) {
 
 .scroller {
   width: 100%;
-  height: 150px;
+  height: 200px;
   position: relative;
   overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent 0px, red 50px, red calc(100% - 50px), transparent 100%);
 }
 
 .scroller-image {
   position: absolute;
   object-fit: cover;
 }
+
+.scroller-image:hover {
+  cursor: pointer;
+}
+
+.modal-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+}
+
 
 @media (max-width: 600px) {
   .blog-page {

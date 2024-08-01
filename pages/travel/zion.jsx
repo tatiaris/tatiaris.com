@@ -4,6 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 import ImageScroller from "../../components/ImageScroller";
+import Copyright from "../../components/Copyright";
 
 export const Zion = () => {
   const [showCostBreakdown, setShowCostBreakdown] = useState(false);
@@ -118,20 +119,34 @@ export const Zion = () => {
             </div>
           </div>
         </div>
-        <br />
-        <ImageScroller images={[
-          '/travel/zion/1.png',
-          '/travel/zion/2.png',
-          '/travel/zion/3.png',
-          '/travel/zion/4.png',
-          '/travel/zion/5.png',
-        ]} />
       </div>
-      {/* <Image src="/travel/zion/1.png" style={{ height: '33vh' }} /> */}
-      {/* <video width="400" controls>
-        <source src="/blog/travel/zion/1.mov" type="video/mp4" />
+      <ImageScroller images={[
+        '/travel/zion/1.png',
+        '/travel/zion/2.png',
+        '/travel/zion/3.png',
+        '/travel/zion/4.png',
+        '/travel/zion/5.png',
+        '/travel/zion/6.png',
+      ]} />
+      <Text>
+        {`Hiking through The Narrows at Zion National Park was an unforgettable experience.
+        The Narrows is a slot canyon carved by the Virgin River, with walls a thousand feet tall and the river sometimes just twenty to thirty feet wide.
+        The hike is a 16-mile round trip, the majority being a river hike.
+        Abijith and I rented waterproof gear from a nearby store (highly recommended), and we were ready to go.`}
+      </Text>
+      <br />
+      <video height="300" controls style={{ float: 'inline-start', marginRight: 15 }}>
+        <source src="/travel/zion/7.mov" type="video/mp4" />
         Your browser does not support HTML video.
-      </video> */}
+      </video>
+      <Text style={{ minHeight: 400 }}>
+        {`We started the hike early in the morning, moving against the cold current.
+        The views were breathtaking, with the sun shining through the canyon walls, illuminating the river.
+        We went about 5 miles and decided to turn back, as we wanted to explore other parts of the park.
+        The water that was previously freezing cold felt good on the way back now that the sun was out.
+        The hike took us about 4-5 hours, and we were exhausted by the end of it, but it was worth it :)`}
+      </Text>
+      <Copyright theme={'light'} />
     </Page>
   );
 }

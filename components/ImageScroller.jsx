@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
+import Modal from './Modal';
+import NextImage from 'next/image';
 
 function getWindowDimensions() {
   if (typeof window === 'undefined') return { width: 500, height: 0 }; // for SSR (server-side rendering
@@ -30,6 +32,8 @@ const ImageScroller = ({ images, containerHeight = 150, gap = 20 }) => {
   const [photos, setPhotos] = useState(null);
   const [circumference, setCircumference] = useState(0);
   const [scrolloffset, setScrollOffset] = useState(1680);
+  const [showModal, setShowModal] = useState(false);
+  const [modalImage, setModalImage] = useState(images[0]);
   const scrollerRef = useRef(null);
 
   useEffect(() => {
@@ -80,6 +84,14 @@ const ImageScroller = ({ images, containerHeight = 150, gap = 20 }) => {
       className="scroller"
       ref={scrollerRef}
     >
+      <Modal
+        active={showModal}
+        setActive={setShowModal}
+        showCloseButton={false}
+        title=""
+        onClose={() => { }}
+        children={<img src={modalImage} alt='' className='modal-img' />}
+      />
       {photos.map((img, index) => {
         let x = -scrolloffset;
         for (let i = 0; i < index; i++) {
@@ -90,6 +102,10 @@ const ImageScroller = ({ images, containerHeight = 150, gap = 20 }) => {
 
         return (
           <img
+            onClick={() => {
+              setModalImage(img.src);
+              setShowModal(true);
+            }}
             key={index}
             src={img.src}
             alt={`img-${index}`}
@@ -97,6 +113,7 @@ const ImageScroller = ({ images, containerHeight = 150, gap = 20 }) => {
             className="scroller-image"
             style={{
               left,
+              top: 25,
               display: visible ? 'block' : 'none',
             }}
           />
