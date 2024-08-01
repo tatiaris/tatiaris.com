@@ -139,13 +139,14 @@ export const Zion = () => {
         <source src="/travel/zion/7.mov" type="video/mp4" />
         Your browser does not support HTML video.
       </video>
-      <Text style={{ minHeight: 400 }}>
+      <Text style={{ minHeight: 300, marginBottom: 100 }}>
         {`We started the hike early in the morning, moving against the cold current.
         The views were breathtaking, with the sun shining through the canyon walls, illuminating the river.
         We went about 5 miles and decided to turn back, as we wanted to explore other parts of the park.
         The water that was previously freezing cold felt good on the way back now that the sun was out.
         The hike took us about 4-5 hours, and we were exhausted by the end of it, but it was worth it :)`}
       </Text>
+      <br /><br /><br />
       <Copyright theme={'light'} />
     </Page>
   );
