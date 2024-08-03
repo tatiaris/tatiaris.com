@@ -43,14 +43,14 @@ export const Zion = () => {
         <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=5, minimum-scale=1, width=device-width" />
         <meta property="og:title" content="Zion National Park" />
         <meta property="og:site_name" content="Rishabh Tatia" />
-        <meta property="og:url" content="tatiaris.com/" />
+        <meta property="og:url" content="tatiaris.com/travel/zion" />
         <meta property="og:description" content="Zion National Park" />
-        <meta property="og:type" content="profile" />
+        <meta property="og:type" content="post" />
         <meta httpEquiv="content-language" content="en" />
       </Head>
       <Breadcrumbs>
         <Breadcrumbs.Item href="/">tatiaris</Breadcrumbs.Item>
-        <Breadcrumbs.Item>travel</Breadcrumbs.Item>
+        <Breadcrumbs.Item href="/travel">travel</Breadcrumbs.Item>
       </Breadcrumbs>
       <br />
       <Text h3>

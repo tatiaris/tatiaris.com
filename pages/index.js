@@ -6,7 +6,7 @@ import Homepage from '../components/Homepage';
 export default function Home() {
   return (
     <>
-      <Page style={{ maxWidth: '1000px' }}>
+      <Page className='blog-page'>
         <Head>
           <title>Rishabh Tatia</title>
           <link rel="icon" href="/favicon.ico" />
