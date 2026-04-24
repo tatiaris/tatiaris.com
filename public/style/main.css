@@ -499,6 +499,22 @@ a.canvasjs-chart-credit {
 
 /* SONG RECOMMEND START */
 
+.rekk-page {
+  padding: 0 calc(3.125 * 16px) 0 calc(3.125 * 16px) !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.rekk-page h3 {
+  margin: 1.25rem 0 1rem;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.rekk-search-wrapper {
+  width: 100%;
+}
+
 .song-search-input {
   width: 100%;
   padding: 0 30px;
@@ -629,6 +645,35 @@ button:hover {
   font-size: 1rem;
 }
 
+.rekkit-btn {
+  display: flex;
+  width: max-content;
+  background: linear-gradient(135deg, #fff 0%, #f2f5ff 100%);
+  color: #0f172a !important;
+  padding: 0 30px;
+  line-height: 3;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.rekk-cta-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .rekk-page {
+    padding: 24px 18px;
+    margin: 0 !important;
+  }
+}
+
 @media (max-width: 600px) {
   .recommend-btn.large {
     display: none;
@@ -636,6 +681,33 @@ button:hover {
 
   .recommend-btn.small {
     display: flex;
+  }
+
+  .rekk-cta-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1.25rem;
+  }
+
+  .rekk-page {
+    padding: 18px 14px;
+    margin: 0 !important;
+  }
+
+  .rekk-page h3 {
+    margin: 0.75rem 0 0.875rem;
+    font-size: 1.15rem;
+  }
+
+  .song-search-input {
+    padding: 0 16px;
+    line-height: 2.8;
+  }
+
+  .spotify-btn,
+  .rekkit-btn {
+    padding: 0 16px;
+    line-height: 2.8;
   }
 }
 

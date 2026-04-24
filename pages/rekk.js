@@ -48,8 +48,8 @@ const RecommendMe = () => {
       });
   };
 
-  useEffect(() => {searchMusic()}, [searchInput]);
-  useEffect(() => {getUserRecPlaylist()}, []);
+  useEffect(() => { searchMusic() }, [searchInput]);
+  useEffect(() => { getUserRecPlaylist() }, []);
 
   return (
     <div style={{ backgroundColor: '#1DB954' }}>
@@ -73,29 +73,30 @@ const RecommendMe = () => {
         <meta name="twitter:image" content="https://tatiaris.com/img/thumbnail.png" />
         <meta httpEquiv="content-language" content="en" />
       </Head>
-      <Page id="project-container">
+      <Page id="project-container" className="rekk-page">
         <Breadcrumbs>
           <Breadcrumbs.Item href="/">
             <span style={{ color: '#333' }}>tatiaris</span>
           </Breadcrumbs.Item>
           <Breadcrumbs.Item>
-            <span style={{ color: '#333' }}>recommend-me</span>
+            <span style={{ color: '#333' }}>recommend</span>
           </Breadcrumbs.Item>
         </Breadcrumbs>
-        <br />
         <h3>Recommend me some music!</h3>
-        <div style={{ display: 'flex' }} className={`${searchResults.length > 0 && 'results-shown'}`}>
-          <input onChange={(e) => setSearchInput(e.target.value)} className="song-search-input" placeholder="Search for any song, artist, or album"></input>
+        <div className={`rekk-search-wrapper${searchResults.length > 0 ? ' results-shown' : ''}`}>
+          <input onChange={(e) => setSearchInput(e.target.value)} className="song-search-input" placeholder="Search for any song, artist, or album" />
         </div>
         <div className="search-results-container">
           {searchResults.map((t, i) => (
             <SearchResult key={`result-${i}`} result={t} recommended={userRecPlaylist.has(t.id)} addSongToPlaylist={addSongToPlaylist} />
           ))}
         </div>
-        <br />
-        <div>
+        <div className="rekk-cta-buttons">
           <a href="https://open.spotify.com/playlist/7qF7ucb45acJ28Z6Qa47Hp" className="spotify-btn" target="_blank" rel="noopener noreferrer">
-            See what I&apos;m listening to
+            See what others have recommended
+          </a>
+          <a href="https://rekk.it/" className="rekkit-btn" target="_blank" rel="noopener noreferrer">
+            Join me on Rekkit!
           </a>
         </div>
       </Page>
