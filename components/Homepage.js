@@ -49,7 +49,7 @@ export const Homepage = (props) => {
             </Text>
             <br />
             <Text style={{ fontSize: '20px', color: '#333' }}>
-              I enjoy <Link href='/travel'>travelling</Link>, playing badminton, longboarding, rocket league, and <Link target='_blank' href='https://rekk.it/to/rishabh'>discovering new music</Link>!
+              I enjoy <Link href='/travel'>travelling</Link>, playing badminton, longboarding, rocket league, and <Link href='/rekk'>discovering new music</Link>!
             </Text>
             <br />
             <Text style={{ fontSize: '20px', color: '#333' }}>
